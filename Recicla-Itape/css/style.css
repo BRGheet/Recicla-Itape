@@ -1,0 +1,51 @@
+
+/*Navbar*/
+.navbar-green{
+	background-color: #008000;
+	color: white;
+	border: none;
+	border-radius: 0;
+}
+
+.navbar-green .navbar-brand,
+.navbar-green .navbar-brand:hover,
+.navbar-green .navbar-brand:active,
+.navbar-green .navbar-brand:visited{
+    color: white;
+}
+
+.navbar-green .main-menu li a,
+.navbar-green .main-menu li a:hover,
+.navbar-green .main-menu li a:active,
+.navbar-green .main-menu li a:visited{
+	color: white;
+}
+
+/*Botão*/
+.btn-green { 
+  color: #ffffff; 
+  background-color: #016301; 
+} 
+ 
+.btn-green:hover, 
+.btn-green:focus, 
+.btn-green:active, 
+.btn-green.active, 
+.open .dropdown-toggle.btn-green { 
+  color: #ffffff; 
+  background-color: #243D2A; 
+}
+
+.btn-blue { 
+  color: #FFFFFF; 
+  background-color: #1FDCA6; 
+} 
+ 
+.btn-blue:hover, 
+.btn-blue:focus, 
+.btn-blue:active, 
+.btn-blue.active, 
+.open .dropdown-toggle.btn-blue { 
+  color: #FFFFFF; 
+  background-color: #2BBABD; 
+}  
