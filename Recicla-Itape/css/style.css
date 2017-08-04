@@ -20,7 +20,15 @@
 font-size: 1.1em;
 font-family:Arial;
 }
-
+/*basckground botao dropdown*/
+.dropdown-menu>li>a,
+.open>.dropdown-menu,
+.open>.dropdown-menu,
+.dropdown-menu>li>a:hover
+{
+  color: white;
+  background-color: #008000;
+}
 /*Botão*/
 .btn-green { 
   color: #ffffff; 
