@@ -1,26 +1,24 @@
-
 /*Navbar*/
 .navbar-green{
-	background-color: #008000;
-	color: white;
-	border: none;
-	border-radius: 0;
+  background-color: #008000;
+  border-radius: 0px;
+  color: white;
+  border: none;
+  margin-bottom: 0px;
 }
-
-.navbar-green .navbar-brand,
-.navbar-green .navbar-brand:hover,
-.navbar-green .navbar-brand:active,
-.navbar-green .navbar-brand:visited{
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus
+{
     color: white;
 }
-
-.navbar-green .main-menu li a,
-.navbar-green .main-menu li a:hover,
-.navbar-green .main-menu li a:active,
-.navbar-green .main-menu li a:visited{
-	color: white;
+/*Propriedades Fonts navbar*/
+.navbar-default .navbar-nav > li > a{
+font-size: 1.1em;
+font-family:Arial;
 }
-
 /*Botão*/
 .btn-green { 
   color: #ffffff; 
@@ -49,3 +47,23 @@
   color: #FFFFFF; 
   background-color: #2BBABD; 
 }  
+/*carousel*/
+.carousel .item {
+height: 580px;
+}
+
+.item img {
+position: absolute;
+top: 0;
+left: 0;
+min-height: 580px; 
+/*Filtro Escurecer Imagem*/
+filter: brightness(80%)
+}
+
+.carousel-caption,.carousel-caption h1{
+top: 50%;
+transform: translateY(-50%);
+font-size: 1.8em;
+/*Font Carousel*/
+}
