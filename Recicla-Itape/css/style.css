@@ -80,9 +80,9 @@
 }
 
 @media screen and (min-width: 701px) {
-.sidebar{
-  display: none;
-}
+  .sidebar{
+    display: none;
+  }
 }
 
 
@@ -100,8 +100,8 @@
 /* The navigation menu links */
 .sidebar {
   height: 100%; 
-  width: -1; 
-  position: fixed; 
+  width: 0; 
+  position: fixed;
   z-index: 1;
   top: 0;
   right: 0;
