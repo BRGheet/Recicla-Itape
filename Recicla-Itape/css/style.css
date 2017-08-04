@@ -17,11 +17,11 @@
 
 /*Propriedades Fontes navbar*/
 .navbar-default .navbar-nav > li > a{
-font-size: 1.1em;
-font-family:Arial;
+  font-size: 1.1em;
+  font-family:Arial;
 }
 .open>.dropdown-menu{
-margin: 0px;
+  margin: 0px;
 }
 /*Botão*/
 .btn-green { 
@@ -60,27 +60,39 @@ margin: 0px;
   background-color: #1FDCA6;
 }
 
-/*carousel*/
+/*carousel propriedades*/
+.carousel .item{
+  height: 600px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 5% 110%;
+  background-color: #363636;
+}
+/*Indicandor do caminho das imagens do carousel*/
+.carouselPicture1{
+  background-image: url(../img/img4.png); 
+}
+.carouselPicture2{
+  background-image: url(../img/img4.png); 
+}
+.carouselPicture3{
+  background-image: url(../img/img4.png); 
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+  /*carousel*/
 .carousel .item {
-height: 580px;
+  background-image: url(../img/img4.png);
+  background-size: 100% 700px;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+  box-shadow:0 0 0 200px white;;
 }
-
-.item img {
-position: absolute;
-top: 0;
-left: 0;
-min-height: 580px; 
-/*Filtro Escurecer Imagem do carousel*/
-filter: brightness(80%)
-}
-
-.carousel-caption,.carousel-caption h1{
-/*alinhar texto ao centro*/
-top: 50%;
-transform: translateY(-50%);
-font-size: 1.8em;
-/*Font Carousel*/
-}
+<<<<<<< HEAD
 
 .sidebar {
     height: 100%; 
@@ -118,4 +130,6 @@ font-size: 1.8em;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+=======
+>>>>>>> 48700b22ed454903e1a846883e703de6a38ade6e
 }
