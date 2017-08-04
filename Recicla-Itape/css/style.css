@@ -20,14 +20,8 @@
 font-size: 1.1em;
 font-family:Arial;
 }
-/*basckground botao dropdown*/
-.dropdown-menu>li>a,
-.open>.dropdown-menu,
-.open>.dropdown-menu,
-.dropdown-menu>li>a:hover
-{
-  color: white;
-  background-color: #008000;
+.open>.dropdown-menu{
+margin: 0px;
 }
 /*Botão*/
 .btn-green { 
@@ -55,8 +49,16 @@ font-family:Arial;
 .btn-blue.active, 
 .open .dropdown-toggle.btn-blue { 
   color: #FFFFFF; 
-  background-color: #2BBABD; 
 }  
+/*background botao dropdown*/
+.dropdown-menu>li>a,
+.open>.dropdown-menu,
+.open>.dropdown-menu,
+.dropdown-menu>li>a:hover
+{
+  color: white;
+  background-color: #1FDCA6;
+}
 
 /*carousel*/
 .carousel .item {
