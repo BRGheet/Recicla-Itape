@@ -73,10 +73,10 @@
   background-image: url(../img/img4.png); 
 }
 .carouselPicture2{
-  background-image: url(../img/img4.png); 
+  background-image: url(../img/lixo1.jpg); 
 }
 .carouselPicture3{
-  background-image: url(../img/img4.png); 
+  background-image: url(../img/lixo2.jpg); 
 }
 
 @media screen and (min-width: 701px) {
@@ -133,4 +133,37 @@
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+/* fade on slider */
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1 !important;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
 }
