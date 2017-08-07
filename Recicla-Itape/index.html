@@ -15,13 +15,13 @@
         <div class="container">
             <div class="navbar-header cor-branco">
                  <!-- <a href="#" class="navbar-brand"><img src="img/logo.png" alt="Logo do Recicla Itapê"></a>-->
-                <a href="#" class="navbar-brand hidden-xs">Recicla Itapê</a>
-                <a href="#" class="navbar-brand hidden-sm hidden-md hidden-lg">Recicla Itapê</a>
-                <button type="button" onclick="openNav()" class="navbar-toggle navbar-left">
+                <button type="button" onclick="openNav()" class="navbar-toggle pull-left">
     		  		<span class="icon-bar"></span>
     		  		<span class="icon-bar"></span>
     		  		<span class="icon-bar"></span>
     		  	</button> 
+                <a href="#" class="navbar-brand hidden-xs">Recicla Itapê</a>
+                <a href="#" class="navbar-brand hidden-sm hidden-md hidden-lg">Recicla Itapê</a>                
             </div>
             <div class="col-md-6 col-md-offset-3 hidden-xs">
                 <ul class="nav navbar-nav">
@@ -44,10 +44,16 @@
         </div>
     </nav>
     <nav id="mySidenav" class="sidebar">
-    	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    	<div class="sidenav-image"></div>
+    	<button class="closebtn" onclick="closeNav()">&times;</button>
+    	<a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Informações</a>
     	<a href="#">Home</a>
-    	<a href="#">Quero Reciclar</a>
-    	<a href="#">Cooperativas</a>
+    	<a href="#"><i class="fa fa-play" aria-hidden="true"></i>Vídeos</a>
+    	<a href="#"><i class="fa fa-recycle" aria-hidden="true"></i>Quero Reciclar</a>
+    	<a href="#"><i class="fa fa-home" aria-hidden="true"></i>Cooperativas</a>
+    	<a href="#"><i class="fa fa-ticket" aria-hidden="true"></i>Recompensas</a>
+    	<a href="#"><i class="fa fa-comment" aria-hidden="true"></i>Dicas</a>
+    	<a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Sobre</a>
     </nav>
 
     <!-- Carousel -->
@@ -102,7 +108,7 @@
 
     <script type="text/javascript">
     function openNav() {
-    	document.getElementById("mySidenav").style.width = "250px";
+    	document.getElementById("mySidenav").style.width = "300px";
 	}
 
 	/* Set the width of the side navigation to 0 */
