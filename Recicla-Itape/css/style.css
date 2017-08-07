@@ -1,3 +1,8 @@
+*:focus{
+  outline: none;
+}
+
+
 /*Navbar*/
 .navbar-green{
   background-color: #008000;
@@ -79,14 +84,14 @@
   background-image: url(../img/img4.png); 
 }
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 769px) {
   .sidebar{
     display: none;
   }
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   /*carousel*/
   .carousel .item {
     background-image: url(../img/img4.png);
@@ -94,6 +99,21 @@
     background-repeat: no-repeat;
     background-position: 100% 0%;
     box-shadow:0 0 0 200px white;;
+  }
+  .navbar-default .navbar-toggle{
+    border-radius: 0px;
+    margin-left: 10px;
+    transition: 0.3s
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+  }
+  .navbar-default .navbar-toggle:hover{
+    background-color: rgba(220,220,220, 0.3);
+    transition: 0.3s;
+  }
+  .navbar-brand{
+    font-size: 2.3rem;
   }
 }
 
@@ -105,18 +125,17 @@
   position: fixed;
   z-index: 1;
   top: 0;
-  right: 0;
+  left: 0;
   background-color: #FFF;
   overflow-x: hidden; 
-  border: 1px solid gray;
-  padding-top: 60px; 
+  border: 1px solid gray; 
   transition: 0.5s; 
 }
 .sidebar a {
-    padding: 8px 8px 8px 32px;
+    padding: 12px 12px 12px 32px;
     text-decoration: none;
     font-size: 18px;
-    color: #818181;
+    color: black;
     display: block;
     transition: 0.3s
 }
@@ -130,7 +149,28 @@
 .sidebar .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    left: 0;
     font-size: 36px;
-    margin-left: 50px;
+    background-color: transparent;    
+    border: none;
+    transition: 0.3s;
+    margin-left: 15px;
+}
+.sidebar .closebtn:hover{
+    color: white;
+    transition: 0.3s;
+}
+
+.sidenav-image{
+  height: 250px;
+  width: 100%;
+  /*background-image: url("../img/sidebar-img.jpg");*/
+  background-color: green;
+  margin-bottom: 10px;
+}
+
+/*Icones*/
+.fa{
+  color: green;
+  margin-right: 20px;
 }
