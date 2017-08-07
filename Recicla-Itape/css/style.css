@@ -65,8 +65,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 5% 110%;
-  background-color: #363636;
+  background-position: 0% 100%;
 }
 /*Indicandor do caminho das imagens do carousel*/
 .carouselPicture1{
@@ -77,24 +76,6 @@
 }
 .carouselPicture3{
   background-image: url(../img/lixo2.jpg); 
-}
-
-@media screen and (min-width: 701px) {
-  .sidebar{
-    display: none;
-  }
-}
-
-
-@media screen and (max-width: 700px) {
-  /*carousel*/
-  .carousel .item {
-    background-image: url(../img/img4.png);
-    background-size: 100% 700px;
-    background-repeat: no-repeat;
-    background-position: 100% 0%;
-    box-shadow:0 0 0 200px white;;
-  }
 }
 
 
@@ -143,27 +124,23 @@
 
 
 
-/* fade on slider */
-.carousel-fade .carousel-inner .item {
-  opacity: 0;
-  -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
+@media screen and (min-width: 701px) {
+  .sidebar{
+    display: none;
+  }
 }
-.carousel-fade .carousel-inner .active {
-  opacity: 1 !important;
-}
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-}
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
-  opacity: 1;
-}
-.carousel-fade .carousel-control {
-  z-index: 2;
+
+
+@media screen and (max-width: 700px) {
+  /*carousel*/
+  .carousel .item {
+    height: 300px;
+    background-size: 100% 400px;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    box-shadow:0 0 0 200px white;
+  }
+  .carousel .slide{
+    display: none;
+  }
 }
