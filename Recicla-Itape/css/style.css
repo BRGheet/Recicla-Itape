@@ -20,7 +20,6 @@
 {
     color: white;
 }
-
 /*Propriedades Fontes navbar*/
 .navbar-default .navbar-nav > li > a{
   font-size: 1.1em;
@@ -28,6 +27,7 @@
 }
 .open>.dropdown-menu{
   margin: 0px;
+  color: white;
 }
 /*Botão*/
 .btn-green { 
@@ -289,5 +289,14 @@
     width: 12px;
     height: 12px;
     opacity: 1;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+  }
+  .navbar-toggle{
+    border-radius: 0px;
+  }
+  .navbar-default .navbar-toggle:hover {
+    background-color: rgba(220,220,220, 0.5);
   }
 }
