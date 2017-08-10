@@ -44,10 +44,11 @@
         </div>
     </nav>
     <nav id="mySidenav" class="sidebar">
-    	<div class="sidenav-image"></div>
+    	<div class="sidenav-image">
+    		<button class="btn btn-green">Cadastre-se</button>
+    	</div>
     	<button class="closebtn" onclick="closeNav()">&times;</button>
     	<a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Informações</a>
-    	<a href="#">Home</a>
     	<a href="#"><i class="fa fa-play" aria-hidden="true"></i>Vídeos</a>
     	<a href="#"><i class="fa fa-recycle" aria-hidden="true"></i>Quero Reciclar</a>
     	<a href="#"><i class="fa fa-home" aria-hidden="true"></i>Cooperativas</a>
@@ -108,20 +109,18 @@
 
     <script type="text/javascript">
     function openNav() {
-    	document.getElementById("mySidenav").style.width = "300px";
+    	document.getElementById("mySidenav").style.left = "0px";
 	}
 
 	/* Set the width of the side navigation to 0 */
 	function closeNav() {
-    	document.getElementById("mySidenav").style.width = "0";
+    	document.getElementById("mySidenav").style.left = "-300px";
 	}
     $('.carousel').carousel({
 
     });
 
     </script>
-
-
     <script src="https://use.fontawesome.com/eb29782670.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
