@@ -249,6 +249,7 @@
 /*          Media Queries       */
 /********************************/
 @media screen and (min-width: 980px){
+  /*Para o pc*/
   .hero{ 
     width: 980px;
   }    
@@ -257,6 +258,20 @@
   }
 }
 @media screen and (max-width: 640px){
+  /*para smartphones*/
   .hero h1{font-size: 4em;
   }    
+  .fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color: #f39c12;
+    border-color: #f39c12;
+    opacity: .7;
+    width: 12px;
+    height: 12px;
+  }
+  .fade-carousel .carousel-indicators > li.active {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+  }
 }
