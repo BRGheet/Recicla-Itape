@@ -32,7 +32,8 @@
 /*Botão*/
 .btn-green { 
   color: #ffffff; 
-  background-color: #016301; 
+  background-color: #016301;
+  border-radius: 0px; 
 } 
  
 .btn-green:hover, 
@@ -135,13 +136,13 @@
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: white;
-  }
-  .navbar-toggle{
-    border-radius: 0px;
-  }
-  .navbar-default .navbar-toggle:hover {
-    background-color: rgba(220,220,220, 0.5);
+  background-color: white;
+}
+.navbar-toggle{
+  border-radius: 0px;
+}
+.navbar-default .navbar-toggle:hover {
+  background-color: rgba(220,220,220, 0.5);
 }
 /*carousel*/
 
@@ -269,6 +270,20 @@
 .fade-carousel .slides .slide-3 {
   background-image: url(../img/lixo3.jpg);
 }
+
+
+/********************************/
+/*       Input de registro      */
+/********************************/
+input[type]{
+  border-radius: 0px;
+}
+
+input[type]:focus{
+  border:2px solid green;
+  box-shadow: none;
+}
+
 
 /********************************/
 /*          Media Queries       */
