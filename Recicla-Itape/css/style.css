@@ -275,7 +275,8 @@
 }
 @media screen and (max-width: 640px){
   /*para smartphones*/
-  .hero h1{font-size: 4em;
+  .hero h1{
+    font-size: 2.5em;
   }    
   .fade-carousel .carousel-indicators > li {
     margin: 0 2px;
