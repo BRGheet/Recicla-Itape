@@ -180,12 +180,14 @@
 }
 
 .hero h1 {
-  font-size: 6em;    
+  font-size: 4.5em;    
   font-weight: bold;
   margin: 0;
   padding: 0;
 }
-.hero h1,h3 {
+.hero h1,h3,
+.carousel-indicators
+ {
   /*Bloqueia copia texto*/
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -196,16 +198,18 @@
 }
 
 .fade-carousel .carousel-inner .item .hero {
-  opacity: 0;
-
+   opacity: 0;
+-  -webkit-transition: 2s all ease-in-out .1s;
+-  -moz-transition: 2s all ease-in-out .1s; 
+-  -ms-transition: 2s all ease-in-out .1s; 
+-  -o-transition: 2s all ease-in-out .1s; 
+-  transition: 2s all ease-in-out .1s; 
 }
 .fade-carousel .carousel-inner .item.active .hero {
   opacity: 1;
   -webkit-transition: 2s all ease-in-out .1s;
   -moz-transition: 2s all ease-in-out .1s; 
-  -ms-transition: 2s all ease-in-out .1s; 
-  -o-transition: 2s all ease-in-out .1s; 
-  transition: 2s all ease-in-out .1s;    
+  -ms-transition: 2s all ease-in-out .1s;     
 }
 
 /********************************/
@@ -215,7 +219,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 2;
   opacity: .7;
 }
 
@@ -264,7 +267,7 @@
 /********************************/
 /*          Media Queries       */
 /********************************/
-@media screen and (min-width: 980px){
+@media screen and (min-width: 995px){
   /*Para o pc*/
   .hero{ 
     width: 980px;
@@ -273,7 +276,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 640px){
+@media screen and (max-width: 994px){
   /*para smartphones*/
   .hero h1{
     font-size: 2.5em;
