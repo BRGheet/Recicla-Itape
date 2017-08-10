@@ -181,14 +181,19 @@
   margin: 0;
   padding: 0;
 }
+.hero h1,h3 {
+  /*Bloqueia copia texto*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 .fade-carousel .carousel-inner .item .hero {
   opacity: 0;
-  -webkit-transition: 2s all ease-in-out .1s;
-  -moz-transition: 2s all ease-in-out .1s; 
-  -ms-transition: 2s all ease-in-out .1s; 
-  -o-transition: 2s all ease-in-out .1s; 
-  transition: 2s all ease-in-out .1s; 
+
 }
 .fade-carousel .carousel-inner .item.active .hero {
   opacity: 1;
@@ -206,7 +211,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 2;
    opacity: .7;
 }
 
@@ -223,6 +227,7 @@
   border-color: #1abc9c;
   outline: none;
   margin: 20px auto;
+  cursor: pointer;
 }
 
 /********************************/
@@ -235,6 +240,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background-color: #363636;
 }
 .fade-carousel .slides .slide-1 {
   background-image: url(../img/lixo1.jpg); 
