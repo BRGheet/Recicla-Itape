@@ -12,6 +12,7 @@
   margin-bottom: 0px;
 }
 .navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand:visited,
 .navbar-default .navbar-brand,
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-nav > li > a:hover,
@@ -184,14 +185,19 @@
   margin: 0;
   padding: 0;
 }
+.hero h1,h3 {
+  /*Bloqueia copia texto*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 .fade-carousel .carousel-inner .item .hero {
   opacity: 0;
-  -webkit-transition: 2s all ease-in-out .1s;
-  -moz-transition: 2s all ease-in-out .1s; 
-  -ms-transition: 2s all ease-in-out .1s; 
-  -o-transition: 2s all ease-in-out .1s; 
-  transition: 2s all ease-in-out .1s; 
+
 }
 .fade-carousel .carousel-inner .item.active .hero {
   opacity: 1;
@@ -230,6 +236,7 @@
   border-color: #1abc9c;
   outline: none;
   margin: 20px auto;
+  cursor: pointer;
 }
 
 /********************************/
@@ -242,6 +249,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background-color: #363636;
 }
 .fade-carousel .slides .slide-1 {
   background-image: url(../img/lixo1.jpg); 
@@ -257,45 +265,29 @@
 /*          Media Queries       */
 /********************************/
 @media screen and (min-width: 980px){
-  .hero{ width: 980px;}    
-}
-@media screen and (max-width: 640px){
-  .hero h1{font-size: 4em;}    
-}
- /*******************************/
- /*        Fim Carousel         */
- /*******************************/
-@media screen and (min-width: 701px) {
+  /*Para o pc*/
+  .hero{ 
+    width: 980px;
+  }    
   .sidebar{
     display: none;
   }
 }
-
-@media screen and (max-width: 700px) {
-  /*carousel*/
-  .carousel .item {
-    height: 300px;
-    background-size: 100% 400px;
-    background-repeat: no-repeat;
-    background-position: 100% 0%;
-    box-shadow:0 0 0 200px white;
+@media screen and (max-width: 640px){
+  /*para smartphones*/
+  .hero h1{font-size: 4em;
+  }    
+  .fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color: #f39c12;
+    border-color: #f39c12;
+    opacity: .7;
+    width: 12px;
+    height: 12px;
   }
-  .carousel .slide{
-    display: none;
-  }
-  .navbar-default .navbar-toggle{
-    border-radius: 0px;
-    margin-left: 10px;
-    transition: 0.3s
-  }
-  .navbar-default .navbar-toggle .icon-bar {
-    background-color: white;
-  }
-  .navbar-default .navbar-toggle:hover{
-    background-color: rgba(220,220,220, 0.3);
-    transition: 0.3s;
-  }
-  .navbar-brand{
-    font-size: 2.3rem;
+  .fade-carousel .carousel-indicators > li.active {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
   }
 }
