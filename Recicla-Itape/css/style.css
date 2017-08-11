@@ -264,9 +264,27 @@
 /********************************/
 /*          Corpo               */
 /********************************/
+#one{
+height: 683px;
+background-color: #ededed;
+padding-top: 6em;
+}
+.textos,
+.titulo
+{
+  text-align: center;
+}
+.textos p,
+.titulo p
+{
+  font-size: 1.2em
 
-
-
+}
+.textos h1,
+.titulo h1
+{
+  font-size: 2.5em;
+}
 
 
 
