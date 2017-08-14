@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recicla Itapê - Registro</title>
+    <title>Recicla Itapê</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
   </head>
   <body>
-      <nav class="navbar navbar-default navbar-green">
+    <nav class="navbar navbar-default navbar-green">
         <div class="container">
             <div class="navbar-header cor-branco">
                  <!-- <a href="#" class="navbar-brand"><img src="img/logo.png" alt="Logo do Recicla Itapê"></a>-->
@@ -42,49 +42,34 @@
                 </div>  
             </div>
         </div>
-      </nav>
-    <nav id="mySidenav" class="sidebar">
-      <div class="sidenav-image">
-        <button class="btn btn-green">Cadastre-se</button>
-      </div>
-      <button class="closebtn" onclick="closeNav()">&times;</button>
-      <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Informações</a>
-      <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Vídeos</a>
-      <a href="#"><i class="fa fa-recycle" aria-hidden="true"></i>Quero Reciclar</a>
-      <a href="#"><i class="fa fa-home" aria-hidden="true"></i>Cooperativas</a>
-      <a href="#"><i class="fa fa-ticket" aria-hidden="true"></i>Recompensas</a>
-      <a href="#"><i class="fa fa-comment" aria-hidden="true"></i>Dicas</a>
-      <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Sobre</a>
     </nav>
-    <div class="container">
-      <div class="row">
-        <div class="page-header">
-          <img id="cad-bg" src="img/registro.jpg" alt="Background">
-          <h1>Registro</h1>
-          <p>Faça o registro e ajude o meio ambiente</p>
-        </div>
-      </div>
-      <div class="row">
-        <div id="cadastro" class="col-md-4 col-md-offset-4">
-          <label for="nome">Nome</label>
-          <input id="nome" type="text" name="nome" class="form-control" placeholder="Digite seu nome completo">
-          <br>
-          <label for="senha">Senha</label>
-          <input id="senha" type="password" name="senha" class="form-control" placeholder="Ao menos 8 digitos">
-          <br>
-          <label for="senha2">Confirme a senha</label>
-          <input id="senha2" type="password" name="senha2" class="form-control">
-          <br>
-          <label for="email">E-mail</label>
-          <input id="email" type="email" name="email" class="form-control">
-          <br>
-          <button class="btn btn-green">Cadastrar</button>
-        </div>
-      </div>
-    </div>
+    <nav id="mySidenav" class="sidebar">
+    	<div class="sidenav-image">
+    		<button class="btn btn-green">Cadastre-se</button>
+    	</div>
+    	<button class="closebtn" onclick="closeNav()">&times;</button>
+    	<a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Informações</a>
+    	<a href="#"><i class="fa fa-play" aria-hidden="true"></i>Vídeos</a>
+    	<a href="#"><i class="fa fa-recycle" aria-hidden="true"></i>Quero Reciclar</a>
+    	<a href="#"><i class="fa fa-home" aria-hidden="true"></i>Cooperativas</a>
+    	<a href="#"><i class="fa fa-ticket" aria-hidden="true"></i>Recompensas</a>
+    	<a href="#"><i class="fa fa-comment" aria-hidden="true"></i>Dicas</a>
+    	<a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Sobre</a>
+    </nav>
 
+    <script type="text/javascript">
+    function openNav() {  
+    	document.getElementById("mySidenav").style.left = "0px";
+	  }
 
+	/* Set the width of the side navigation to 0 */
+	  function closeNav() {
+    	document.getElementById("mySidenav").style.left = "-300px";
+	  }
+    $('.carousel').carousel({
 
+    });
+    </script>
     <script src="https://use.fontawesome.com/eb29782670.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
