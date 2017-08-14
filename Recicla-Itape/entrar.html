@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recicla Itapê - Registro</title>
+    <title>Recicla Itapê - Entrar</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <!-- Google Fonts -->
@@ -32,14 +32,8 @@
             </div>
             <div class="nav navbar-nav navbar-right">
                 <div class="dropdown hidden-xs">
-                    <button class="btn btn-blue navbar-btn dropdown-toggle" id="drop-entrar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Entrar<span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu hidden-xs" area-labelledby="drop-entrar">
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Cadastro</a></li>
-                 <!--        <li><a href="#">Sair</a></li> -->
-                    </ul>
-                </div>  
+                    <button class="btn btn-blue-outline navbar-btn">Entrar</button>
+                </div>
             </div>
         </div>
       </nav>
@@ -57,15 +51,12 @@
       <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Sobre</a>
     </nav>
     <div class="container">
-      <div class="row">
-        <div class="page-header">
           <img id="cad-bg" src="img/registro.jpg" alt="Background">
-          <h1>Registro</h1>
-          <p>Faça o registro e ajude o meio ambiente</p>
-        </div>
-      </div>
+          <img style="transform: scale(0.5); text-align: center;" src="img/logo.png" alt="Logo do Recicla Itape">
       <div class="row">
-        <div id="cadastro" class="col-md-4 col-md-offset-4">
+        <div class="cadastro col-md-5">
+          <p class="lead">Ainda não tem um cadastro ?</p>
+          <h1 class="green">Cadastre-se</h1>
           <label for="nome">Nome</label>
           <input id="nome" type="text" name="nome" class="form-control" placeholder="Digite seu nome completo">
           <br>
@@ -79,6 +70,20 @@
           <input id="email" type="email" name="email" class="form-control">
           <br>
           <button class="btn btn-green">Cadastrar</button>
+        </div>
+        <div class="cadastro col-md-5 col-md-offset-2">
+          <p class="lead">Caso já tenha uma conta,</p>
+          <h1 class="blue">Entre Agora</h1>
+          <label for="nome">E-mail</label>
+          <input id="nome" type="email" name="nome" class="form-control">
+          <br>
+          <label for="senha">Senha</label>
+          <input id="senha" type="password" name="senha" class="form-control">
+          <br>
+          <a href="#">Esqueci a minha senha</a>
+          <br>
+          <br>
+          <button class="btn btn-green pull-right">Entrar</button>
         </div>
       </div>
     </div>

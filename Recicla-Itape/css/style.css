@@ -1,6 +1,14 @@
 *:focus{
   outline: none;
 }
+/*Cores*/
+.green{
+  color: green;
+}
+
+.blue{
+  color: #1FDCA6;
+}
 
 
 /*Navbar*/
@@ -34,8 +42,22 @@
   color: #ffffff; 
   background-color: #016301;
   border-radius: 0px; 
+}
+
+.btn-blue-outline{
+  color: #1FDCA6;
+  background-color: transparent;
+  border-radius: 0px;
+  border: 1px solid #1FDCA6;
+  transition: 0.3s;
 } 
- 
+.btn-blue-outline:hover{
+  background-color: #1FDCA6;
+  color: white;
+  transition: 0.3s;
+}
+
+
 .btn-green:hover, 
 .btn-green:focus, 
 .btn-green:active, 
@@ -234,7 +256,7 @@
 }
 
 /********************************/
-/*          Custom Buttons      */
+/*       Custom Buttons         */
 /********************************/
 
 .btn.btn-lg {padding: 10px 40px;}
@@ -284,7 +306,7 @@ input[type]:focus{
   box-shadow: none;
 }
 
-#cadastro{
+.cadastro{
   border: 1px solid rgba(0,128,0,0.7);
   border-radius: 5px;
   padding: 20px;
