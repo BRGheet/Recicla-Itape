@@ -7,7 +7,7 @@
     <title>Recicla Itapê</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/cooperativas.css">
+    <link rel="stylesheet" href="css/QueroReciclar.css">
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
   </head>
   <body>
@@ -25,9 +25,9 @@
             </div>
             <div class="col-md-6 col-md-offset-3 hidden-xs">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Quero Reciclar</a></li>
-                    <li><a href="#">Cooperativas</a></li>
+                    <li><a href="/index.php">Home</a></li>
+                    <li><a href="QueroReciclar.php">Quero Reciclar</a></li>
+                    <li><a href="cooperativas.php">Cooperativas</a></li>
                 </ul>
             </div>
             <div class="nav navbar-nav navbar-right">
@@ -56,11 +56,3 @@
     	<a href="#"><i class="fa fa-comment" aria-hidden="true"></i>Dicas</a>
     	<a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Sobre</a>
     </nav>
-
-    <!-- Conteudo -->
-
-
-
-
- </body>
-</html>

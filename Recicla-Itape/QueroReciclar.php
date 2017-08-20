@@ -1,49 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recicla Itapê</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/QueroReciclar.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar navbar-default navbar-green">
-        <div class="container">
-            <div class="navbar-header cor-branco">
-                 <!-- <a href="#" class="navbar-brand"><img src="img/logo.png" alt="Logo do Recicla Itapê"></a>-->
-                <button type="button" onclick="openNav()" class="navbar-toggle pull-left">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button> 
-                <a href="#" class="navbar-brand hidden-xs">Recicla Itapê</a>
-                <a href="#" class="navbar-brand hidden-sm hidden-md hidden-lg">Recicla Itapê</a>                
-            </div>
-            <div class="col-md-6 col-md-offset-3 hidden-xs">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Quero Reciclar</a></li>
-                    <li><a href="#">Cooperativas</a></li>
-                </ul>
-            </div>
-            <div class="nav navbar-nav navbar-right">
-                <div class="dropdown hidden-xs">
-                    <button class="btn btn-blue navbar-btn dropdown-toggle" id="drop-entrar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Entrar<span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu hidden-xs" area-labelledby="drop-entrar">
-                        <li><a href="#" data-toggle="modal" data-target="#myModal" >Login</a></li>
-                        <li><a href="#">Cadastro</a></li>
-                        <!--<li><a href="#">Sair</a></li> -->
-                    </ul>
-                </div>  
-            </div>
-        </div>
-    </nav>
+<!--********************** -->
+<!--   Include Cabecalho   -->
+<!--***********************-->
+<?php
+  include("cabecalho.php");
+?>
+
     <nav id="mySidenav" class="sidebar">
     	<div class="sidenav-image">
     		<button class="btn btn-green">Cadastre-se</button>
@@ -101,9 +62,13 @@
 
 
     <!-- Script Google Maps -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwXuWZ2-FkzhSWRE3IT3BlmFsCz5Cvrqo&callback=initMap&region=GB">
-    </script>
     <script type="text/javascript" src="js/GoogleMaps.js"></script>
+     <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKTFiIq0LFTvHk92BdJ1qnyUf_U3AGDOE&callback=initMap">
+    </script>
+
+
+    
     <!-- Script NavBar -->
     <script type="text/javascript" src="js/Navbar.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
