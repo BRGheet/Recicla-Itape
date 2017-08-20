@@ -132,16 +132,13 @@
     display: block;
   }
 }
-body {
-  margin: 0px;
-  padding: 0px;
-}
+
 /******************/
 /* Mapa Google    */
 /******************/
  #map {
  width: 84%;
- height: 94%;
+ height: 100%;
  float: right;
 }
 
