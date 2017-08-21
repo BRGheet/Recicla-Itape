@@ -9,8 +9,7 @@
   font-family: verdana;
   font-weight: 200;
   background-color: #363636;
-  position: fixed;
-  width: 16%;
+   position: absolute;
   height: 100%;
   color: #e1ffff;
 }
@@ -137,9 +136,9 @@
 /* Mapa Google    */
 /******************/
  #map {
- width: 84%;
  height: 100%;
- float: right;
+ position:absolute;
+right: 0;
 }
 
 

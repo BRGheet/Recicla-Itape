@@ -13,12 +13,13 @@
         var map = new google.maps.Map(document.getElementById('map'), {
           center: new google.maps.LatLng(-23.593950, -48.018747),
           zoom: 14,
-          mapTypeId: 'roadmap'
+          mapTypeId: 'hybrid',
+    
         });
         var infoWindow = new google.maps.InfoWindow;
 
           // Change this depending on the name of your PHP or XML file
-          downloadUrl('https://storage.googleapis.com/mapsdevsite/json/mapmarkers2.xml', function(data) {
+          downloadUrl('', function(data) {
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
             Array.prototype.forEach.call(markers, function(markerElem) {
@@ -71,3 +72,4 @@
       }
 
       function doNothing() {}
+
