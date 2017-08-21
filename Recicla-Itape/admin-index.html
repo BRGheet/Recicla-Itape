@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recicla Itapê</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="css/QueroReciclar.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-green hidden-lg hidden-md">
+        <div class="container">
+            <div class="navbar-header cor-branco">
+                 <!-- <a href="#" class="navbar-brand"><img src="img/logo.png" alt="Logo do Recicla Itapê"></a>-->
+                <button type="button" onclick="openNav()" class="navbar-toggle pull-left">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> 
+                <a href="index.html" class="navbar-brand hidden-xs">Recicla Itapê</a>
+                <a href="index.html" class="navbar-brand hidden-sm hidden-md hidden-lg">Recicla Itapê</a>                
+            </div>
+        </div>
+    </nav>
+    <nav class="sidebar-lg hidden-xs hidden-sm">
+    	<h1>ADMIN</h1>
+    	<a href="#">Nova Informação</a>
+      	<a href="#">Novo Vídeo</a>
+      	<a href="#">Novo Ponto no Quero Reciclar</a> <!-- Adicionar as páginas em AJAX -->
+      	<a href="#">Nova Cooperativa</a>
+      	<a href="#">Nova Recompensa</a>
+      	<a href="#">Alterar Dicas</a>
+      	<a href="#">Alterar Sobre</a>
+    </nav>
+    <nav id="mySidenav" class="sidebar">
+      <div class="sidenav-image">
+        <h1>ADMIN</h1>
+      </div>
+      <button class="closebtn" onclick="closeNav()">&times;</button>
+      <a href="#">Nova Informação</a>
+      <a href="#">Novo Vídeo</a>
+      <a href="#">Novo Ponto no Quero Reciclar</a>
+      <a href="#">Nova Cooperativa</a>
+      <a href="#">Nova Recompensa</a>
+      <a href="#">Alterar Dicas</a>
+      <a href="#">Alterar Sobre</a>
+    </nav>
+    <!-- Script NavBar -->
+    <script type="text/javascript" src="js/Navbar.js"></script>
+    <script src="https://use.fontawesome.com/eb29782670.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
