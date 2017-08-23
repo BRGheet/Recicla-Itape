@@ -12,6 +12,28 @@
     <link rel="stylesheet" href="css/QueroReciclar.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+          $('.pagina').click(function(){
+
+              var pagina = this.id;
+              pagina = "admin-"+pagina+".html";
+              
+              $.ajax({
+                  url: pagina,
+                  success: function(data){
+                      /*Precisa de um servidor para funcionar*/
+                      $('#conteudo').html(data)
+                  }
+              });
+
+          });
+      });
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-default navbar-green hidden-lg hidden-md">
@@ -28,43 +50,40 @@
             </div>
         </div>
     </nav>
-    <nav class="col-md-2 sidebar-lg hidden-xs hidden-sm">
-    	<h1>ADMIN</h1>
-    	<a href="#">Nova Informação</a>
-      	<a href="#">Novo Vídeo</a>
-      	<a href="#">Novo Ponto no Quero Reciclar</a> <!-- Adicionar as páginas em AJAX -->
-      	<a href="#">Nova Cooperativa</a>
-      	<a href="#">Nova Recompensa</a>
-      	<a href="#">Alterar Dicas</a>
-      	<a href="#">Alterar Sobre</a>
-    </nav>
+
     <nav id="mySidenav" class="sidebar">
       <div class="sidenav-image">
         <h1>ADMIN</h1>
       </div>
       <button class="closebtn" onclick="closeNav()">&times;</button>
-      <a href="#">Nova Informação</a>
-      <a href="#">Novo Vídeo</a>
-      <a href="#">Novo Ponto no Quero Reciclar</a>
-      <a href="#">Nova Cooperativa</a>
-      <a href="#">Nova Recompensa</a>
-      <a href="#">Alterar Dicas</a>
-      <a href="#">Alterar Sobre</a>
+      <a href="#" class="pagina" id="1">Nova Informação</a>
+      <a href="#" class="pagina" id="2">Novo Vídeo</a>
+      <a href="#" class="pagina" id="3">Novo Ponto no Quero Reciclar</a>
+      <a href="#" class="pagina" id="4">Nova Cooperativa</a>
+      <a href="#" class="pagina" id="5">Nova Recompensa</a>
+      <a href="#" class="pagina" id="6">Alterar Dicas</a>
+      <a href="#" class="pagina" id="7">Alterar Sobre</a>
     </nav>
-    <div class="col-md-10">
-    	<h1>Nova Informação</h1>
-    	<p class="lead">Adicione alguma novidade ou informação para o usuário.</p>
-    	<label for="titulo">Titulo</label>
-    	<input id="titulo" type="text" name="titulo" class="form-control">
-    	<br>
-    	<label for="autor">Autor</label>
-    	<input id="autor" type="text" name="autor"  class="form-control">
-    	<br>
-    	<label for="texto">Texto</label>
-    	<textarea id="texto" class="form-control"></textarea>
-    </div>
+      <nav class="col-md-2 sidebar-lg hidden-xs hidden-sm">
+      	<h1>ADMIN</h1>
+      	  <a href="#" class="pagina" id="info">Nova Informação</a>
+        	<a href="#" class="pagina" id="video">Novo Vídeo</a>
+        	<a href="#" class="pagina" id="reciclar">Novo Ponto no Quero Reciclar</a> <!-- Adicionar as páginas em AJAX -->
+        	<a href="#" class="pagina" id="coop">Nova Cooperativa</a>
+        	<a href="#" class="pagina" id="gift">Nova Recompensa</a>
+        	<a href="#" class="pagina" id="dicas">Alterar Dicas</a>
+        	<a href="#" class="pagina" id="sobre">Alterar Sobre</a>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <div id="conteudo" class="col-md-10">
+
+          </div>
+        </div>
+      </div>
     <!-- Script NavBar -->
     <script type="text/javascript" src="js/Navbar.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script src="https://use.fontawesome.com/eb29782670.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
