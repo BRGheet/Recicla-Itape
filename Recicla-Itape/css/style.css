@@ -350,10 +350,27 @@ padding-bottom: 30px;
 {
   font-size: 2.5em;
 }
-/*Box com imagens*/
-.box{
-background-color: red;
-margin-left: 20px;
+/*Tutoriais*/
+.box,
+.thumbnail
+{
+border: 0px;
+}
+.boxImg{
+height: 200px;
+border-radius: 4px;
+background-image: url(../img/lixo.jpg);
+background-size: 100%;
+background-color: #363636;
+cursor: pointer;
+margin: 0 0 2em 0;
+}
+h3{
+font-size: 1.7em;
+padding-bottom: 1em;
+text-align: center;
+border-bottom: 3px double #CFCFCF;
+cursor: pointer;
 }
 
 
