@@ -1,7 +1,5 @@
-*:focus,
-*{
+*:focus{
   outline: none;
-  overflow-x: hidden;
 }
 /*Cores*/
 .green{
