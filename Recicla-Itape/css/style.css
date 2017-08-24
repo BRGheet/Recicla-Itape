@@ -355,10 +355,22 @@ border: 0px;
 }
 .imagemThubnail{
   height: 202px;
-  background-image: url(../img/lixo.jpg);
+  background-color: #363636;
   background-size: 100%;
   border-radius: 5px;
   cursor: pointer;
+}
+.imagemThubnail1{
+  background-image: url(../img/lixo.jpg);
+}
+.imagemThubnail2{
+  background-image: url(../img/index2.jpg);
+}
+.imagemThubnail3{
+  background-image: url(../img/index3.jpg);
+}
+.imagemThubnail4{
+  background-image: url(../img/index4.jpg);
 }
 .caption h3{
   color: #666;
