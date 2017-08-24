@@ -45,8 +45,8 @@
 }
 
 .btn-blue-outline{
-  color: #1FDCA6;
-  background-color: transparent;
+  color: white;
+  background-color: #1FDCA6;
   border-radius: 0px;
   border: 1px solid #1FDCA6;
   transition: 0.3s;
@@ -55,6 +55,7 @@
   background-color: #1FDCA6;
   color: white;
   transition: 0.3s;
+  outline: none;
 }
 
 
@@ -77,7 +78,8 @@
 .btn-blue:active, 
 .btn-blue.active, 
 .open .dropdown-toggle.btn-blue { 
-  color: #FFFFFF; 
+  color: white;
+  background-color: #1FDCA6;
 }  
 /*background botao dropdown*/
 .dropdown-menu>li>a,
@@ -351,12 +353,13 @@ input[type]:focus{
 
 /*Tutoriais Index*/
 .thumbnail {
-border: 0px;
+  border: 0px;
 }
 .imagemThubnail{
   height: 202px;
   background-color: #363636;
   background-size: 100%;
+  background-repeat: no-repeat;
   border-radius: 5px;
   cursor: pointer;
 }
