@@ -5,9 +5,16 @@
 }
 
 .sidebar-lg a{
+  border-left: 6px solid black;
   color: white;
   text-decoration: none;
-  text-align: center;
   display: block;
-  padding: 10px 0px;
+  transition: 0.3s;
+  padding: 10px 0px 10px 20px;
+  margin: 10px 0px;
+}
+
+.sidebar-lg a:hover{
+	transition: 0.3s;
+	background-color: rgba(0,0,0,0.5);
 }
