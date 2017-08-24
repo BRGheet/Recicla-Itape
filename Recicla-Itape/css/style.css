@@ -327,10 +327,8 @@ input[type]:focus{
 /********************************/
 #one{
 height: 683px;
+background-color: #ededed;
 padding-top: 6em;
-}
-header{
-padding-bottom: 30px;
 }
 .textos,
 .titulo
@@ -341,8 +339,6 @@ padding-bottom: 30px;
 .titulo p
 {
   font-size: 1.2em;
-  padding-bottom: 20px;
-  border-bottom: 3px double #CFCFCF;
 
 }
 .textos h1,
@@ -350,28 +346,9 @@ padding-bottom: 30px;
 {
   font-size: 2.5em;
 }
-/*Tutoriais*/
-.box,
-.thumbnail
-{
-border: 0px;
-}
-.boxImg{
-height: 200px;
-border-radius: 4px;
-background-image: url(../img/lixo.jpg);
-background-size: 100%;
-background-color: #363636;
-cursor: pointer;
-margin: 0 0 2em 0;
-}
-h3{
-font-size: 1.7em;
-padding-bottom: 1em;
-text-align: center;
-border-bottom: 3px double #CFCFCF;
-cursor: pointer;
-}
+
+
+
 
 
 
