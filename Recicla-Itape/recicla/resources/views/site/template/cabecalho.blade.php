@@ -26,9 +26,9 @@
       </div>
       <div class="col-md-6 col-md-offset-3 hidden-xs">
         <ul class="nav navbar-nav">
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="QueroReciclar.html">Quero Reciclar</a></li>
-          <li><a href="cooperativas.html">Cooperativas</a></li>
+          <li><a href="/home">Home</a></li>
+          <li><a href="reciclar">Quero Reciclar</a></li>
+          <li><a href="cooperativas">Cooperativas</a></li>
         </ul>
       </div>
       <div class="nav navbar-nav navbar-right">
@@ -45,14 +45,13 @@
     <button class="closebtn" onclick="closeNav()">&times;</button>
     <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Informações</a>
     <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Vídeos</a>
-    <a href="QueroReciclar.html"><i class="fa fa-recycle" aria-hidden="true"></i>Quero Reciclar</a>
-    <a href="#"><i class="fa fa-home" aria-hidden="true"></i>Cooperativas</a>
+    <a href="reciclar"><i class="fa fa-recycle" aria-hidden="true"></i>Quero Reciclar</a>
+    <a href="cooperativas"><i class="fa fa-home" aria-hidden="true"></i>Cooperativas</a>
     <a href="#"><i class="fa fa-ticket" aria-hidden="true"></i>Recompensas</a>
     <a href="#"><i class="fa fa-comment" aria-hidden="true"></i>Dicas</a>
     <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Sobre</a>
   </nav>
   @yield('cabecalho')
-
   <!-- Script NavBar -->
   <script type="text/javascript" src="js/Navbar.js"></script>
   <script src="https://use.fontawesome.com/eb29782670.js"></script>

@@ -1,2 +1,5 @@
 <?php
-Route::get('/', 'homeController@index');
+Route::get('home', 'siteController@index');
+Route::get('/', 'siteController@index');
+Route::get('reciclar', 'siteController@queroReciclar');
+Route::get('cooperativas', 'siteController@Cooperativas');
