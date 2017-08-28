@@ -1,5 +1,10 @@
 @extends('.site.template.cabecalho')
 @section('cabecalho')
+@foreach($user as $u)
+  <p style="color:white">{{$u->nome}}</p>
+  <p style="color:white">{{$u->email}}</p></br>
+  <p style="color:white">{{$u->senha}}</p></br>
+@endforeach
 <div class="container">
   <img id="cad-bg" src="img/registro.jpg" alt="Background">
   <!-- <img style="transform: scale(0.5); text-align: center;" src="img/logo.png" alt="Logo do Recicla Itape"> -->

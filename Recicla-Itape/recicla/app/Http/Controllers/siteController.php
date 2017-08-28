@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Users;
 
 class siteController extends Controller
 {
@@ -18,7 +19,8 @@ class siteController extends Controller
 	public function cooperativas(){
 		return view('site\cooperativas');
 	}
-	public function entrar(){
-		return view('site\login');
+	public function entrar(Users $usuarios){
+		$user = $usuarios->all();
+		return view('site\login',compact('user'));
 	}
 }
