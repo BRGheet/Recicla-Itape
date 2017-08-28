@@ -20,7 +20,13 @@ class siteController extends Controller
 		return view('site\cooperativas');
 	}
 	public function entrar(Users $usuarios){
+		$title = "Login - Cadastro";
 		$user = $usuarios->all();
 		return view('site\login',compact('user'));
+	}
+	public function ProcessaCadastro(){
+		$dataForm = $request->all();
+
+		return view('site\processamento\ProcessaCadastro');
 	}
 }
