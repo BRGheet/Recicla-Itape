@@ -18,4 +18,7 @@ class siteController extends Controller
 	public function cooperativas(){
 		return view('site\cooperativas');
 	}
+	public function entrar(){
+		return view('login');
+	}
 }

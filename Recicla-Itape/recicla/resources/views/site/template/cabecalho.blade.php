@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+  @stack('estilos')
 </head>
 <body>
   <nav class="navbar navbar-default navbar-green">
@@ -33,7 +34,7 @@
       </div>
       <div class="nav navbar-nav navbar-right">
         <div class="dropdown hidden-xs">
-          <a href="entrar.html"><button class="btn btn-blue-outline navbar-btn">Entrar</button></a>
+          <a href="entrar"><button class="btn btn-blue-outline navbar-btn">Entrar</button></a>
         </div>
       </div>
     </div>
@@ -57,5 +58,6 @@
   <script src="https://use.fontawesome.com/eb29782670.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  @stack('scripts')
 </body>
 </html>

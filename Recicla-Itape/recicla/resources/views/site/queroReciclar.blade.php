@@ -40,3 +40,8 @@
 	</div>
 </div>
 @endsection
+@push('scripts')
+<script type="text/javascript" src="js/maps.js"></script>     
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKTFiIq0LFTvHk92BdJ1qnyUf_U3AGDOE&callback=initMap">
+</script>
+@endpush
