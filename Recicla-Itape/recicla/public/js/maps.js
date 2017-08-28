@@ -5,8 +5,8 @@
           zoom: 13,
           /*Minimo zoom limite*/
           minZoom:13,
-          zoomControl: false,
-          scaleControl: false,
+          zoomControl: true,
+          scaleControl: true,
           streetViewControl: false,
           /*Desabilita ctrl para zoon*/
           gestureHandling: 'greedy'

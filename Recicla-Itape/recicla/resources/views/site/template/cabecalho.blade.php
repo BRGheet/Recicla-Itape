@@ -22,8 +22,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button> 
-        <a href="index.html" class="navbar-brand hidden-xs">Recicla Itapê</a>
-        <a href="index.html" class="navbar-brand hidden-sm hidden-md hidden-lg">Recicla Itapê</a>                
+        <a href="/" class="navbar-brand hidden-xs">Recicla Itapê</a>
+        <a href="/" class="navbar-brand hidden-sm hidden-md hidden-lg">Recicla Itapê</a>                
       </div>
       <div class="col-md-6 col-md-offset-3 hidden-xs">
         <ul class="nav navbar-nav">

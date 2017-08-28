@@ -19,6 +19,6 @@ class siteController extends Controller
 		return view('site\cooperativas');
 	}
 	public function entrar(){
-		return view('login');
+		return view('site\login');
 	}
 }
