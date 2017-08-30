@@ -14,7 +14,8 @@
       <p class="lead">Ainda não tem um cadastro ?</p>
       <h1 class="green">Cadastre-se</h1>
       <label for="nome">Nome</label>
-      <form method="post" action="<!-- {{route('entrar.cadastro')}} -->">
+      <form method="post" action="">
+        {!!csrf_field()!!}
         <input id="nome" type="text" name="nome" class="form-control" placeholder="Digite seu nome completo">
         <br>
         <label for="senha">Senha</label>

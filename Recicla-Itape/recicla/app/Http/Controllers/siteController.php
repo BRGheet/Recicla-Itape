@@ -27,6 +27,6 @@ class siteController extends Controller
 	public function ProcessaCadastro(){
 		$dataForm = $request->all();
 
-		return view('site\processamento\ProcessaCadastro');
+		return view('site\processamento\cadastro');
 	}
 }

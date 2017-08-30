@@ -4,4 +4,4 @@ Route::get('/', 'siteController@index');
 Route::get('reciclar', 'siteController@queroReciclar');
 Route::get('cooperativas', 'siteController@Cooperativas');
 Route::get('entrar', 'siteController@entrar');
-Route::get('cadastro', 'siteController@ProcessaCadastro');
+Route::get('entrar/cadastro', 'siteController@ProcessaCadastro');
