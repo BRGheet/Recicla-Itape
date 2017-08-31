@@ -3,9 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Users;
 
 class CadastroLoginController extends Controller
 {
+    private $user;
+
+    public function __construct(Users $user){
+        $this->users = $user;
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -34,7 +42,22 @@ class CadastroLoginController extends Controller
      */
     public function store(Request $request)
     {
-        return('oa');
+        /*dd($request->all());*/
+        /*Seleciona os campos*/
+        /*dd($request->except(['_token']));*/
+        /* dd($request->only(['nome','tipo','email','senha']));*/
+        /*$dataForm = $request->all();
+        /*Faz cadastro*/
+        $dataForm = $request->except(['_token']);
+        $insert = $this->users->insert($dataForm);
+
+        if($insert){
+            return redirect('entrar/create');
+            
+        }
+        else{
+            return redirect()->back();  
+        }
     }
 
     /**

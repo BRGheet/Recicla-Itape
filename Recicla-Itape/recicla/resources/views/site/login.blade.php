@@ -15,12 +15,13 @@
       <form method="post" action="{{url('/entrar/')}}">
         {!!csrf_field()!!}
         <input id="nome" type="text" name="nome" class="form-control" placeholder="Digite seu nome completo">
+        <input type="hidden" name="tipo" value="1">
         <br>
         <label for="senha">Senha</label>
         <input id="senha" type="password" name="senha" class="form-control" placeholder="Ao menos 8 digitos">
         <br>
         <label for="senha2">Confirme a senha</label>
-        <input id="senha2" type="password" name="senha2" class="form-control" placeholder="Digite novamente sua senha">
+        <input id="senha2" type="password" class="form-control" placeholder="Digite novamente sua senha">
         <br>
         <label for="email">E-mail</label>
         <input id="email" type="email" name="email" class="form-control" placeholder="Digite seu Email">
