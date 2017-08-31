@@ -15,7 +15,7 @@
       <form method="post" action="{{url('/entrar/')}}">
         {!!csrf_field()!!}
         <input id="nome" type="text" name="nome" class="form-control" placeholder="Digite seu nome completo">
-        <input type="hidden" name="tipo" value="1">
+        <input type="hidden" name="tipo" value="t">
         <br>
         <label for="senha">Senha</label>
         <input id="senha" type="password" name="senha" class="form-control" placeholder="Ao menos 8 digitos">
