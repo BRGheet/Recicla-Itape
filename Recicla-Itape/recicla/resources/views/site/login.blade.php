@@ -1,20 +1,18 @@
 @extends('.site.template.cabecalho')
 @section('cabecalho')
-@foreach($user as $u)
-<p style="color:white">{{$u->nome}}</p>
-<p style="color:white">{{$u->email}}</p></br>
-<p style="color:white">{{$u->senha}}</p></br>
-@endforeach
+
 <div class="container">
-  <img id="cad-bg" src="img/registro.jpg" alt="Background">
+  <img id="cad-bg" src="{{ URL::asset('img/registro.jpg') }}" alt="Background">
   <!-- <img style="transform: scale(0.5); text-align: center;" src="img/logo.png" alt="Logo do Recicla Itape"> -->
+
   <hr>
   <div class="row">
     <div class="cadastro col-md-5">
       <p class="lead">Ainda não tem um cadastro ?</p>
       <h1 class="green">Cadastre-se</h1>
       <label for="nome">Nome</label>
-      <form method="post" action="">
+
+      <form method="post" action="{{url('/entrar/')}}">
         {!!csrf_field()!!}
         <input id="nome" type="text" name="nome" class="form-control" placeholder="Digite seu nome completo">
         <br>
@@ -22,10 +20,10 @@
         <input id="senha" type="password" name="senha" class="form-control" placeholder="Ao menos 8 digitos">
         <br>
         <label for="senha2">Confirme a senha</label>
-        <input id="senha2" type="password" name="senha2" class="form-control">
+        <input id="senha2" type="password" name="senha2" class="form-control" placeholder="Digite novamente sua senha">
         <br>
         <label for="email">E-mail</label>
-        <input id="email" type="email" name="email" class="form-control">
+        <input id="email" type="email" name="email" class="form-control" placeholder="Digite seu Email">
         <br>
         <button class="btn btn-green">Cadastrar</button>
       </form>
