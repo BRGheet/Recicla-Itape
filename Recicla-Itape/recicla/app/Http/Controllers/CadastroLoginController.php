@@ -48,15 +48,16 @@ class CadastroLoginController extends Controller
         /* dd($request->only(['nome','tipo','email','senha']));*/
         /*$dataForm = $request->all();
         /*Faz cadastro*/
-        $dataForm = $request->except(['_token']);
-        $insert = $this->users->insert($dataForm);
+        $dataForm = $request->all();
+        $insert = $this->users->create($dataForm);
 
+        
         if($insert){
             return redirect('entrar/create');
             
         }
         else{
-            return redirect()->back();  
+            return redirect()->back()
         }
     }
 
@@ -65,7 +66,7 @@ class CadastroLoginController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
+     
     public function show($id)
     {
         //
