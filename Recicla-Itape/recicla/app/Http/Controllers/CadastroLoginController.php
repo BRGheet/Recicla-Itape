@@ -48,16 +48,17 @@ class CadastroLoginController extends Controller
         /* dd($request->only(['nome','tipo','email','senha']));*/
         /*$dataForm = $request->all();
         /*Faz cadastro*/
-        $dataForm = $request->all();
-        $insert = $this->users->create($dataForm);
 
-        
+        $dataForm = $request->all();
+        $this->validate($request, $this->users->rules);
+
+        /*Faz o insert no banco*/
+        $insert = $this->users->create($dataForm);
         if($insert){
             return redirect('entrar/create');
-            
         }
         else{
-            return redirect()->back()
+            return redirect()->back();
         }
     }
 

@@ -10,6 +10,13 @@
     <div class="cadastro col-md-5">
       <p class="lead">Ainda não tem um cadastro ?</p>
       <h1 class="green">Cadastre-se</h1>
+      @if(isset($errors)&& count($errors) > 0)
+      <div class="alert alert-danger" role="alert">
+        @foreach($errors->all() as $error)
+        {{$error}}
+        @endforeach
+      </div>
+      @endif
       <label for="nome">Nome</label>
 
       <form method="post" action="{{url('/entrar/')}}">
