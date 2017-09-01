@@ -8,6 +8,7 @@ class Users extends Model
 {
 	protected $fillable = ['nome','email','senha'];
 
+	/*Valida campos automaticamente*/
 	public $rules = [
 		'name' => 'required|min:3|max:150',
 		'email' => 'required|max:150',
