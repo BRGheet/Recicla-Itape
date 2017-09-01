@@ -54,7 +54,10 @@ class CadastroLoginController extends Controller
         /*Valida dados automaticamente*/
         /*$this->validate($request, $this->users->rules);*/
 
-        $validate = validator($dataForm, $this->users->rules);
+        $message = [
+            'name.required'=>'O campo nome tem preenchimento obrigatório.',
+        ];
+        $validate = validator($dataForm, $this->users->rules,$message);
         if($validate->fails()){
             return redirect()->back()->withInput()
             ->withErrors($validate);
