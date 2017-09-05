@@ -4,6 +4,7 @@ namespace App\Http\Controllers\site;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Crypt;
 use App\Models\Users;
 
 class CadastroController extends Controller
@@ -21,7 +22,7 @@ class CadastroController extends Controller
 	public function cadastro(Request $request){
 		/*Pega todos os dados do form*/
 		$dataForm = $request->all();
-		$dataForm["senha"]=bcrypt($dataForm["senha"]);
+		$dataForm["senha"]=Crypt::encryptString($dataForm["senha"]);
 		/*Valida dados automaticamente*/
 		$this->validate($request, $this->users->rules);
 

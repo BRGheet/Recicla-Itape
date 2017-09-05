@@ -7,6 +7,8 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Http\Request;
 use App\Models\Users;
 use DB;
@@ -24,8 +26,11 @@ class LoginController extends BaseController
 		/*Pega todos os dados do form*/
 		$dataForm = $request->except('_token');
 		$email = $dataForm["email"];
-		$senha = bcrypt($dataForm["senha"]);
+		$senha = Crypt::decryptString($dataForm["senha"]);
 		/*$senha = $dataForm["senha"];*/
+		if (Hash::check('plain-text', $senha)) {
+    		return('teste');
+		}
 		$checkLogin = DB::table('users')->where(['email'=>$email,'senha'=>$senha])->get();
 		if(count($checkLogin) > 0){
 			return('Login Realizado com Sucesso!');
