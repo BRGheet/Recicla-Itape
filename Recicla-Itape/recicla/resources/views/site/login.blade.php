@@ -20,9 +20,9 @@
       @endif
       <!-- Mesagem Usuario cadastrado -->
       @if(Session::has('message'))
-        <div class="alert alert-success" role="alert">
-          {{ Session::get('message') }}
-        </div>
+      <div class="alert alert-success" role="alert">
+        {{ Session::get('message') }}
+      </div>
       @endif
       <label for="nome">Nome</label>
 
@@ -46,16 +46,19 @@
     <div class="cadastro col-md-5 col-md-offset-2">
       <p class="lead">Caso já tenha uma conta,</p>
       <h1 class="blue">Entre Agora</h1>
-      <label for="nome">E-mail</label>
-      <input id="nome" type="email" name="nome" class="form-control">
-      <br>
-      <label for="senha">Senha</label>
-      <input id="senha" type="password" name="senha" class="form-control">
-      <br>
-      <a href="#">Esqueci a minha senha</a>
-      <br>
-      <br>
-      <button class="btn btn-green pull-right">Entrar</button>
+      <form  method="post" action="{{url('/login/')}}">
+        {!!csrf_field()!!}
+        <label for="nome">E-mail</label>
+        <input id="nome" type="email" name="email" class="form-control">
+        <br>
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" name="senha" class="form-control">
+        <br>
+        <a href="#">Esqueci a minha senha</a>
+        <br>
+        <br>
+        <button class="btn btn-green pull-right">Entrar</button>
+      </form>
     </div>
   </div>
 </div>

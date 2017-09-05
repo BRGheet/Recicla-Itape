@@ -34,7 +34,7 @@
       </div>
       <div class="nav navbar-nav navbar-right">
         <div class="dropdown hidden-xs">
-          <a href="{{url('/entrar/create')}}"><button class="btn btn-blue-outline navbar-btn">Entrar</button></a>
+          <a href="{{url('cadastro/entrar')}}"><button class="btn btn-blue-outline navbar-btn">Entrar</button></a>
         </div>
       </div>
     </div>
