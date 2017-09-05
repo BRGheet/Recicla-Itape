@@ -24,8 +24,8 @@ class LoginController extends BaseController
 		/*Pega todos os dados do form*/
 		$dataForm = $request->except('_token');
 		$email = $dataForm["email"];
-		/*$senha = bcrypt($dataForm["senha"]);*/
-		$senha = $dataForm["senha"];
+		$senha = bcrypt($dataForm["senha"]);
+		/*$senha = $dataForm["senha"];*/
 		$checkLogin = DB::table('users')->where(['email'=>$email,'senha'=>$senha])->get();
 		if(count($checkLogin) > 0){
 			return('Login Realizado com Sucesso!');
