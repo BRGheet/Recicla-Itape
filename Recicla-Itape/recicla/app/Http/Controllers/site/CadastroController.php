@@ -21,6 +21,7 @@ class CadastroController extends Controller
 	public function cadastro(Request $request){
 		/*Pega todos os dados do form*/
 		$dataForm = $request->all();
+		$dataForm["senha"]=bcrypt($dataForm["senha"]);
 		/*Valida dados automaticamente*/
 		$this->validate($request, $this->users->rules);
 
