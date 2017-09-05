@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Site;
 
 use Illuminate\Http\Request;
-use App\Models\Users;
+use App\Http\Controllers\Controller;
 
 class siteController extends Controller
 {
@@ -20,9 +20,7 @@ class siteController extends Controller
 		return view('site\cooperativas');
 	}
 
-
-
-		public function entrar(Users $usuarios){
+	public function entrar(Users $usuarios){
 		$title = "Login - Cadastro";
 		$user = $usuarios->all();
 		return view('site\login',compact('user'));

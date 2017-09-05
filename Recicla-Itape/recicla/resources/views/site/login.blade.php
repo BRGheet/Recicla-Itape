@@ -19,7 +19,7 @@
       @endif
       <label for="nome">Nome</label>
 
-      <form method="post" action="{{url('/entrar/')}}">
+      <form method="post" action="{{url('/cadastro/')}}">
         {!!csrf_field()!!}
         <input id="nome" type="text" name="nome" class="form-control" placeholder="Digite seu nome completo" value="{{old('nome')}}">
         <input type="hidden" name="admin" value="true">

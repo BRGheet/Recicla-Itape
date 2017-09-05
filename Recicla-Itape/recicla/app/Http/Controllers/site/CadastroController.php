@@ -7,7 +7,10 @@ use App\Http\Controllers\Controller;
 
 class CadastroController extends Controller
 {
+    public function index(){
+    	return view('site.login');
+    }
     public function cadastro(){
-    	return('rt');
+    	return('Cadastrando');
     }
 }
