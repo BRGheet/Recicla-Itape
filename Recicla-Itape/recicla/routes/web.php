@@ -1,8 +1,10 @@
 <?php
 /*Namespace das rotas site*/
 Route::group(['namespace'=>'site'],function(){
+	/*Cadastro de usuarios*/
 	Route::get('cadastro/entrar','CadastroController@index');
 	/*Metodo post usado para submeter o form*/
+	
 	Route::post('cadastro','CadastroController@cadastro');
 	Route::get('home', 'siteController@index');
 	Route::get('/', 'siteController@index');

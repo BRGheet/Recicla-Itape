@@ -10,8 +10,9 @@ class Users extends Model
 
 	/*Valida campos automaticamente*/
 	public $rules = [
-		'name' => 'required|min:3|max:150',
-		'email' => 'required|max:150',
-		'senha' => 'required|min:5',
+	'nome' => 'required|min:3|max:150',
+	'email' => 'required|max:150',
+	'senha' => 'required|min:5|confirmed',
+	'senha_confirmation'=> 'required|min:5'
 	];
 }

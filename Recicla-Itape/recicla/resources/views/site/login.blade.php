@@ -10,12 +10,19 @@
     <div class="cadastro col-md-5">
       <p class="lead">Ainda não tem um cadastro ?</p>
       <h1 class="green">Cadastre-se</h1>
+      <!-- Mensagens de erro -->
       @if(isset($errors)&& count($errors) > 0)
       <div class="alert alert-danger" role="alert">
         @foreach($errors->all() as $error)
         {{$error}}
         @endforeach
       </div>
+      @endif
+      <!-- Mesagem Usuario cadastrado -->
+      @if(Session::has('message'))
+        <div class="alert alert-success" role="alert">
+          {{ Session::get('message') }}
+        </div>
       @endif
       <label for="nome">Nome</label>
 
@@ -25,10 +32,10 @@
         <input type="hidden" name="admin" value="true">
         <br>
         <label for="senha">Senha</label>
-        <input id="senha" type="password" name="senha" class="form-control" placeholder="Ao menos 8 digitos">
+        <input id="senha" type="password" name="senha" class="form-control" placeholder="Ao menos 8 digitos" value="{{old('senha')}}">
         <br>
         <label for="senha2">Confirme a senha</label>
-        <input id="senha2" type="password" class="form-control" placeholder="Digite novamente sua senha" >
+        <input id="senha2" type="password" class="form-control" placeholder="Digite novamente sua senha" name="senha_confirmation" value="{{old('senha_confirmation')}}">
         <br>
         <label for="email">E-mail</label>
         <input id="email" type="email" name="email" class="form-control" placeholder="Digite seu Email" value="{{old('email')}}">

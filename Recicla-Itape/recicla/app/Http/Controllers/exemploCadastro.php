@@ -50,27 +50,28 @@ class CadastroLoginController extends Controller
         /*Faz cadastro*/
 
         $dataForm = $request->all();
+        dd($dataForm);
 
         /*Valida dados automaticamente*/
         /*$this->validate($request, $this->users->rules);*/
 
-        $message = [
+       /* $message = [
             'name.required'=>'O campo nome tem preenchimento obrigatório.',
         ];
         $validate = validator($dataForm, $this->users->rules,$message);
         if($validate->fails()){
             return redirect()->back()->withInput()
             ->withErrors($validate);
-        }
+        }*/
 
         /*Faz o insert no banco*/
-        $insert = $this->users->create($dataForm);
+       /* $insert = $this->users->create($dataForm);
         if($insert){
             return redirect('entrar/create');
         }
         else{
             return redirect()->back();
-        }
+        }*/
     }
 
     /**
