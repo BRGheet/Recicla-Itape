@@ -9,8 +9,6 @@ Route::group(['namespace'=>'site'],function(){
 	Route::get('reciclar', 'siteController@queroReciclar');
 	Route::get('cooperativas', 'siteController@Cooperativas');
 });
-
-
-
+/*Routes de Login e Cadastro*/
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
