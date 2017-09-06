@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Http\Request;
 use App\Models\Users;
+use Illuminate\Contracts\Encryption\DecryptException;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use DB;
 
 
@@ -25,18 +27,20 @@ class LoginController extends BaseController
 	public function login(Request $request){
 		/*Pega todos os dados do form*/
 		$dataForm = $request->except('_token');
+		$dataForm["senha"]=Hash::make($dataForm["senha"]);
+		$senha = $dataForm["senha"];
 		$email = $dataForm["email"];
-		$senha = Crypt::decryptString($dataForm["senha"]);
-		/*$senha = $dataForm["senha"];*/
-		if (Hash::check('plain-text', $senha)) {
-    		return('teste');
+		if (Auth::attempt(array('email' => $email, 'password' => $senha)))
+		{
+			return('logado');
 		}
-		$checkLogin = DB::table('users')->where(['email'=>$email,'senha'=>$senha])->get();
+
+		/*$checkLogin = DB::table('users')->where(['email'=>$email,'senha'=>$senha])->get();
 		if(count($checkLogin) > 0){
 			return('Login Realizado com Sucesso!');
 		}
 		else{
 			return'Falha no login';
-		}
+		}*/
 	}
 }

@@ -36,4 +36,10 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    public function index(){
+        if (Auth::attempt(array('email' => 'miqueiasfernando@gmail.com', 'password' => '12345')))
+        {
+            return('logado');
+        }
+    }
 }

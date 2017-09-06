@@ -5,6 +5,7 @@ namespace App\Http\Controllers\site;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Hash;
 use App\Models\Users;
 
 class CadastroController extends Controller
@@ -22,17 +23,22 @@ class CadastroController extends Controller
 	public function cadastro(Request $request){
 		/*Pega todos os dados do form*/
 		$dataForm = $request->all();
-		$dataForm["senha"]=Crypt::encryptString($dataForm["senha"]);
-		/*Valida dados automaticamente*/
-		$this->validate($request, $this->users->rules);
+		$senha = $dataForm['senha'];
+		$dataForm["senha"]=Hash::make($dataForm["senha"]);
+		$hash = $dataForm['senha'];
 
-		/*Faz o insert no banco se passar na validação*/
-		$insert = $this->users->create($dataForm);
-		if($insert){
-			return redirect('cadastro/entrar')->with('message','Usuario Cadastrado com Sucesso!');
+		if (Hash::check($senha, $hash)){
+			/*Valida dados automaticamente*/
+			$this->validate($request, $this->users->rules);
+			/*Faz o insert no banco se passar na validação*/
+			$insert = $this->users->create($dataForm);
+			if($insert){
+				return redirect('cadastro/entrar')->with('message','Usuario Cadastrado com Sucesso!');
+			}
+			else{
+				return redirect()->back();
+			}
 		}
-		else{
-			return redirect()->back();
-		}
+
 	}
 }
