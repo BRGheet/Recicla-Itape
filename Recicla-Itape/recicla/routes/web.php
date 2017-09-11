@@ -2,6 +2,7 @@
 /*Namespace das rotas site*/
 Route::group(['namespace'=>'site'],function(){
 	Route::get('cadastro/entrar','CadastroController@index');
+	Route::get('admin', 'adminController@admin');
 	/*Cadastro de usuarios*/
 	Route::post('/cadastro','CadastroController@cadastro');
 	Route::get('home', 'siteController@index');
@@ -9,7 +10,6 @@ Route::group(['namespace'=>'site'],function(){
 	Route::get('reciclar', 'siteController@queroReciclar');
 	Route::get('cooperativas', 'siteController@Cooperativas');
 });
-
 /*Routes de Login e Cadastro*/
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
