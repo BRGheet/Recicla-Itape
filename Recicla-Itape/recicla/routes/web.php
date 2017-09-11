@@ -3,7 +3,6 @@
 Route::group(['namespace'=>'site'],function(){
 	Route::get('cadastro/entrar','CadastroController@index');
 	/*Cadastro de usuarios*/
-	Route::post('/cadastro','CadastroController@cadastro');
 	Route::get('home', 'siteController@index');
 	Route::get('/', 'siteController@index');
 	Route::get('reciclar', 'siteController@queroReciclar');

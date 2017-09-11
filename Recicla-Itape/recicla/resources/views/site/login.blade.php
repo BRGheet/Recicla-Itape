@@ -46,7 +46,7 @@
     <div class="cadastro col-md-5 col-md-offset-2">
       <p class="lead">Caso já tenha uma conta,</p>
       <h1 class="blue">Entre Agora</h1>
-      <form  method="post" action="{{url('/login/')}}">
+      <form  method="post" action="{{url('/login')}}">
         {!!csrf_field()!!}
         <label for="nome">E-mail</label>
         <input id="nome" type="email" name="email" class="form-control">
