@@ -1,69 +1,66 @@
-@extends('layouts.app')
+@extends('.site.template.cabecalho')
+@section('cabecalho')
 
-@section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+  <img id="cad-bg" src="{{ URL::asset('img/registro.jpg') }}" alt="Background">
+  <!-- <img style="transform: scale(0.5); text-align: center;" src="img/logo.png" alt="Logo do Recicla Itape"> -->
 
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
+  <hr>
+  <div class="row">
+    <div class="cadastro col-md-5">
+      <p class="lead">Ainda não tem um cadastro ?</p>
+      <h1 class="green">Cadastre-se</h1>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+      <label for="nome">Nome</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+      <form method="post" action="{{url('/cadastro/')}}">
+        {!!csrf_field()!!}
+        <input id="nome" type="text" name="nome" class="form-control" placeholder="Digite seu nome completo" value="{{old('nome')}}">
+        <input type="hidden" name="admin" value="true">
+        <br>
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" name="senha" class="form-control" placeholder="Ao menos 8 digitos" value="{{old('senha')}}">
+        <br>
+        <label for="senha2">Confirme a senha</label>
+        <input id="senha2" type="password" class="form-control" placeholder="Digite novamente sua senha" name="senha_confirmation" value="{{old('senha_confirmation')}}">
+        <br>
+        <label for="email">E-mail</label>
+        <input id="email" type="email" name="email" class="form-control" placeholder="Digite seu Email" value="{{old('email')}}">
+        <br>
+        <button class="btn btn-green">Cadastrar</button>
+    </form>
+</div>
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+<div class="cadastro col-md-5 col-md-offset-2">
+  <p class="lead">Caso já tenha uma conta,</p>
+  <h1 class="blue">Entre Agora</h1>
+  <form  method="POST" action="{{ route('login') }}">
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+    {!!csrf_field()!!}
+    <label for="nome">E-mail</label>
+        <input id="nome" type="email" name="email" class="form-control">
+        <br>
+        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+         @if ($errors->has('email'))
+            <span class="help-block">
+                <strong>{{ $errors->first('email') }}</strong>
+            </span>
+        @endif
+        <label for="senha">Senha</label>
+            <input id="senha" type="password" name="password" class="form-control">
+            <br>
+         @if ($errors->has('password'))
+            <span class="help-block">
+                <strong>{{ $errors->first('password') }}</strong>
+            </span>
+         @endif
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <a href="{{ route('password.request') }}">Esqueci a minha senha</a>
+        <br>
+        <br>
+        <button class="btn btn-green pull-right">Entrar</button>
+    </form>
     </div>
 </div>
 @endsection
