@@ -13,8 +13,8 @@ Route::group(['namespace'=>'site'],function(){
 /*Auth::routes();*/
 
 // Authentication Routes...
-$this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
-$this->post('login', 'Auth\LoginController@login');
+$this->get('cadastro/login', 'Auth\LoginController@showLoginForm')->name('login');
+$this->post('cadastro/login', 'Auth\LoginController@login');
 $this->post('logout', 'Auth\LoginController@logout')->name('logout');
 
 // Registration Routes...
