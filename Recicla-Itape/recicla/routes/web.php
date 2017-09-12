@@ -8,7 +8,7 @@ Route::group(['namespace'=>'Site'],function(){
 
 
 
-/*Routes de Login e Cadastro*/
+/*Rotas de Login e Cadastro*/
 $this->get('cadastro/login', 'Auth\LoginController@showLoginForm')->name('login');
 $this->post('cadastro/login', 'Auth\LoginController@login');
 $this->post('logout', 'Auth\LoginController@logout')->name('logout');
