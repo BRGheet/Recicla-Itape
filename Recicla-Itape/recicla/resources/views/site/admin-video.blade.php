@@ -1,3 +1,7 @@
+@extends('.site.template.admin')
+
+@section('content')
+
 <h1>Novo Vídeo</h1>
 <p class="lead">Adicione um novo vídeo</p>
 <div class="col-md-offset-2 col-md-7">
@@ -22,3 +26,5 @@
     </div>
   </div>
 </div>
+
+@endsection

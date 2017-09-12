@@ -5,32 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Recicla Itapê</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
+      <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/admin.css') }}">
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="css/QueroReciclar.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('css/QueroReciclar.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/font-awesome.min.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script>
-      $(document).ready(function(){
-          $('.pagina').click(function(){
+      // $(document).ready(function(){
+      //     $('.pagina').click(function(){
 
-              var pagina = this.id;
-              pagina = "resources/views/site/admin-"+pagina+".php";
+      //         var pagina = this.id;
+      //         pagina = "admin-"+pagina+".php";
               
               
-              $.ajax({
-                  url: pagina,
-                  success: function(data){
-                      /*Precisa de um servidor para funcionar*/
-                      $('#conteudo').html(data)
-                  }
-              });
+      //         $.ajax({
+      //             type: "GET",
+      //             url: pagina,
+      //             success: function(data){
+      //                 /*Precisa de um servidor para funcionar*/
+      //                 $('#conteudo').html(data)
+      //             }
+      //         });
 
-          });
-      });
+      //     });
+      // });
     </script>
   </head>
   <body>
@@ -63,22 +64,20 @@
     </nav>
       <nav class="col-md-2 sidebar-lg hidden-xs hidden-sm">
       	<h1>ADMIN</h1>
-      	  <a href="#" class="pagina" id="info">Nova Informação</a>
-        	<a href="#" class="pagina" id="video">Novo Vídeo</a>
-        	<a href="#" class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
-        	<a href="#" class="pagina" id="coop">Nova Cooperativa</a>
-        	<a href="#" class="pagina" id="gift">Nova Recompensa</a>
-        	<a href="#" class="pagina" id="dicas">Alterar Dicas</a>
+      	  <a href="/info" class="pagina" id="info">Nova Informação</a>
+        	<a href="/video" class="pagina" id="video">Novo Vídeo</a>
+        	<a href="/ponto" class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
+        	<a href="/coop" class="pagina" id="coop">Nova Cooperativa</a>
+        	<a href="/gift" class="pagina" id="gift">Nova Recompensa</a>
+        	<a href="/dicas" class="pagina" id="dicas">Alterar Dicas</a>
       </nav>
-          <div id="conteudo" class="col-md-10">
-              <div class="row">
-              
-              </div>
+          <div id="conteudo" class="container col-md-10">
+                @yield('content')
           </div>
     <!-- Script NavBar -->
-    <script type="text/javascript" src="js/Navbar.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/Navbar.js') }}"></script>
     <script src="https://use.fontawesome.com/eb29782670.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
   </body>
 </html>

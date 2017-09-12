@@ -1,3 +1,7 @@
+@extends('.site.template.admin')
+
+@section('content')
+
 <h1>Alterar Dica</h1>
 <p class="lead">Adicione uma nova dica do site para ajudar ao usuário</p>
 <div class="col-md-offset-2 col-md-7">
@@ -23,3 +27,4 @@
   	</div>
 </div>
 	
+@endsection

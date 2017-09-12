@@ -9,7 +9,14 @@ Route::group(['namespace'=>'site'],function(){
 	Route::get('reciclar', 'siteController@queroReciclar');
 	Route::get('cooperativas', 'siteController@Cooperativas');
 });
+/* Rotas da tela de administrador */
 Route::get('admin', 'adminController@admin');
+Route::get('info', 'adminController@info');
+Route::get('video', 'adminController@video');
+Route::get('ponto', 'adminController@ponto');
+Route::get('coop', 'adminController@coop');
+Route::get('gift', 'adminController@gift');
+Route::get('dicas', 'adminController@dicas');
 /*Routes de Login e Cadastro*/
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

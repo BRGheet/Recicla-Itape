@@ -1,3 +1,7 @@
+@extends('.site.template.admin')
+
+@section('content')
+
 <h1>Nova Recompensa</h1>
 <p class="lead">Adicione uma nova recompensa ao usuário</p>
 <div class="col-md-offset-2 col-md-7">
@@ -24,3 +28,6 @@
     	</div>
   	</div>
 </div>
+
+@endsection
+
