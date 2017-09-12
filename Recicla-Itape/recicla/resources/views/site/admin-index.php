@@ -12,16 +12,13 @@
     <link rel="stylesheet" href="css/QueroReciclar.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
-    <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script>
       $(document).ready(function(){
           $('.pagina').click(function(){
 
               var pagina = this.id;
-              pagina = "resources/views/site/admin-"+pagina+".html";
+              pagina = "resources/views/site/admin-"+pagina+".php";
               
               
               $.ajax({
@@ -80,7 +77,6 @@
           </div>
     <!-- Script NavBar -->
     <script type="text/javascript" src="js/Navbar.js"></script>
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script src="https://use.fontawesome.com/eb29782670.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
