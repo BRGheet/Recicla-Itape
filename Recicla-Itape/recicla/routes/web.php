@@ -1,10 +1,12 @@
 <?php
 /*Namespace das rotas site*/
-Route::group(['namespace'=>'site'],function(){
+Route::group(['namespace'=>'Site'],function(){
 	Route::get('/', 'siteController@index');
 	Route::get('reciclar', 'siteController@queroReciclar');
 	Route::get('cooperativas', 'siteController@Cooperativas');
 });
+
+
 
 /*Routes de Login e Cadastro*/
 $this->get('cadastro/login', 'Auth\LoginController@showLoginForm')->name('login');
