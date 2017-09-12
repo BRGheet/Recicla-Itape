@@ -59,11 +59,11 @@
 
         {!!csrf_field()!!}
         <label for="nome">E-mail</label>
-        <input id="nome" type="email" name="email" class="form-control">
+        <input id="nome" type="email" name="email" class="form-control" value="{{old('email')}}" placeholder="Digite seu email">
         <br>
         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
         <label for="senha">Senha</label>
-        <input id="senha" type="password" name="password" class="form-control">
+        <input id="senha" type="password" name="password" class="form-control" placeholder="Digite sua senha">
         <br>
 
         <a href="{{ route('password.request') }}">Esqueci a minha senha</a>

@@ -27,9 +27,9 @@
       </div>
       <div class="col-md-6 col-md-offset-3 hidden-xs">
         <ul class="nav navbar-nav">
-          <li><a href="/home">Home</a></li>
-          <li><a href="reciclar">Quero Reciclar</a></li>
-          <li><a href="cooperativas">Cooperativas</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/reciclar">Quero Reciclar</a></li>
+          <li><a href="/cooperativas">Cooperativas</a></li>
         </ul>
       </div>
       <div class="nav navbar-nav navbar-right">
