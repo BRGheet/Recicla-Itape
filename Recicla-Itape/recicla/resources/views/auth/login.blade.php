@@ -45,15 +45,14 @@
     <div class="cadastro col-md-5 col-md-offset-2">
       <p class="lead">Caso já tenha uma conta,</p>
       <h1 class="blue">Entre Agora</h1>
-      @if ($errors->has('password'))
+      @if ($errors->has('email'))
         <div class="alert alert-danger" role="alert">
-        <p>{{ $errors->first('email') }}</p>
-          <p>{{ $errors->first('password') }}</p>
+          <p>{{ $errors->first('email') }}</p>
         </div>
       @endif
-      @if ($errors->has('email'))
-        <div class="alert alert-warning" role="alert">
-          <strong>{{ $errors->first('email') }}</strong>
+      @if ($errors->has('password'))
+        <div class="alert alert-danger" role="alert">
+          <p>{{ $errors->first('password') }}</p>
         </div>
       @endif
       <form  method="POST" action="{{ route('login') }}">
@@ -66,11 +65,6 @@
         <label for="senha">Senha</label>
         <input id="senha" type="password" name="password" class="form-control">
         <br>
-        @if ($errors->has('password'))
-        <span class="help-block">
-          <strong>{{ $errors->first('password') }}</strong>
-        </span>
-        @endif
 
         <a href="{{ route('password.request') }}">Esqueci a minha senha</a>
         <br>
