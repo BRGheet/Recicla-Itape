@@ -14,24 +14,24 @@
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script>
-      // $(document).ready(function(){
-      //     $('.pagina').click(function(){
+       $(document).ready(function(){
+           $('.pagina').click(function(){
 
-      //         var pagina = this.id;
-      //         pagina = "admin-"+pagina+".php";
+               var pagina = this.id;
+               pagina = "/video";
               
               
-      //         $.ajax({
-      //             type: "GET",
-      //             url: pagina,
-      //             success: function(data){
-      //                 /*Precisa de um servidor para funcionar*/
-      //                 $('#conteudo').html(data)
-      //             }
-      //         });
+               $.ajax({
+                   type: "GET",
+                   url: pagina,
+                   success: function(data){
+                       /*Precisa de um servidor para funcionar*/
+                       $('#conteudo').html(data)
+                  }
+               });
 
-      //     });
-      // });
+           });
+       });
     </script>
   </head>
   <body>
