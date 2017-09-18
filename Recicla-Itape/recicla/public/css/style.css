@@ -287,13 +287,13 @@
   background-color: #363636;
 }
 .fade-carousel .slides .slide-1 {
-  background-image: url(../img/lixo1.jpg); 
+  background-image: url(../img/banner/lixo1.jpg); 
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url(../img/lixo2.jpg);
+  background-image: url(../img/banner/lixo2.jpg);
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(../img/lixo3.jpg);
+  background-image: url(../img/banner/lixo3.jpg);
 }
 
 
