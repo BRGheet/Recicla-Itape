@@ -1,7 +1,3 @@
-@extends('.site.template.admin')
-
-@section('content')
-
 <h1>Novo Ponto no Mapa</h1>
 <p class="lead">Adicione um ponto no mapa que represente uma nova cooperativa</p>
 <div class="col-md-offset-2 col-md-7">
@@ -32,5 +28,3 @@
     	</div>
   	</div>
 </div>
-
-@endsection	

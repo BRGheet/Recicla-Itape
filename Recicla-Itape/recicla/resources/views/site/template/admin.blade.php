@@ -18,15 +18,14 @@
            $('.pagina').click(function(){
 
                var pagina = this.id;
-               pagina = "/video";
+               pagina = "/"+ pagina;
               
               
                $.ajax({
                    type: "GET",
                    url: pagina,
                    success: function(data){
-                       /*Precisa de um servidor para funcionar*/
-                       $('#conteudo').html(data)
+                      $('#conteudo').html(data);
                   }
                });
 
@@ -64,12 +63,12 @@
     </nav>
       <nav class="col-md-2 sidebar-lg hidden-xs hidden-sm">
       	<h1>ADMIN</h1>
-      	  <a href="/info" class="pagina" id="info">Nova Informação</a>
-        	<a href="/video" class="pagina" id="video">Novo Vídeo</a>
-        	<a href="/ponto" class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
-        	<a href="/coop" class="pagina" id="coop">Nova Cooperativa</a>
-        	<a href="/gift" class="pagina" id="gift">Nova Recompensa</a>
-        	<a href="/dicas" class="pagina" id="dicas">Alterar Dicas</a>
+      	  <a class="pagina" id="info">Nova Informação</a>
+        	<a class="pagina" id="video">Novo Vídeo</a>
+        	<a class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
+        	<a class="pagina" id="coop">Nova Cooperativa</a>
+        	<a class="pagina" id="gift">Nova Recompensa</a>
+        	<a class="pagina" id="dicas">Alterar Dicas</a>
       </nav>
           <div id="conteudo" class="container col-md-10">
                 @yield('content')

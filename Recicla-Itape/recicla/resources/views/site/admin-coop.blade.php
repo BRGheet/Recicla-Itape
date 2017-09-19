@@ -1,7 +1,3 @@
-@extends('.site.template.admin')
-
-@section('content')
-
 <h1>Nova Cooperativa</h1>
 <p class="lead">Adicione uma nova cooperativa no sistema</p>
 <div class="col-md-offset-2 col-md-7">
@@ -29,6 +25,3 @@
     	</div>
   	</div>
 </div>
-
-@endsection
-
