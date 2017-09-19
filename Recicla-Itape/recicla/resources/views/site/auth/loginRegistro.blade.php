@@ -4,7 +4,7 @@
 <div class="container">
   <img id="cad-bg" src="{{ URL::asset('img/registro.jpg') }}" alt="Background">
   <!-- <img style="transform: scale(0.5); text-align: center;" src="img/logo.png" alt="Logo do Recicla Itape"> -->
-
+  <h1 class="title_LoginCadas">Faça o Login ou Cadastre-se</h1>
   <hr>
   <div class="row">
     <div class="cadastro col-md-5">
