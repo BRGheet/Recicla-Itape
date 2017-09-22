@@ -230,7 +230,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  text-shadow: 0.1em 0.1em #333;
+  /*text-shadow: 0.1em 0.1em #333;*/
   color: white; 
 }
 

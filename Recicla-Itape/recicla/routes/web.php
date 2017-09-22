@@ -1,11 +1,22 @@
 <?php
+Route::group(['middleware' => 'admin'], function (){
+	Route::group(['middleware'=> 'auth:admin'], function(){
+		Route::get('/admin','AdminController@index');
+	});
+	Route::get('/admin/login','AdminController@login');
+	Route::post('/admin/login','AdminController@postLogin');
+	Route::get('/admin/logout','AdminController@logout');
+});
+
+
+
+
 /*Namespace das rotas site*/
 Route::group(['namespace'=>'Site'],function(){
 	Route::get('/', 'siteController@index');
 	Route::get('reciclar', 'siteController@queroReciclar');
 	Route::get('cooperativas', 'siteController@Cooperativas');
 });
-
 
 
 
