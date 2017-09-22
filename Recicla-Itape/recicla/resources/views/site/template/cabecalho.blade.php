@@ -34,7 +34,11 @@
       </div>
       <div class="nav navbar-nav navbar-right">
         <div class="dropdown hidden-xs">
+          @if (Auth::guest())
           <a href="{{url('cadastro/login')}}"><button class="btn btn-blue-outline navbar-btn">Entrar</button></a>
+          @else
+          <a href="{{url('cadastro/login')}}"><button class="btn btn-blue-outline navbar-btn">Bem Vindo,  {{ Auth::user()->name }}</button></a>
+          @endif
         </div>
       </div>
     </div>
