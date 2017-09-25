@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Info;
 
 class adminController extends Controller
 {
@@ -26,5 +27,14 @@ class adminController extends Controller
     }
     public function dicas(){
     	return view('site\admin-dicas');
+    }
+    public function infoStore(Request $req){
+        $info = new Info();
+        $info->titulo = $req->input('titulo');
+        $info->autor = $req->input('autor');
+        $info->texto = $req->input('texto');
+        $info->save();
+
+        return true;
     }
 }

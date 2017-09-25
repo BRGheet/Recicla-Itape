@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Recicla Itapê</title>
     <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
       <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
@@ -73,10 +74,46 @@
           <div id="conteudo" class="container col-md-10">
                 @yield('content')
           </div>
+          <div id="res"></div>
     <!-- Script NavBar -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{{ URL::asset('js/Navbar.js') }}"></script>
     <script src="https://use.fontawesome.com/eb29782670.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript">
+      $.ajaxSetup({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).on('click', '#button', function(){
+        //tranforma o form em array
+        var dado = {};
+        $('.form-control').each(function(){
+          dado[$(this).attr('name')] = $(this).val();
+        });
+        // tranforma array em json
+        JSON.stringify(dado);
+        
+        $.ajax({
+          type: 'POST',
+          data: dado,
+          dataType: 'json',
+          url: '/admin/info/send',
+          beforeSend: function(){
+            $('#res').html('Carregando...');
+          },
+          success: function(data){
+            if(data){
+              $('#res').html('Sucesso');
+            }
+          }
+        });
+      });
+    </script>
+    @yield('script')
   </body>
 </html>

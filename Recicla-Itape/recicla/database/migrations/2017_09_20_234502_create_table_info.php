@@ -16,6 +16,7 @@ class CreateTableInfo extends Migration
         Schema::create('informacao', function(Blueprint $table){
             $table->increments('id');
             /*$table->integer('id_user')->foreign('id_pergunta')->references('id')->on('user');*/
+            $table->integer('autor');
             $table->string('titulo',50);
             $table->string('texto',300);
         });
