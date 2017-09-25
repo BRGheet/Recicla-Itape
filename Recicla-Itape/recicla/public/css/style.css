@@ -398,7 +398,7 @@ input[type]:focus{
 
 /*Tela Usuario*/
 .pontos{
-background-color: #1C1C1C;
+  background-color: #1C1C1C;
 /*background-image: url(../img/teste.jpg);
 background-position: 10px 0px;*/
 height: 220px;
@@ -520,18 +520,21 @@ height: 220px;
 /******************/
 /* Mapa Google    */
 /******************/
- #map {
+#map {
  height: 100%;
  position:absolute;
  right: 0;
 }
 /*Fim quero Reciclar*/
 .title_LoginCadas{
-color: white;
-font-size: 1.9em;
+  color: white;
+  font-size: 1.9em;
 }
 
-
+/*Form Login Admin*/
+.login-form h1{
+  text-align: center;
+}
 
 /********************************/
 /*          Media Queries       */
@@ -569,7 +572,7 @@ font-size: 1.9em;
   }
 
   /*Quero Reciclar*/
-    .nav-side-menu {
+  .nav-side-menu {
     position: relative;
     width: 100%;
     margin-bottom: 10px;

@@ -1,4 +1,5 @@
 <?php
+/*Login admin*/
 Route::group(['middleware' => 'admin'], function (){
 	Route::group(['middleware'=> 'auth:admin'], function(){
 		Route::get('/admin','AdminController@index');
