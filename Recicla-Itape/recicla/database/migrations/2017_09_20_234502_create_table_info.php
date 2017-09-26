@@ -13,7 +13,7 @@ class CreateTableInfo extends Migration
      */
     public function up()
     {
-        Schema::create('informacao', function(Blueprint $table){
+        Schema::create('info', function(Blueprint $table){
             $table->increments('id');
             /*$table->integer('id_user')->foreign('id_pergunta')->references('id')->on('user');*/
             $table->integer('autor');

@@ -35,6 +35,6 @@ class adminController extends Controller
         $info->texto = $req->input('texto');
         $info->save();
 
-        return true;
+        return "Sucesso";
     }
 }

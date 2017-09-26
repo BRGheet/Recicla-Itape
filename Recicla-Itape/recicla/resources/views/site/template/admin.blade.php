@@ -101,7 +101,7 @@
         $.ajax({
           type: 'POST',
           data: dado,
-          dataType: 'json',
+          dataType: 'text',
           url: '/admin/info/send',
           beforeSend: function(){
             $('#res').html('Carregando...');
