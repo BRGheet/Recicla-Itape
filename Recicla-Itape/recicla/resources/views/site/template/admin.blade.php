@@ -98,6 +98,7 @@
         $('.form-control').each(function(){
           dado[$(this).attr('name')] = $(this).val();
         });
+        // verifica se existe input do tipo checkbox
         if($('.check').length > 0){
           $('.check').each(function(){
             dado[$(this).attr('name')] = $(this).is(':checked') ? 1 : 0;

@@ -3,12 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 use App\Info;
 use App\Video;
 use App\Ponto;
 
 class adminController extends Controller
 {
+
+    public function index(){
+        $infos = DB::table('info')->get();
+        return view('site\admin', ['infos' => $infos]);
+    }
+
     public function admin(){
     	return view('site\admin-index');
     }
