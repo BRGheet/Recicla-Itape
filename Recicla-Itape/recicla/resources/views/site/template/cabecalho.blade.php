@@ -37,31 +37,46 @@
           @if (Auth::guest())
           <a href="{{url('cadastro/login')}}"><button class="btn btn-blue-outline navbar-btn">Entrar</button></a>
           @else
-          <a href="{{url('cadastro/login')}}"><button class="btn btn-blue-outline navbar-btn">Bem Vindo,  {{ Auth::user()->name }}</button></a>
-          @endif
+          <div class="btn-group">
+            <button type="button" class="btn btn-blue-outline navbar-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ Auth::user()->name }} <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Recompensas</a></li>
+              <li><a href="#">Meus Pontos</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/home">Minha Conta</a></li>
+              <li><a href="{{ route('logout') }}"  onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">Sair</a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              {{ csrf_field() }}</form>
+            </li>
+          </ul>
         </div>
+        @endif
       </div>
     </div>
-  </nav>
-  <nav id="mySidenav" class="sidebar">
-    <div class="sidenav-image">
-      <button class="btn btn-green">Cadastre-se</button>
-    </div>
-    <button class="closebtn" onclick="closeNav()">&times;</button>
-    <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Informações</a>
-    <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Vídeos</a>
-    <a href="reciclar"><i class="fa fa-recycle" aria-hidden="true"></i>Quero Reciclar</a>
-    <a href="cooperativas"><i class="fa fa-home" aria-hidden="true"></i>Cooperativas</a>
-    <a href="#"><i class="fa fa-ticket" aria-hidden="true"></i>Recompensas</a>
-    <a href="#"><i class="fa fa-comment" aria-hidden="true"></i>Dicas</a>
-    <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Sobre</a>
-  </nav>
-  @yield('cabecalho')
-  <!-- Script NavBar -->
-  <script type="text/javascript" src="{{ URL::asset('js/Navbar.js') }}"></script>
-  <script src="https://use.fontawesome.com/eb29782670.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
-  @stack('scripts')
+  </div>
+</nav>
+<nav id="mySidenav" class="sidebar">
+  <div class="sidenav-image">
+    <button class="btn btn-green">Cadastre-se</button>
+  </div>
+  <button class="closebtn" onclick="closeNav()">&times;</button>
+  <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Informações</a>
+  <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Vídeos</a>
+  <a href="reciclar"><i class="fa fa-recycle" aria-hidden="true"></i>Quero Reciclar</a>
+  <a href="cooperativas"><i class="fa fa-home" aria-hidden="true"></i>Cooperativas</a>
+  <a href="#"><i class="fa fa-ticket" aria-hidden="true"></i>Recompensas</a>
+  <a href="#"><i class="fa fa-comment" aria-hidden="true"></i>Dicas</a>
+  <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Sobre</a>
+</nav>
+@yield('cabecalho')
+<!-- Script NavBar -->
+<script type="text/javascript" src="{{ URL::asset('js/Navbar.js') }}"></script>
+<script src="https://use.fontawesome.com/eb29782670.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+@stack('scripts')
 </body>
 </html>
