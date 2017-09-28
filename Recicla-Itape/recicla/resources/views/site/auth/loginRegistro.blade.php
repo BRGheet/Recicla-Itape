@@ -11,42 +11,39 @@
       <p class="lead">Ainda não tem um cadastro ?</p>
       <h1 class="green">Cadastre-se</h1>
 
-      <!-- Div para alertas de erros -->
-      @if ($errors->has('email'))
-      <div class="alert alert-danger" role="alert">
-        <p>{{ $errors->first('email') }}</p>
-      </div>
-      @endif
-      @if ($errors->has('password'))
-      <div class="alert alert-danger" role="alert">
-        <p>{{ $errors->first('password') }}</p>
-      </div>
+      @if($errors->any())
+        <div class="alert alert-danger" role="alert">
+        @if ($errors->has('name'))
+          <p>{{ $errors->first('name') }}</p>
+        @endif
+        @if ($errors->has('email'))
+          <p>{{ $errors->first('email') }}</p>
+        @endif
+        @if ($errors->has('password'))
+          <p>{{ $errors->first('password') }}</p>
+        @endif
+        @if ($errors->has('password_confirmation'))
+          <p>{{ $errors->first('password_confirmation') }}</p>
+        @endif
+        </div>
       @endif
 
-      @if ($errors->has('name'))
-      <div class="alert alert-danger" role="alert">
-        <p>{{ $errors->first('name') }}</p>
-        <p>{{ $errors->first('email') }}</p>
-        <p>{{ $errors->first('password') }}</p>
-        <p>{{ $errors->first('password_confirmation') }}</p>
-      </div>
-      @endif
 
       <form method="POST" action="{{ route('register') }}">
 
         {!!csrf_field()!!}
         <label for="nome">Nome</label>
-        <input id="nome" type="text" name="name" class="form-control"  value="{{old('name')}}" placeholder="Digite seu nome completo"><br>
+        <input id="nome" type="text" name="Nome" class="form-control"  value="{{old('Nome')}}" placeholder="Digite seu nome completo"><br>
 
         <label for="email">E-mail</label>
-        <input id="email" type="email" name="email" class="form-control"  placeholder="Digite seu e-mail"><br>
+        <input id="email" type="email" name="Email" class="form-control"  value="{{old('Email')}}" placeholder="Digite seu e-mail"><br>
 
         <label for="senha">Senha</label>
-        <input id="senha" type="password" name="password" class="form-control" placeholder="Ao menos 8 digitos">
+        <input id="senha" type="password" name="Senha" class="form-control" placeholder="Ao menos 8 digitos" value="{{old('Senha')}}">
         <br>
 
         <label for="senha2">Confirme a senha</label>
-        <input id="senha2" type="password" class="form-control" placeholder="Digite novamente sua senha" name="password_confirmation"><br>
+        <input id="senha2" type="password" class="form-control" placeholder="Digite novamente sua senha" name="Senha_Confirme" value="{{old('Senha_Confirme')}}"><br>
 
         <button class="btn btn-green">Cadastrar</button>
       </form>
@@ -70,11 +67,11 @@
 
           {!!csrf_field()!!}
           <label for="nome">E-mail</label>
-          <input id="nome" type="email" name="email" class="form-control"  placeholder="Digite seu email">
+          <input id="nome" type="email" name="email" class="form-control"  placeholder="Digite seu email" value="{{old('email')}}">
           <br>
           <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
             <label for="senha">Senha</label>
-            <input id="senha" type="password" name="password" class="form-control" placeholder="Digite sua senha">
+            <input id="senha" type="password" name="password" class="form-control" placeholder="Digite sua senha" value="{{old('password')}}">
             <br>
 
             <a href="{{ route('password.request') }}">Esqueci a minha senha</a>
