@@ -21,7 +21,7 @@
 			<label class="checkbox-inline"><input type="checkbox" value="vidro">Vidro</label>
 			<br>
 			<br>
-			<button class="btn btn-green">Submeter</button>
+			<button class="btn btn-green" data-type="coop">Submeter</button>
     	</div>
   	</div>
 </div>

@@ -6,8 +6,8 @@
       	Painel
     	</div>
     	<div class="panel-body">
-		    <label for="autor">Nome da cooperativa</label>
-			<input id="autor" type="text" name="autor"  class="form-control">
+		    <label for="nome">Nome da cooperativa</label>
+			<input id="nome" type="text" name="nome"  class="form-control">
 			<br>
 			<form class="form-inline">
 				<div class="form-group">
@@ -19,12 +19,12 @@
 			</form>
 			<br>
 			<h3>Tipo de lixo que recolhe: </h3>
-			<label class="checkbox-inline"><input type="checkbox" value="papel">Papel</label>
-			<label class="checkbox-inline"><input type="checkbox" value="plastico">Plastico</label>
-			<label class="checkbox-inline"><input type="checkbox" value="vidro">Vidro</label>
+			<label class="checkbox-inline"><input type="checkbox" class="check" name="papel">Papel</label>
+			<label class="checkbox-inline"><input type="checkbox" class="check" name="plastico">Plastico</label>
+			<label class="checkbox-inline"><input type="checkbox" class="check" name="vidro">Vidro</label>
 			<br>
 			<br>
-			<button class="btn btn-green">Submeter</button>
+			<button class="btn btn-green" data-type="ponto">Submeter</button>
     	</div>
   	</div>
 </div>

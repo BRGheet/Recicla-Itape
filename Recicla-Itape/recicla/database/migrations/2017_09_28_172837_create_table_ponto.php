@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableInfo extends Migration
+class CreateTablePonto extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateTableInfo extends Migration
      */
     public function up()
     {
-        Schema::create('info', function(Blueprint $table){
+        Schema::create('ponto', function(Blueprint $table){
             $table->increments('id');
-            /*$table->integer('id_user')->foreign('id_pergunta')->references('id')->on('user');*/
-            $table->integer('autor');
-            $table->string('titulo',50);
-            $table->string('texto',300);
+            $table->string('nome');
+            $table->string('longitude');
+            $table->string('latitude');
+            $table->boolean('papel');
+            $table->boolean('plastico');
+            $table->boolean('vidro');
         });
     }
 
@@ -29,6 +31,6 @@ class CreateTableInfo extends Migration
      */
     public function down()
     {
-        Schema::drop('info');
+        Schema::drop('ponto');
     }
 }

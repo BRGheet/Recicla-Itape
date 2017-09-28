@@ -13,12 +13,12 @@
         <input id="autor" type="text" name="autor"  class="form-control">
         <br>
         <label for="texto">Texto</label>
-        <textarea id="texto" class="form-control"></textarea>
+        <textarea name="texto" class="form-control"></textarea>
         <br>
         <label for="video">Vídeo</label>
         <input id="video" type="text" name="video" class="form-control">
         <br>
-        <button class="btn btn-green">Submeter</button>
+        <button class="btn btn-green" data-type="video">Submeter</button>
     </div>
   </div>
 </div>

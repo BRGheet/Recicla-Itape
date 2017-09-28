@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableInfo extends Migration
+class CreateTableVideo extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateTableInfo extends Migration
      */
     public function up()
     {
-        Schema::create('info', function(Blueprint $table){
+        Schema::create('video', function(Blueprint $table){
             $table->increments('id');
-            /*$table->integer('id_user')->foreign('id_pergunta')->references('id')->on('user');*/
-            $table->integer('autor');
-            $table->string('titulo',50);
-            $table->string('texto',300);
+            $table->string('titulo',80);
+            $table->string('autor'); // join com a tabela de admin
+            $table->string('texto');
+            $table->string('video_url');
         });
     }
 
@@ -29,6 +29,6 @@ class CreateTableInfo extends Migration
      */
     public function down()
     {
-        Schema::drop('info');
+        Schema::drop('video');
     }
 }

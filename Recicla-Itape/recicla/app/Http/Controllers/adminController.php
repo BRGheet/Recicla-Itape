@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Info;
+use App\Video;
+use App\Ponto;
 
 class adminController extends Controller
 {
@@ -35,6 +37,28 @@ class adminController extends Controller
         $info->texto = $req->input('texto');
         $info->save();
 
-        return "Sucesso";
+        return "Info Sucesso";
+    }
+    public function videoStore(Request $req){
+        $video = new Video();
+        $video->titulo = $req->input('titulo');
+        $video->autor = $req->input('autor');
+        $video->texto = $req->input('texto');
+        $video->video_url = $req->input('video');
+        $video->save();
+
+        return "Video Sucesso";
+    }
+    public function pontoStore(Request $req){
+        $ponto = new Ponto();
+        $ponto->nome = $req->input('nome');
+        $ponto->longitude = $req->input('longitude');
+        $ponto->latitude = $req->input('latitude');
+        $ponto->papel = $req->input('papel');
+        $ponto->plastico = $req->input('plastico');
+        $ponto->vidro = $req->input('vidro');
+        $ponto->save();
+
+        return "Ponto Sucesso";
     }
 }

@@ -20,7 +20,7 @@
 				<button class="btn btn-green"><i class="glyphicon glyphicon-circle-arrow-up"></i> Enviar Imagem</button>
 				<br>
 				<br>
-				<button class="btn btn-green">Submeter</button>
+				<button class="btn btn-green" data-type="gift">Submeter</button>
     	</div>
   	</div>
 </div>

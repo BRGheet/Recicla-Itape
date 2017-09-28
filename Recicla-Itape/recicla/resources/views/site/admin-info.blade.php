@@ -15,27 +15,7 @@
         <label for="texto">Texto</label>
         <textarea id="texto" name="texto" class="form-control"></textarea>
         <br>
-      <button id="button" class="btn btn-green">Submeter</button>
+      <button class="btn btn-green" data-type="info">Submeter</button>
     </div>
   </div>
 </div>
-<!-- @section('script')
-  <script type="text/javascript">
-    $('#button').click(function(){
-      $.ajax({
-        type: 'POST',
-        data: {'titulo' : $_POST['titulo'],'autor':$_POST['autor'], 'texto' : $_POST['texto']}
-        dataType: 'json',
-        url: '/admin/info/send',
-        beforeSend: function(){
-          $('#res').html('Carregando...');
-        }
-        success: function(data){
-          if(data){
-            $('#res').html('Sucesso');
-          }
-        }
-      });
-    });
-  </script>
-@endsection -->

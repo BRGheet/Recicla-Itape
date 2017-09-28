@@ -89,27 +89,34 @@
       });
     </script>
     <script type="text/javascript">
-      $(document).on('click', '#button', function(){
+      $(document).on('click', '.btn-green', function(){
+        var pagina = $(this).attr('data-type');
+        pagina = '/admin/'+pagina+'/send';
+
         //tranforma o form em array
         var dado = {};
         $('.form-control').each(function(){
           dado[$(this).attr('name')] = $(this).val();
         });
+        if($('.check').length > 0){
+          $('.check').each(function(){
+            dado[$(this).attr('name')] = $(this).is(':checked') ? 1 : 0;
+          });
+        }
         // tranforma array em json
         JSON.stringify(dado);
-        
+        console.log(dado);
+
         $.ajax({
           type: 'POST',
           data: dado,
           dataType: 'text',
-          url: '/admin/info/send',
+          url: pagina,
           beforeSend: function(){
             $('#res').html('Carregando...');
           },
           success: function(data){
-            if(data){
-              $('#res').html('Sucesso');
-            }
+            $('#res').html(data);
           }
         });
       });
