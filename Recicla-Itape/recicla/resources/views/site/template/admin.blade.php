@@ -107,9 +107,7 @@
             $('#res').html('Carregando...');
           },
           success: function(data){
-            if(data){
-              $('#res').html('Sucesso');
-            }
+            $('#res').html(data);
           }
         });
       });

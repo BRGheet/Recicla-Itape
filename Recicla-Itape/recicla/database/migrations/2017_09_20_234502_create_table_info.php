@@ -29,6 +29,6 @@ class CreateTableInfo extends Migration
      */
     public function down()
     {
-        Schema::drop('informacao');
+        Schema::drop('info');
     }
 }
