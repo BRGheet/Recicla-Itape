@@ -30,6 +30,7 @@
 				<button class="btn btn-hero btn-lg" role="button">Veja Agora</button>
 			</div>
 		</div>
+
 		<div class="item slides">
 			<div class="slide-3"></div>
 			<div class="hero">        
@@ -42,14 +43,17 @@
 		</div>
 	</div>
 </div> 
+
+
+<!-- Tutoriais Reciclagem -->
+
+
 <header id="box1" class="container-fluid box1">
 	<div class="container">
 		<div class="titulo">
 			<h1 id="Tutoriais">Tutoriais sobre a reciclagem</h1>
 			<p>Aprenda a reciclar de forma correta!</p>
 		</div>
-
-
 
 		<div class="row">
 			<div class="col-sm-6 col-md-6">
@@ -58,8 +62,8 @@
 						<!-- <img src=""> -->
 					</div>
 					<div class="caption">
-						<h3>Lorem ipsum</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ipsa voluptate, quae quibusdam. Doloremque similique, reiciendis sit quibusdam aperiam? Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<h3>Decoração com Reciclagem</h3>
+						<p>Aqui você vai descobrir maneiras fantásticas de fazer decoração com reciclagem.Com objetos feitos à mão você pode melhorar o visual da sua casa inteira, desde o jardim, até o quarto, cozinha, sala e banheiro. Sendo assim, mostraremos aqui vários artesanatos simples, todos feitos com materiais recicláveis, tais como: latas, garrafas de vidro, caixotes e papelão.</p>
 						<p><a href="#" class="btn btn-primary" role="button">Ler Mais</a></p>
 					</div>
 				</div>
