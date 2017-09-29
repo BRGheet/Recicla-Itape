@@ -76,8 +76,8 @@
 						<!-- <img src=""> -->
 					</div>
 					<div class="caption">
-						<h3>Lorem ipsum</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ipsa voluptate, quae quibusdam. Doloremque similique, reiciendis sit quibusdam aperiam? Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<h3>Lixo Organico</h3>
+						<p>Reciclar, diminuir e transformar o seu próprio lixo doméstico ou da empresa em que trabalha são algumas das sugestões feitas à população pela campanha lançada pela Prefeitura de Curitiba. Todas as peças publicitárias têm o terapeuta Dr.Sigmundo como protagonista.</p>
 						<p><a href="#" class="btn btn-primary" role="button">Ler Mais</a></p>
 					</div>
 				</div>
@@ -91,8 +91,8 @@
 						<!-- <img src=""> -->
 					</div>
 					<div class="caption">
-						<h3>Lorem ipsum</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ipsa voluptate, quae quibusdam. Doloremque similique, reiciendis sit quibusdam aperiam? Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<h3>Como Reciclar</h3>
+						<p>A reciclagem é um meio de assegurar que os itens que terminamos de utilizar voltem para a pilha de recursos que poderão ser utilizados novamente ao serem transformados em alguma outra coisa ou simplesmente limpos e reutilizados. A reciclagem ajuda a conservar matérias-primas e muitas vezes também ajuda a economizar energia que seria utilizada por fabricantes para produzir novos produtos do zero.</p>
 						<p><a href="#" class="btn btn-primary" role="button">Ler Mais</a></p>
 					</div>
 				</div>
@@ -105,8 +105,9 @@
 						<!-- <img src=""> -->
 					</div>
 					<div class="caption">
-						<h3>Lorem ipsum</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ipsa voluptate, quae quibusdam. Doloremque similique, reiciendis sit quibusdam aperiam? Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<h3>Separação do lixo</h3>
+						<p>As empresas comprometidas com o desenvolvimento sustentável adotam conceitos como otimização de recursos, redução de desperdício, tecnologia, conhecimento, bom senso e responsabilidade na adoção de boas práticas ambientais.Dessa forma, a separação do lixo se enquadra nessas práticas com a possibilidade de reutilizar, reciclar, agregar valor ao material reciclado, aumentar o tempo de vida dos aterros sanitários e diminuir o impacto ambiental quanto a disposição final dos rejeitos.
+ 						</p>
 						<p><a href="#" class="btn btn-primary" role="button">Ler Mais</a></p>
 					</div>
 				</div>
