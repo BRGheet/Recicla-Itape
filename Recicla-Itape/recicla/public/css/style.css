@@ -599,9 +599,19 @@ height: 220px;
 .Historic{
   margin-top: -45px;
   background-color: white;
-  height: 400px;
+  height: 550px;
   z-index: 10;
   overflow-y: auto;
+}
+.Historic p{
+ text-align: center;
+ font-size: 1.1em;
+ font-weight: bold;
+ padding-top: 10px;
+
+}
+.Historic .table th td{
+
 }
 /********************************/
 /*          Media Queries       */
