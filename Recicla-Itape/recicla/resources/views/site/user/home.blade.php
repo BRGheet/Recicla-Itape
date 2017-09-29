@@ -21,6 +21,7 @@
 					<tr>
 						<th>Data</th>
 						<th>Horario</th>
+						<th>Local</th>
 						<th>Material</th>
 						<th>Pontos</th>
 					</tr>
@@ -30,12 +31,14 @@
 					<tr>
 						<td>08/09/2017</td>
 						<td>15:12</td>
+						<td>Cooperita</td>
 						<td>Plastico</td>
 						<td>5</td>
 					</tr>
 					<tr>
 						<td>08/09/2017</td>
 						<td>15:12</td>
+						<td>Cooperita</td>
 						<td>Plastico</td>
 						<td>5</td>
 					</tr>
