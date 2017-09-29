@@ -17,7 +17,7 @@
 					<h1>Recicle seu Lixo</h1>        
 					<h3>Ajude o Meio Ambiente</h3>
 				</hgroup>
-				<button class="btn btn-hero btn-lg" role="button">Procure No Mapa</button>
+				<a href="/reciclar"><button class="btn btn-hero btn-lg" role="button">Procure No Mapa</button></a>
 			</div>
 		</div>
 		<div class="item slides">
@@ -34,10 +34,10 @@
 			<div class="slide-3"></div>
 			<div class="hero">        
 				<hgroup>
-					<h1>Algo Aqui!</h1>        
+					<h1>Tutoriais sobre reciclagem</h1>        
 					<h3>Aprenda a Reciclar</h3>
 				</hgroup>
-				<button class="btn btn-hero btn-lg" role="button">Clique Aqui</button>
+				<a href="#Tutoriais"><button class="btn btn-hero btn-lg" role="button">Clique Aqui</button></a>
 			</div>
 		</div>
 	</div>
@@ -45,7 +45,7 @@
 <header id="box1" class="container-fluid box1">
 	<div class="container">
 		<div class="titulo">
-			<h1>Tutoriais sobre a reciclagem</h1>
+			<h1 id="Tutoriais">Tutoriais sobre a reciclagem</h1>
 			<p>Aprenda a reciclar de forma correta!</p>
 		</div>
 

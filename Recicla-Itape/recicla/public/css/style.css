@@ -169,6 +169,11 @@
 .navbar-default .navbar-toggle:hover {
   background-color: rgba(220,220,220, 0.5);
 }
+
+.btn-group-vertical>.btn.active, .btn-group-vertical>.btn:active, .btn-group-vertical>.btn:focus, .btn-group-vertical>.btn:hover, .btn-group>.btn.active, .btn-group>.btn:active, .btn-group>.btn:focus, .btn-group>.btn:hover{
+  color: white;
+}
+
 /*carousel*/
 
 /********************************/
@@ -289,7 +294,7 @@
   background-color: #363636;
 }
 .fade-carousel .slides .slide-1 {
-  background-image: url(../img/banner/lixo1.jpg); 
+  background-image: url(../img/banner/0000.jpg); 
 }
 .fade-carousel .slides .slide-2 {
   background-image: url(../img/banner/lixo2.jpg);
@@ -536,6 +541,68 @@ height: 220px;
   text-align: center;
 }
 
+/*Interface Usuario*/
+.UserInterface{
+  height: 170px;
+  background-color: #363636;
+  background-image: url('../img/pontos.jpg');
+  background-size: 200% auto;
+  background-repeat: no-repeat;
+}
+.userImage{
+  height: 100%;
+}
+.UserPhotoDiv{
+  width: 140px;
+  height: 127px;
+  border-radius: 100%;
+  background-color: #ededed;
+  background-image: url('../img/0000.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin:8% 17%;
+  position: absolute;
+  z-index: 1;
+}
+.NameInforma{
+  height: 100%;
+  margin-left: -55px;
+  z-index: 0;
+}
+.InformationUser{
+  margin: 25% -4%;
+  height: auto;
+  max-height:100px; 
+
+}
+.InformationUser p:first-child{
+ color: white;
+ font-size: 1.2em;
+}
+.InformationUser p{
+ color: white;
+ font-size: 1.1em;
+}
+/*Conteudo Usuario*/
+.UserContent{
+  height: auto;
+  min-height: 100%;
+}
+.HistoricBox{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.Historic{
+  margin-top: -45px;
+  background-color: white;
+  height: 400px;
+  z-index: 10;
+  overflow-y: auto;
+}
 /********************************/
 /*          Media Queries       */
 /********************************/
