@@ -7,6 +7,8 @@ use DB;
 use App\Info;
 use App\Video;
 use App\Ponto;
+use App\Coop;
+use App\Gift;
 
 class adminController extends Controller
 {
@@ -44,7 +46,7 @@ class adminController extends Controller
         $info->texto = $req->input('texto');
         $info->save();
 
-        return "Info Sucesso";
+        return "Foi inserido uma nova informação com sucesso";
     }
     public function videoStore(Request $req){
         $video = new Video();
@@ -54,7 +56,7 @@ class adminController extends Controller
         $video->video_url = $req->input('video');
         $video->save();
 
-        return "Video Sucesso";
+        return "Novo vídeo inserido com sucesso";
     }
     public function pontoStore(Request $req){
         $ponto = new Ponto();
@@ -66,6 +68,31 @@ class adminController extends Controller
         $ponto->vidro = $req->input('vidro');
         $ponto->save();
 
-        return "Ponto Sucesso";
+        return "Ponto adicionado no mapa com sucesso";
+    }
+
+    public function coopStore(Request $req){
+        $coop = new Coop();
+        $coop->nome = $req->input('nome');
+        $coop->endereco = $req->input('endereco');
+        $coop->telefone = $req->input('telefone');
+        $coop->papel = $req->input('papel');
+        $coop->plastico = $req->input('plastico');
+        $coop->vidro = $req->input('vidro');
+
+        $coop->save();
+
+        return "Nova Cooperativa adicionada com sucesso";
+    }
+
+    public function giftStore(Request $req){
+        $gift = new Gift();
+        $gift->nome = $req->input('nome');
+        $gift->descricao = $req->input('desc');
+        $gift->pontos = $req->input('pontos');
+
+        $gift->save();
+
+        return "Recompensa adicionada com sucesso";
     }
 }

@@ -1,0 +1,11 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Gift extends Model
+{
+    protected $table = "gift";
+    public $timestamps = false;
+}

@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Recicla Itapê</title>
-    <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
-      <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/admin.css') }}">
+    <link href="{{ URL::asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+      <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/admin.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/jquery.sweet-modal.min.css') }}" />
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="{{ URL::asset('css/QueroReciclar.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/QueroReciclar.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/font-awesome.min.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script>
@@ -60,7 +61,6 @@
       <a href="#" class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
       <a href="#" class="pagina" id="coop">Nova Cooperativa</a>
       <a href="#" class="pagina" id="gift">Nova Recompensa</a>
-      <a href="#" class="pagina" id="dicas">Alterar Dicas</a>
     </nav>
       <nav class="col-md-2 sidebar-lg hidden-xs hidden-sm">
       	<h1>ADMIN</h1>
@@ -69,18 +69,17 @@
         	<a class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
         	<a class="pagina" id="coop">Nova Cooperativa</a>
         	<a class="pagina" id="gift">Nova Recompensa</a>
-        	<a class="pagina" id="dicas">Alterar Dicas</a>
       </nav>
-          <div id="conteudo" class="container col-md-10">
-                @yield('content')
-          </div>
-          <div id="res"></div>
+      <div id="conteudo" class="container col-md-10">
+        @yield('content')
+      </div>
     <!-- Script NavBar -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/Navbar.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('assets/js/Navbar.js') }}"></script>
     <script src="https://use.fontawesome.com/eb29782670.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/jquery.sweet-modal.min.js') }}"></script>
     <script type="text/javascript">
       $.ajaxSetup({
         headers: {
@@ -106,18 +105,17 @@
         }
         // tranforma array em json
         JSON.stringify(dado);
-        console.log(dado);
 
         $.ajax({
           type: 'POST',
           data: dado,
           dataType: 'text',
           url: pagina,
-          beforeSend: function(){
-            $('#res').html('Carregando...');
-          },
           success: function(data){
-            $('#res').html(data);
+            $.sweetModal({
+              content: data,
+              icon: $.sweetModal.ICON_SUCCESS
+            });
           }
         });
       });

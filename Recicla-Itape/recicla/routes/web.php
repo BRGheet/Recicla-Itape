@@ -17,10 +17,11 @@ Route::get('video', 'adminController@video');
 Route::get('ponto', 'adminController@ponto');
 Route::get('coop', 'adminController@coop');
 Route::get('gift', 'adminController@gift');
-Route::get('dicas', 'adminController@dicas');
 Route::post('admin/info/send', 'adminController@infoStore');
 Route::post('admin/video/send', 'adminController@videoStore');
 Route::post('admin/ponto/send', 'adminController@pontoStore');
+Route::post('admin/coop/send', 'adminController@coopStore');
+Route::post('admin/gift/send', 'adminController@giftStore');
 /*Routes de Login e Cadastro*/
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

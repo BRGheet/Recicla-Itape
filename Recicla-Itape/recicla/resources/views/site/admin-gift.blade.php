@@ -7,10 +7,10 @@
     	</div>
     	<div class="panel-body">
 		    	<label for="rec">Nome da recompensa</label>
-				<input id="rec" type="text" name="recompensa"  class="form-control">
+				<input id="rec" type="text" name="nome"  class="form-control">
 				<br>
 				<label for="desc">Descrição</label>
-				<input id="desc" type="text" name="descricao" class="form-control">
+				<input id="desc" type="text" name="desc" class="form-control">
 				<br>
 				<label for="pontos">Pontos</label>
 				<input id="pontos" type="text" name="pontos" class="form-control">
