@@ -17,6 +17,7 @@ Route::group(['namespace'=>'Site'],function(){
 	Route::get('/', 'siteController@index');
 	Route::get('reciclar', 'siteController@queroReciclar');
 	Route::get('cooperativas', 'siteController@Cooperativas');
+	Route::get('tutoriais','siteController@Tutoriais');
 });
 
 

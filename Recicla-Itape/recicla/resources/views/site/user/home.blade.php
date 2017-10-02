@@ -22,7 +22,7 @@
 				<div class="ImageBene">
 				</div>
 				<div class="rewardsText col-md-12">
-					<p>Frete grátis em compras a partir de R$ 110.</p> 
+					<p>Sorvete grátis a partir de 50 pontos.</p> 
 					<div class="col-md-12 InfoReward">
 						<a href="">mais informações</a>
 					</div>

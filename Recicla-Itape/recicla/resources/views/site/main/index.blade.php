@@ -77,7 +77,9 @@
 					</div>
 					<div class="caption">
 						<h3>Lixo Organico</h3>
-						<p>Reciclar, diminuir e transformar o seu próprio lixo doméstico ou da empresa em que trabalha são algumas das sugestões feitas à população pela campanha lançada pela Prefeitura de Curitiba. Todas as peças publicitárias têm o terapeuta Dr.Sigmundo como protagonista.</p>
+						<p>Reciclar, diminuir e transformar o seu próprio lixo doméstico ou da empresa em que trabalha são algumas das sugestões feitas à população pela campanha lançada pela Prefeitura de Curitiba. Todas as peças publicitárias têm o terapeuta Dr.Sigmundo como protagonista. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					</p>
 						<p><a href="#" class="btn btn-primary" role="button">Ler Mais</a></p>
 					</div>
 				</div>
