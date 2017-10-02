@@ -601,7 +601,7 @@ height: 220px;
 }
 .imageRewards{
   height: auto;
-   display: -webkit-flex;
+  display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   align-items: center;
@@ -627,13 +627,13 @@ height: 220px;
   margin-top: 5px;
 }
 .InfoReward a{
-   text-decoration: none;
+ text-decoration: none;
 }
 
 .historicMain{
   height: auto;
   min-height: 100%;
-   display: -webkit-flex;
+  display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   align-items: center;
@@ -647,6 +647,44 @@ height: 220px;
   height: 500px;
   overflow-y: auto;
 
+}
+/*Tutoriais*/
+.TutoriaisMain{
+
+}
+.TutoriaisMain h1{
+  font-size: 1.7em;
+  text-align: center;
+}
+.TutoriaisMain p{
+  text-align: center;
+
+}
+.videoImage{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.videoImage iframe{
+  width: 600px;
+  height: 335px;
+  border:solid 1px #EEE9E9;
+}
+.textTutorial{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.textTutorial p{
+  width: 700px;
+  font-size: 1.2em;
+  margin-top: 50px;
 }
 
 /********************************/

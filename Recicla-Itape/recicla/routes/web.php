@@ -1,4 +1,12 @@
 <?php
+/*Namespace das rotas site*/
+Route::group(['namespace'=>'Site'],function(){
+	Route::get('/', 'siteController@index');
+	Route::get('reciclar', 'siteController@queroReciclar');
+	Route::get('cooperativas', 'siteController@Cooperativas');
+	Route::get('tutoriais/{id}','siteController@Tutoriais');
+});
+
 /*Login admin*/
 Route::group(['middleware' => 'admin'], function (){
 	Route::group(['middleware'=> 'auth:admin'], function(){
@@ -8,19 +16,6 @@ Route::group(['middleware' => 'admin'], function (){
 	Route::post('/admin/login','AdminController@postLogin');
 	Route::get('/admin/logout','AdminController@logout');
 });
-
-
-
-
-/*Namespace das rotas site*/
-Route::group(['namespace'=>'Site'],function(){
-	Route::get('/', 'siteController@index');
-	Route::get('reciclar', 'siteController@queroReciclar');
-	Route::get('cooperativas', 'siteController@Cooperativas');
-	Route::get('tutoriais','siteController@Tutoriais');
-});
-
-
 
 /*Rotas de Login e Cadastro*/
 $this->get('cadastro/login', 'Auth\LoginController@showLoginForm')->name('login');

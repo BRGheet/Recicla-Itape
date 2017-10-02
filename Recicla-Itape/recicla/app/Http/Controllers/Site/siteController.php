@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use DB;
 
 class siteController extends Controller
 {
@@ -19,5 +20,10 @@ class siteController extends Controller
 	public function cooperativas(){
 		$title = 'Cooperativas';
 		return view('site\main\cooperativas',compact('title'));
+	}
+	public function Tutoriais($id){
+		$noticias = DB::table('tutoriais')->whereIn('id',[$id])->get();
+		$title = 'Tutoriais';
+		return view('site\main\tutoriais',compact('title','id','noticias'));
 	}
 }

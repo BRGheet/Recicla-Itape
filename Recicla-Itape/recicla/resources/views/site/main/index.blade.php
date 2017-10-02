@@ -64,7 +64,7 @@
 					<div class="caption">
 						<h3>Decoração com Reciclagem</h3>
 						<p>Aqui você vai descobrir maneiras fantásticas de fazer decoração com reciclagem.Com objetos feitos à mão você pode melhorar o visual da sua casa inteira, desde o jardim, até o quarto, cozinha, sala e banheiro. Sendo assim, mostraremos aqui vários artesanatos simples, todos feitos com materiais recicláveis, tais como: latas, garrafas de vidro, caixotes e papelão.</p>
-						<p><a href="#" class="btn btn-primary" role="button">Ler Mais</a></p>
+						<p><a href="/tutoriais" class="btn btn-primary" role="button">Ler Mais</a></p>
 					</div>
 				</div>
 			</div>
