@@ -669,8 +669,8 @@ height: 220px;
   justify-content: center;
 }
 .videoImage iframe{
-  width: 600px;
-  height: 335px;
+  width: 900px;
+  height: 500px;
   border:solid 1px #EEE9E9;
 }
 .textTutorial{
@@ -682,9 +682,10 @@ height: 220px;
   justify-content: center;
 }
 .textTutorial p{
-  width: 700px;
-  font-size: 1.2em;
+  width: 950px;
+  font-size: 1.3em;
   margin-top: 50px;
+    text-align: justify;
 }
 
 /********************************/
