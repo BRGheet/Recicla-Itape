@@ -1,6 +1,10 @@
 *:focus{
   outline: none;
 }
+html,body{
+  height: auto;
+  min-height: 100%;
+}
 /*Cores*/
 .green{
   color: green;
@@ -432,8 +436,8 @@ height: 220px;
   font-family: verdana;
   font-weight: 200;
   background-color: #363636;
-  position: absolute;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   color: #e1ffff;
 }
 .nav-side-menu .brand {
@@ -527,9 +531,11 @@ height: 220px;
 /* Mapa Google    */
 /******************/
 #map {
- height: 100%;
- position:absolute;
- right: 0;
+height: 100%;
+float: right;
+right: 0;
+position: absolute;
+background-color: #ededed;
 }
 /*Fim quero Reciclar*/
 .title_LoginCadas{
@@ -688,6 +694,62 @@ height: 220px;
     text-align: justify;
 }
 
+
+/*Rodape*/
+.rodapeMain{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #008000;
+  height: 200px;
+  clear: both;
+}
+.rodape-menus{
+  height: 85%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.rodape-menus h2{
+  font-size: 1.2em;
+  color:white;
+  margin-bottom: -5px;
+  text-align: left;
+}
+.listasRodape ul{
+  display: inline;
+}
+.listasRodape li{
+  margin-bottom: 5px;
+}
+.listasRodape ul li{
+  color: white;
+  text-align: left;
+  list-style: none;
+}
+.listasRodape a{
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+.testeMapa{
+  background-color: red;
+}
 /********************************/
 /*          Media Queries       */
 /********************************/
