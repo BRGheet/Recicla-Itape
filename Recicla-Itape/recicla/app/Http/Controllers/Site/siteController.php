@@ -8,9 +8,12 @@ use DB;
 
 class siteController extends Controller
 {
+	private $totalPage = 6;
+
 	public function index(){
+		$tutoriais = DB::table('tutoriais')->orderBy('id', 'desc')->paginate($this->totalPage);
 		$title = "Home";
-		return view('site\main\index',compact('title'));
+		return view('site\main\index',compact('title','tutoriais'));
 	} 
 	public function queroReciclar(){
 		$title = 'Quero Reciclar';

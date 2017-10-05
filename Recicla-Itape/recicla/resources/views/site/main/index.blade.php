@@ -54,26 +54,33 @@
 			<h1 id="Tutoriais">Tutoriais sobre a reciclagem</h1>
 			<p>Aprenda a reciclar de forma correta!</p>
 		</div>
-
+		@forelse($tutoriais as $tuto)
 		<div class="row">
 			<div class="col-sm-6 col-md-6">
 				<div class="thumbnail">
-					<div class="imagemThubnail imagemThubnail1">
-						<!-- <img src=""> -->
+					<div class="imagemThubnail">
+						
 					</div>
 					<div class="caption">
-						<h3>Decoração com Reciclagem</h3>
+						<h3>{{$tuto->titulo}}</h3>
 						<p>Aqui você vai descobrir maneiras fantásticas de fazer decoração com reciclagem.Com objetos feitos à mão você pode melhorar o visual da sua casa inteira, desde o jardim, até o quarto, cozinha, sala e banheiro. Sendo assim, mostraremos aqui vários artesanatos simples, todos feitos com materiais recicláveis, tais como: latas, garrafas de vidro, caixotes e papelão.</p>
-						<p><a href="/tutoriais" class="btn btn-primary" role="button">Ler Mais</a></p>
+						<p><a href="/tutoriais/{{$tuto->id}}" class="btn btn-primary" role="button">Ler Mais</a></p>
 					</div>
 				</div>
 			</div>
-
+			@empty
+			<p>Nenhum Tutorial Encontrado</p>
+		
+		@endforelse
+		<div class="col-md-12 paginacao">
+			{!!  $tutoriais->links() !!}
+		</div>
+<!-- 	
 
 			<div class="col-sm-6 col-md-6">
 				<div class="thumbnail">
 					<div class="imagemThubnail imagemThubnail2">
-						<!-- <img src=""> -->
+			
 					</div>
 					<div class="caption">
 						<h3>Lixo Organico</h3>
@@ -90,7 +97,7 @@
 			<div class="col-sm-6 col-md-6">
 				<div class="thumbnail">
 					<div class="imagemThubnail imagemThubnail3">
-						<!-- <img src=""> -->
+		
 					</div>
 					<div class="caption">
 						<h3>Como Reciclar</h3>
@@ -104,7 +111,7 @@
 			<div class="col-sm-6 col-md-6">
 				<div class="thumbnail">
 					<div class="imagemThubnail imagemThubnail4">
-						<!-- <img src=""> -->
+				
 					</div>
 					<div class="caption">
 						<h3>Separação do lixo</h3>
@@ -113,7 +120,7 @@
 						<p><a href="#" class="btn btn-primary" role="button">Ler Mais</a></p>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</header>
 	@endsection

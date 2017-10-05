@@ -436,6 +436,7 @@ height: 220px;
   font-family: verdana;
   font-weight: 200;
   background-color: #363636;
+  position: absolute;
   height: auto;
   min-height: 100%;
   color: #e1ffff;
@@ -740,15 +741,15 @@ background-color: #ededed;
 
 
 
-
-
-
-
-
-
-
-.testeMapa{
-  background-color: red;
+/*Paginação*/
+.paginacao{
+  clear: both;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 /********************************/
 /*          Media Queries       */
