@@ -41,7 +41,49 @@
 </div>
 @endsection
 @push('scripts')
-<script type="text/javascript" src="js/maps.js"></script>     
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKTFiIq0LFTvHk92BdJ1qnyUf_U3AGDOE&callback=initMap">
-</script>
+<script type="text/javascript">
+	  function initMap() {
+        var meio = {lat: -23.588225, lng: -48.040106};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: meio,
+          zoom: 13,
+          /*Minimo zoom limite*/
+          minZoom:13,
+          zoomControl: true,
+          scaleControl: true,
+          streetViewControl: false,
+          /*Desabilita ctrl para zoon*/
+          gestureHandling: 'greedy'
+        });
+
+        /*@foreach($markers as $marker)
+        	var info{{ $marker->id }} = new google.maps.InfoWindow({
+          		content: "<h1>{{ $marker->name }}</h1>"
+          		+"<p>{{ $marker->content }}</p>"
+          		+"<br><strong>Endereço:</strong> {{ $marker->address }}<br>"
+          		@if($marker->papel)
+          			+"<strong>Papel</strong> "
+          		@endif
+          		@if($marker->plastico)
+          			+" <strong>Plastico</strong> "
+          		@endif
+          		@if($marker->vidro)
+          			+"<strong>Vidro</strong>"
+          		@endif
+        	});
+       	 	var marker{{ $marker->id }} = new google.maps.Marker({
+         		position: {lat: {{ $marker->lat }}, lng: {{ $marker->lng }} },
+          		map: map,
+          		title: "{{ $marker->name }}"
+        	});
+        	marker{{ $marker->id }}.addListener('click', function(){
+          		info{{ $marker->id }}.open(map,marker{{ $marker->id }})
+        	});
+
+        	marker{{ $marker->id }}.setMap(map);
+        @endforeach*/
+    }
+
+</script>     
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKTFiIq0LFTvHk92BdJ1qnyUf_U3AGDOE&callback=initMap"></script>
 @endpush

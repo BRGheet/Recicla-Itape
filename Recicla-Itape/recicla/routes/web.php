@@ -2,6 +2,7 @@
 /*Namespace das rotas site*/
 Route::group(['namespace'=>'Site'],function(){
 	Route::get('/', 'siteController@index');
+	/*Retorna o mapa e seus respectivos marcadores de cooperativas.*/
 	Route::get('reciclar', 'siteController@queroReciclar');
 	Route::get('cooperativas', 'siteController@Cooperativas');
 	Route::get('tutoriais/{id}','siteController@Tutoriais');
