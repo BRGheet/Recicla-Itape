@@ -1,47 +1,37 @@
 @extends('.site.template.cabecalho')
 @section('cabecalho')
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="ModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <a href="/f=papel">
+          <div class="col-md-6">
+            <span class="glyphicon glyphicon-file"></span> Papel
+          </div>
+        </a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container-fluid">
 	<div class="row">
-		<div class="nav-side-menu col-md-2">
-			<div class="brand">Filtro</div>
-			<i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-
-			<div class="menu-list">
-
-				<ul id="menu-content" class="menu-content collapse out">
-
-					<li>
-						<a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>Papel</a>
-					</li>
-
-					<li  data-toggle="collapse" data-target="#products" class="collapsed">
-						<a href="#"><i class="fa fa-thumb-tack" aria-hidden="true"></i> Plastico</a>
-					</li>
-
-					<li data-toggle="collapse" data-target="#service" class="collapsed">
-						<a href="#"><i class="fa fa-database" aria-hidden="true"></i> Metal</a>
-					</li>  
-
-					<li data-toggle="collapse" data-target="#new" class="collapsed">
-						<a href="#"><i class="fa fa-car fa-lg"></i> Oleo</a>
-					</li>
-
-					<li>
-						<a href="#"><i class="fa fa-glass" aria-hidden="true"></i> Vidro</a>
-					</li>
-
-					<li>
-						<a href="#"><i class="fa fa-desktop" aria-hidden="true"></i> Eletrônicos</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div id="map" class="col-md-10"></div>
+			<button class="btn btn-blue filter"><strong>Filtro</strong></button>
+			<div class="col-md-12" id="map"></div>
 	</div>
 </div>
 @endsection
 @push('scripts')
 <script type="text/javascript">
+    $('.filter').click(function(){
+      $('#modal').modal('show');
+    });
 	  function initMap() {
         var meio = {lat: -23.588225, lng: -48.040106};
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -56,7 +46,7 @@
           gestureHandling: 'greedy'
         });
 
-        /*@foreach($markers as $marker)
+        @foreach($markers as $marker)
         	var info{{ $marker->id }} = new google.maps.InfoWindow({
           		content: "<h1>{{ $marker->name }}</h1>"
           		+"<p>{{ $marker->content }}</p>"
@@ -81,7 +71,7 @@
         	});
 
         	marker{{ $marker->id }}.setMap(map);
-        @endforeach*/
+        @endforeach
     }
 
 </script>     
