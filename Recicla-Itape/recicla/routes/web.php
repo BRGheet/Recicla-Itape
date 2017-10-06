@@ -6,6 +6,7 @@ Route::group(['namespace'=>'Site'],function(){
 	Route::get('reciclar', 'siteController@queroReciclar');
 	Route::get('cooperativas', 'siteController@Cooperativas');
 	Route::get('tutoriais/{id}','siteController@Tutoriais');
+	Route::get('reciclar/f={dado}','siteController@mapFilter');
 });
 
 /*Login admin*/

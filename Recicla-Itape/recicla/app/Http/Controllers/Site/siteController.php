@@ -20,6 +20,14 @@ class siteController extends Controller
 		return view('site\main\queroReciclar',compact('title'), ['markers' => $markers]);
 	}
 
+	public function mapFilter($dado){
+		$title = 'Quero Reciclar';
+
+		$markers = DB::table('markers')->where($dado, 1)->get();
+
+		return view('site.main.queroReciclar', ['markers' => $markers], compact('title'));
+	}
+
 	public function cooperativas(){
 		$title = 'Cooperativas';
 		return view('site\main\cooperativas',compact('title'));

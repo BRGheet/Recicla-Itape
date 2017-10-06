@@ -8,7 +8,7 @@
         <h4 class="modal-title" id="ModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
-        <a href="/f=papel">
+        <a href="/reciclar/f=papel">
           <div class="col-md-6">
             <span class="glyphicon glyphicon-file"></span> Papel
           </div>
