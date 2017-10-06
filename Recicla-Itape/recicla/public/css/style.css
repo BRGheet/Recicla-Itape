@@ -702,13 +702,18 @@ height: 220px;
   height: 500px;
   border:solid 1px #EEE9E9;
 }
+.textTutorial p::first-letter{
+  font-size: 1.5em;
+}
 .textTutorial p{
   text-align: justify;
   padding-top: 35px;
   font-size: 1.3em;
   text-indent: 50px;
   padding-bottom: 50px;
+  line-height: 1.5;
 }
+
 /*Rodape*/
 .rodapeMain{
   display: -webkit-flex;
