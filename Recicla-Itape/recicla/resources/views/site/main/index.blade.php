@@ -58,18 +58,17 @@
 		<div class="row">
 			<div class="col-sm-6 col-md-6">
 				<div class="thumbnail">
-					<div class="imagemThubnail">
-						
+					<div class="imagemThubnail" style="background-image:url('img/tutoriais/{{$tuto->img}}');">
 					</div>
 					<div class="caption">
-						<h3>{{$tuto->titulo}}</h3>
-						<p>Aqui você vai descobrir maneiras fantásticas de fazer decoração com reciclagem.Com objetos feitos à mão você pode melhorar o visual da sua casa inteira, desde o jardim, até o quarto, cozinha, sala e banheiro. Sendo assim, mostraremos aqui vários artesanatos simples, todos feitos com materiais recicláveis, tais como: latas, garrafas de vidro, caixotes e papelão.</p>
+						<h3>{{$tuto->titulo}}.</h3>
+						<p>{{$tuto->resumo}}</p>
 						<p><a href="/tutoriais/{{$tuto->id}}" class="btn btn-primary" role="button">Ler Mais</a></p>
 					</div>
 				</div>
 			</div>
 			@empty
-			<p>Nenhum Tutorial Encontrado</p>
+			<p style="text-align: center; font-size: 1.5em;">Nenhum Tutorial Encontrado</p>
 		
 		@endforelse
 		<div class="col-md-12 paginacao">

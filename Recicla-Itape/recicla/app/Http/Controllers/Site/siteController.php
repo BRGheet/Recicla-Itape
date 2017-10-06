@@ -25,8 +25,8 @@ class siteController extends Controller
 		return view('site\main\cooperativas',compact('title'));
 	}
 	public function Tutoriais($id){
-		$noticias = DB::table('tutoriais')->whereIn('id',[$id])->get();
+		$tutoriais = DB::table('tutoriais')->whereIn('id',[$id])->get();
 		$title = 'Tutoriais';
-		return view('site\main\tutoriais',compact('title','id','noticias'));
+		return view('site\main\tutoriais',compact('title','id','tutoriais'));
 	}
 }
