@@ -37,6 +37,45 @@
 			<p><strong>Cep:</strong> 18275-000</p>
 			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
 		</div>
+		<div class="listagemCoop col-md-4">
+			<p>Cooperação-Cooperativa Regional de Coleta Seletiva e Reciclage</p>
+			<p><strong>Endereço:</strong>Rua Onze de Agosto, 3045</p>
+			<p><strong>Bairro:</strong> Valinho</p>
+			<p><strong>Cep:</strong> 18275-000</p>
+			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
+		</div>
+		<div class="listagemCoop col-md-4">
+			<p>Cooperativa de Reciclagem de Sorocaba</p>
+			<p><strong>Endereço:</strong>R. Tomaz Sanches Artero, 70</p>
+			<p><strong>Bairro:</strong> Valinho</p>
+			<p><strong>Cep:</strong> 18275-000</p>
+			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
+		</div>
+		<div class="listagemCoop col-md-4">
+			<p>CDM - Central Distrib., Serviços e Reciclagem de Madeiras</p>
+			<p><strong>Endereço:</strong>Rua Onze de Agosto, 3045</p>
+			<p><strong>Bairro:</strong> Valinho</p>
+			<p><strong>Cep:</strong> 18275-000</p>
+			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
+		</div>
+		<div class="listagemCoop col-md-4">
+			<p>Cooperativa Central de Catadores e Catadoras de Materiais Re</p>
+			<p><strong>Endereço:</strong>Rua Onze de Agosto, 3045</p>
+			<p><strong>Bairro:</strong> Valinho</p>
+			<p><strong>Cep:</strong> 18275-000</p>
+			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
+		</div><div class="listagemCoop col-md-4">
+			<p>Cooperativa de Recicláveis Santa Genebra</p>
+			<p><strong>Endereço:</strong>Rua Onze de Agosto, 3045</p>
+			<p><strong>Bairro:</strong> Valinho</p>
+			<p><strong>Cep:</strong> 18275-000</p>
+			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
+		</div><div class="listagemCoop col-md-4">
+			<p>Coopernatuz Cooperativa de Catadores Cooperando Com A Natureza</p>
+			<p><strong>Endereço:</strong>Rua Onze de Agosto, 3045</p>
+			<p><strong>Bairro:</strong> Valinho</p>
+			<p><strong>Cep:</strong> 18275-000</p>
+			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
 
 		
 
