@@ -299,7 +299,7 @@ html,body{
 }
 .slide-1,.slide-2,.slide-3{
   /*Escurecer Imagem*/
- filter: brightness(80%);
+ filter: brightness(90%);
 }
 .fade-carousel .slides .slide-1 {
   height: 100%;
@@ -381,6 +381,7 @@ input[type]:focus{
   background-repeat: no-repeat;
   border-radius: 5px;
   cursor: pointer;
+  background-position: 0px -130px;
 }
 .imagemThubnail1{
   background-image: url(../img/index1.jpg);
