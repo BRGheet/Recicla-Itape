@@ -631,6 +631,7 @@ height: 220px;
   font-size: 1.1em;
 }
 .InfoReward{
+
   margin-top: 5px;
 }
 .InfoReward a{
@@ -690,7 +691,7 @@ height: 220px;
   min-height: 100%;
 }
 .VideoPlay{
-    display: -webkit-flex;
+  display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   align-items: center;
@@ -713,7 +714,45 @@ height: 220px;
   padding-bottom: 50px;
   line-height: 1.5;
 }
-
+.CooperativasMain{
+  text-align: justify;
+}
+.titleCoope h1{
+  font-size: 2.2em;
+}
+.titleCoope p{
+  text-align: justify;
+}
+.listasCoope{
+ display: -webkit-flex;
+ display: flex;
+ -webkit-align-items: center;
+ align-items: center;
+ -webkit-justify-content: center; 
+}
+.titleList p{
+  text-align: left;
+  font-size: 1.7em;
+  padding: 20px 0px 0px 20px;
+}
+.listasCoope ul li{
+  margin: 0px;
+  padding: 0px;
+  margin-left: 20px;
+}
+.listagemCoop p:first-child{
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.listagemCoop{
+  height: 200px;
+  max-height: 200px;
+  padding-top: 20px;
+  font-size: 1.1em;
+  text-align: justify;
+  margin-bottom: 50px;
+  float: right;
+}
 /*Rodape*/
 .rodapeMain{
   display: -webkit-flex;

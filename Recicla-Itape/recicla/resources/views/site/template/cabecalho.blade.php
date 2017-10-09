@@ -29,7 +29,7 @@
         <ul class="nav navbar-nav">
           <li><a href="/">Home</a></li>
           <li><a href="/reciclar">Quero Reciclar</a></li>
-          <li><a href="#">Cooperativas</a></li>
+          <li><a href="/cooperativas">Cooperativas</a></li>
         </ul>
       </div>
       <div class="nav navbar-nav navbar-right">
