@@ -7,9 +7,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Recicla Itapê</title>
     <link href="{{ URL::asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
-      <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/admin.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/jquery.sweet-modal.min.css') }}" />
+    <script src="{{ URL::asset('assets/js/tinymce/tinymce.min.js') }}"></script>
+    <script type="text/javascript">
+      tinymce.init({ selector: '#texto' });
+    </script>
     <!-- Google Fonts -->
     <link rel="stylesheet" href="{{ URL::asset('assets/css/QueroReciclar.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/font-awesome.min.css') }}">
@@ -28,7 +32,7 @@
                    url: pagina,
                    success: function(data){
                       $('#conteudo').html(data);
-                  }
+                   }
                });
 
            });
@@ -56,20 +60,19 @@
         <h1>ADMIN</h1>
       </div>
       <button class="closebtn" onclick="closeNav()">&times;</button>
-      <a href="#" class="pagina" id="info">Nova Informação</a>
-      <a href="#" class="pagina" id="video">Novo Vídeo</a>
+      <a href="#" class="pagina" id="info">Nova Informação/Tutorial</a>
       <a href="#" class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
       <a href="#" class="pagina" id="coop">Nova Cooperativa</a>
       <a href="#" class="pagina" id="gift">Nova Recompensa</a>
     </nav>
       <nav class="col-md-2 sidebar-lg hidden-xs hidden-sm">
       	<h1>ADMIN</h1>
-      	  <a class="pagina" id="info">Nova Informação</a>
-        	<a class="pagina" id="video">Novo Vídeo</a>
+      	  <a href="/admin">Nova Informação</a>
         	<a class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
         	<a class="pagina" id="coop">Nova Cooperativa</a>
         	<a class="pagina" id="gift">Nova Recompensa</a>
       </nav>
+      <div class="col-md-2"></div>
       <div id="conteudo" class="container col-md-10">
         @yield('content')
       </div>
@@ -103,9 +106,12 @@
             dado[$(this).attr('name')] = $(this).is(':checked') ? 1 : 0;
           });
         }
+        if ($('#texto').length > 0){
+          dado['texto'] = tinymce.get('texto').getContent();
+        }
         // tranforma array em json
         JSON.stringify(dado);
-
+        console.log(dado);
         $.ajax({
           type: 'POST',
           data: dado,

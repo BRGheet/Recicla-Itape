@@ -1,7 +1,12 @@
+html, body{
+  overflow-y: auto;
+}
+
 .sidebar-lg {
   height: 100%;
   background-color: #141414;
   overflow-x: hidden;
+  position: fixed;
 }
 
 .sidebar-lg a{
@@ -25,4 +30,8 @@
 .panel .panel-heading{
   background-color: green;
   border:none;
+}
+
+.font-red{
+  color: red;
 }

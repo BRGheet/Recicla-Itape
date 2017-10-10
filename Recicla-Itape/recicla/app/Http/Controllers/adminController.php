@@ -9,6 +9,7 @@ use App\Video;
 use App\Ponto;
 use App\Coop;
 use App\Gift;
+use DateTime;
 
 class adminController extends Controller
 {
@@ -43,6 +44,8 @@ class adminController extends Controller
         $info = new Info();
         $info->titulo = $req->input('titulo');
         $info->autor = $req->input('autor');
+        $info->resumo = $req->input('resumo');
+        $info->video = $req->input('video');
         $info->texto = $req->input('texto');
         $info->save();
 
@@ -53,6 +56,7 @@ class adminController extends Controller
         $video->titulo = $req->input('titulo');
         $video->autor = $req->input('autor');
         $video->texto = $req->input('texto');
+        $video->dataHora = new DateTime();
         $video->video_url = $req->input('video');
         $video->save();
 
