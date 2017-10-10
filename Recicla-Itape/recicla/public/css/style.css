@@ -1,7 +1,14 @@
 *:focus{
   outline: none;
 }
-html,body{
+*{
+  list-style: none;
+}
+html{
+  height: auto;
+  min-height: 100%;
+}
+body{
   height: auto;
   min-height: 100%;
 }
@@ -299,7 +306,7 @@ html,body{
 }
 .slide-1,.slide-2,.slide-3{
   /*Escurecer Imagem*/
- filter: brightness(90%);
+  filter: brightness(90%);
 }
 .fade-carousel .slides .slide-1 {
   height: 100%;
@@ -351,7 +358,6 @@ input[type]:focus{
   padding-top: 6em;
   margin-bottom: 1em;
 }
-
 .titulo
 {
   text-align: center;
@@ -359,6 +365,7 @@ input[type]:focus{
 }
 .titulo p
 {
+  text-align: center;
   font-size: 1.2em;
   padding-bottom: 2em;
   margin-bottom: 5em;
@@ -366,6 +373,7 @@ input[type]:focus{
 }
 .titulo h1
 {
+  text-align: center;
   font-size: 2.5em;
   margin-bottom: 0.5em;
 }
@@ -394,6 +402,9 @@ input[type]:focus{
 }
 .imagemThubnail4{
   background-image: url(../img/index4.jpg);
+}
+.caption {
+  height: 350px;
 }
 .caption h3{
   color: #666;
@@ -762,7 +773,7 @@ height: 220px;
   float: right;
 }
 /*Rodape*/
-.rodapeMain{
+footer{
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -772,9 +783,10 @@ height: 220px;
   background-color: #008000;
   height: 200px;
   clear: both;
+  margin-bottom: 0;
 }
-.rodape-menus{
-  height: 85%;
+.container-menus-footer{
+  height: 100%;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -782,29 +794,33 @@ height: 220px;
   -webkit-justify-content: center;
   justify-content: center;
 }
-.rodape-menus h2{
+.box-footer-list{
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+}
+.box-footer-list h2{
+ font-size: 1.3em;
+ text-align: center;
+}
+.box-footer-list ul{
+ padding: 0;
+ list-style-type: none;
+}
+.box-footer-list ul li{
+  text-align: center;
+}
+.box-footer-list li a{
+  color: white;
   font-size: 1.2em;
-  color:white;
-  margin-bottom: -5px;
-  text-align: left;
-}
-.listasRodape ul{
-  display: inline;
-}
-.listasRodape li{
-  margin-bottom: 5px;
-}
-.listasRodape ul li{
-  color: white;
-  text-align: left;
-  list-style: none;
-}
-.listasRodape a{
-  color: white;
   text-decoration: none;
 }
-
-
+.box-footer-list li a:hover{
+  color:#ededed;
+}
+.box-footer-list li{
+    padding-bottom: 5px;
+}
 
 /*Paginação*/
 .paginacao{
