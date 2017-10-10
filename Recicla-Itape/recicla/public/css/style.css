@@ -407,6 +407,9 @@ input[type]:focus{
   height: 350px;
 }
 .caption h3{
+  height: auto;
+  min-height: 51px;
+  max-height: 51px;
   color: #666;
   font-size: 1.5em;
   text-align: center;

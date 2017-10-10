@@ -39,17 +39,17 @@
 
         {!!csrf_field()!!}
         <label for="nome">Nome</label>
-        <input id="nome" type="text" name="Nome" class="form-control"  value="{{old('Nome')}}" placeholder="Digite seu nome completo"><br>
+        <input id="nome" type="text" name="Nome" class="form-control"  value="{{old('Nome')}}" placeholder="Digite seu nome completo" required="required"><br>
 
         <label for="email">E-mail</label>
-        <input id="email" type="email" name="Email" class="form-control"  value="{{old('Email')}}" placeholder="Digite seu e-mail"><br>
+        <input id="email" type="email" name="Email" class="form-control"  value="{{old('Email')}}" placeholder="Digite seu e-mail" required="required"><br>
 
         <label for="senha">Senha</label>
-        <input id="senha" type="password" name="Senha" class="form-control" placeholder="Ao menos 8 digitos" value="{{old('Senha')}}">
+        <input id="senha" type="password" name="Senha" class="form-control" placeholder="Ao menos 8 digitos" value="{{old('Senha')}}" required="required">
         <br>
 
         <label for="senha2">Confirme a senha</label>
-        <input id="senha2" type="password" class="form-control" placeholder="Digite novamente sua senha" name="Senha_Confirme" value="{{old('Senha_Confirme')}}"><br>
+        <input id="senha2" type="password" class="form-control" placeholder="Digite novamente sua senha" name="Senha_Confirme" value="{{old('Senha_Confirme')}}" required="required"><br>
 
         <button class="btn btn-green">Cadastrar</button>
       </form>
