@@ -786,7 +786,7 @@ footer{
   margin-bottom: 0;
 }
 .container-menus-footer{
-  height: 100%;
+  height: 200px;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;

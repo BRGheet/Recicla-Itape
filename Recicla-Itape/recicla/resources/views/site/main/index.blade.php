@@ -66,7 +66,7 @@
 	<p style="text-align: center; font-size: 1.5em;">Nenhum Tutorial Encontrado</p>
 	@endforelse
 	<div class="col-md-12 paginacao">
-		{!!  $tutoriais->links() !!}
+		{!!$tutoriais->links()!!}
 	</div>
 </div>
 <footer class="container-fluid">
@@ -104,8 +104,6 @@
 				</ul>
 			</nav>
 		</div>
-		
 	</div>
 </footer>
-
 @endsection
