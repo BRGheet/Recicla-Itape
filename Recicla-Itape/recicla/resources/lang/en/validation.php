@@ -29,7 +29,7 @@ return [
         'array'   => ':attribute deve ter entre :min e :max itens.',
     ],
     'boolean'              => ':attribute deve ser verdadeiro ou falso.',
-    'confirmed'            => 'A confirmação de :attribute não confere.',
+    'confirmed'            => 'A confirmação de senha não confere.',
     'date'                 => ':attribute não é uma data válida.',
     'date_format'          => ':attribute não confere com o formato :format.',
     'different'            => ':attribute e :other devem ser diferentes.',
@@ -100,7 +100,19 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'password' => [
+            'required' => 'O campo senha é obrigatorio.',
+        ],
+        'password_confirmation' => [
+            'required' => 'Os campos senhas não confirmam.',
+        ],
+        'name' => [
+            'required' => 'O campo nome é obrigatorio.',
+        ],
+
     ],
+    
+
 
     /*
     |--------------------------------------------------------------------------

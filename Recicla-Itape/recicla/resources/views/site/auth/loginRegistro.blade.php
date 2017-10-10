@@ -11,20 +11,12 @@
       <p class="lead">Ainda não tem um cadastro ?</p>
       <h1 class="green">Cadastre-se</h1>
 
-      @if($errors->any())
+      @if($errors->cadastro->any())
         <div class="alert alert-danger" role="alert">
-        @if ($errors->has('name'))
-          <p>{{ $errors->first('name') }}</p>
-        @endif
-        @if ($errors->has('email'))
-          <p>{{ $errors->first('email') }}</p>
-        @endif
-        @if ($errors->has('password'))
-          <p>{{ $errors->first('password') }}</p>
-        @endif
-        @if ($errors->has('password_confirmation'))
-          <p>{{ $errors->first('password_confirmation') }}</p>
-        @endif
+          {{$errors->cadastro->first('name')}}<br>
+          {{$errors->cadastro->first('email')}}<br>
+          {{$errors->cadastro->first('password')}}<br>
+          {{$errors->cadastro->first('Senha_Confirme')}}
         </div>
       @endif
 
