@@ -11,15 +11,29 @@
       <p class="lead">Ainda não tem um cadastro ?</p>
       <h1 class="green">Cadastre-se</h1>
 
-      @if($errors->cadastro->any())
-        <div class="alert alert-danger" role="alert">
-          {{$errors->cadastro->first('name')}}<br>
-          {{$errors->cadastro->first('email')}}<br>
-          {{$errors->cadastro->first('password')}}<br>
-          {{$errors->cadastro->first('Senha_Confirme')}}
-        </div>
+      @if ($errors->cadastro->first('name'))
+      <span class="help-block">
+        <strong>{{ $errors->cadastro->first('name')}}</strong>
+      </span>
       @endif
 
+      @if ($errors->cadastro->first('email'))
+      <span class="help-block">
+        <strong>{{ $errors->cadastro->first('email')}}</strong>
+      </span>
+      @endif
+
+      @if ($errors->cadastro->first('password'))
+      <span class="help-block">
+        <strong>{{ $errors->cadastro->first('password')}}</strong>
+      </span>
+      @endif
+
+      @if ($errors->cadastro->first('Senha_Confirme'))
+      <span class="help-block">
+        <strong>{{ $errors->cadastro->first('Senha_Confirme')}}</strong>
+      </span>
+      @endif
 
       <form method="POST" action="{{ route('register') }}">
 
@@ -45,32 +59,32 @@
     <div class="cadastro col-md-5 col-md-offset-2">
       <p class="lead">Caso já tenha uma conta,</p>
       <h1 class="blue">Entre Agora</h1>
-     <!--  @if ($errors->has('email'))
-        <div class="alert alert-danger" role="alert">
-          <p>{{ $errors->first('email') }}</p>
-        </div>
-      @endif
-      @if ($errors->has('password'))
-        <div class="alert alert-danger" role="alert">
-          <p>{{ $errors->first('password') }}</p>
-        </div>
-        @endif -->
-        <form  method="POST" action="{{ route('login') }}">
+      <form  method="POST" action="{{ route('login') }}">
 
-          {!!csrf_field()!!}
-          <label for="nome">E-mail</label>
-          <input id="nome" type="email" name="email" class="form-control"  placeholder="Digite seu email" value="{{old('email')}}">
+        {!!csrf_field()!!}
+        @if ($errors->has('email'))
+        <span class="help-block">
+          <strong>{{ $errors->first('email') }}</strong>
+        </span>
+        @endif
+        @if ($errors->has('password'))
+        <span class="help-block">
+          <strong>{{ $errors->first('password') }}</strong>
+        </span>
+        @endif
+        <label for="nome">E-mail</label>
+        <input id="nome" type="email" name="email" class="form-control"  placeholder="Digite seu email" value="{{old('email')}}" required="required">
+        <br>
+        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+          <label for="senha">Senha</label>
+          <input id="senha" type="password" name="password" class="form-control" placeholder="Digite sua senha" value="{{old('password')}}" required="required">
           <br>
-          <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-            <label for="senha">Senha</label>
-            <input id="senha" type="password" name="password" class="form-control" placeholder="Digite sua senha" value="{{old('password')}}">
-            <br>
 
-            <a href="{{ route('password.request') }}">Esqueci a minha senha</a>
-            <br>
-            <br>
-            <button class="btn btn-green pull-right">Entrar</button>
-          </form>
-        </div>
+          <a href="{{ route('password.request') }}">Esqueci a minha senha</a>
+          <br>
+          <br>
+          <button class="btn btn-green pull-right">Entrar</button>
+        </form>
       </div>
-      @endsection
+    </div>
+    @endsection
