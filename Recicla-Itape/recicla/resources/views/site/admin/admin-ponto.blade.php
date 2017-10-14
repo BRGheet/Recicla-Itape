@@ -17,7 +17,6 @@
 					<input type="text" name="longitude" placeholder="Longitude do local: " class="form-control">
 				</div>
 			</form>
-			<br>
 			<h3>Tipo de lixo que recolhe: </h3>
 			<label class="checkbox-inline"><input type="checkbox" class="check" name="papel">Papel</label>
 			<label class="checkbox-inline"><input type="checkbox" class="check" name="plastico">Plastico</label>

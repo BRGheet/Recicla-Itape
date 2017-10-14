@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
+use App\Info;
+use App\Ponto;
+use App\Gift;
+use App\Coop;
 
 class AdminController extends Controller
 {
@@ -85,8 +89,10 @@ class AdminController extends Controller
     public function pontoStore(Request $req){
         $ponto = new Ponto();
         $ponto->nome = $req->input('nome');
-        $ponto->longitude = $req->input('longitude');
-        $ponto->latitude = $req->input('latitude');
+        $ponto->lat = $req->input('longitude');
+        $ponto->lgn = $req->input('latitude');
+        $ponto->content = $req->input('descricao');
+        $ponto->address = $req->input('endereco');
         $ponto->papel = $req->input('papel');
         $ponto->plastico = $req->input('plastico');
         $ponto->vidro = $req->input('vidro');

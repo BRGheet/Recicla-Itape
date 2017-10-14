@@ -15,12 +15,12 @@ class CreateTutoriaisTable extends Migration
     {
         Schema::create('tutoriais', function (Blueprint $table) {
         $table->increments('id');
-        $table->dateTime('data');
-        $table->string('titulo');
-        $table->string('autor');
+        $table->string('autor',30);
+        $table->string('titulo',200);
+        $table->string('resumo',476);
         $table->text('texto');
         $table->string('video')->nullable();
-        $table->string('img')->nullable();
+        $table->timestamp('dataHora')->useCurrent();
     });
   }
 
