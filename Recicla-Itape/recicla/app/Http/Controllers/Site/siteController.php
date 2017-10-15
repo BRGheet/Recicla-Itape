@@ -30,7 +30,8 @@ class siteController extends Controller
 
 	public function cooperativas(){
 		$title = 'Cooperativas';
-		return view('site\main\cooperativas',compact('title'));
+		$coops = DB::table('coop')->get();
+		return view('site\main\cooperativas',compact('title'), ['coops' => $coops]);
 	}
 	public function Tutoriais($id){
 		$noticias = DB::table('tutoriais')->whereIn('id',[$id])->get();

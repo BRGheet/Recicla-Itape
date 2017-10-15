@@ -29,7 +29,7 @@
         <ul class="nav navbar-nav">
           <li><a href="/">Home</a></li>
           <li><a href="/reciclar">Quero Reciclar</a></li>
-          <li><a href="#">Cooperativas</a></li>
+          <li><a href="/cooperativas">Cooperativas</a></li>
         </ul>
       </div>
       <div class="nav navbar-nav navbar-right">
@@ -73,7 +73,7 @@
 </nav>
 @yield('cabecalho')
 <!-- Script NavBar -->
-<script type="text/javascript" src="{{ URL::asset('js/Navbar.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('assets/js/Navbar.js') }}"></script>
 <script src="https://use.fontawesome.com/eb29782670.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="{{ URL::asset('assets/js/bootstrap.min.js') }}"></script>

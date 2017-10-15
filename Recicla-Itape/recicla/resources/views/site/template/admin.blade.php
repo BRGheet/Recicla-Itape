@@ -15,7 +15,6 @@
       tinymce.init({ selector: '#texto' });
     </script>
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/QueroReciclar.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/font-awesome.min.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
