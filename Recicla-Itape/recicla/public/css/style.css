@@ -613,71 +613,40 @@ height: 220px;
  font-size: 1.1em;
 }
 /*Conteudo Usuario*/
-.UserContent{
+.UserContentMain{
   height: auto;
   min-height: 100%;
+  margin-top: 20px;
 }
-.rewards{
-  height: auto;
-  min-height: 100%;
-  
+.sidebarUser{
+  height: 1500px;
 }
-.rewards h1{
-  font-size: 1.3em;
-  padding-bottom: 5px;
-  text-align: center;
-  font-weight: bold;
-}
-.imageRewards{
-  height: auto;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  padding-bottom: 20px;
-}
-.ImageBene{
-  width: 150px;
-  height: 100px;
-  border-radius: 100%;
-  background-color: white;
-  background-image: url('../img/chocolate.jpg');
-  background-size: 100% 100%;
+.sidebarUser h2{
   float: left;
-  border:1px solid black;
-  display: inline-block;
-}
-.rewardsText{
   font-size: 1.1em;
+  color: #008000;
+  font-weight: bold;
+  padding: 20px;
 }
-.InfoReward{
-
-  margin-top: 5px;
-}
-.InfoReward a{
- text-decoration: none;
-}
-
-.historicMain{
+.pontosUser{
+  background-color: #f8f8f8;
+  border-top: 2px solid #363636;
+  border-bottom: 1px solid #4F4F4F;
   height: auto;
-  min-height: 100%;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
-.historic{
-  width:100%;
-  background-color: white;
-  margin-top: -20px;
-  height: 500px;
-  overflow-y: auto;
+.pontosUser dl{
+  margin: 0px;
+  color: #707070;
+  padding: 10px;
+}
+.pontosUser dt{
+  font-weight: normal;
+}
+.pontosUser span{
+  display: inline;
+  font-size: 1.9em;
+}
 
-}
 /*Tutoriais*/
 .TutoriaisMain{
 
