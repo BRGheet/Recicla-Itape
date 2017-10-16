@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
+use Image;
 use App\Info;
 use App\Ponto;
 use App\Gift;
@@ -106,6 +107,12 @@ class AdminController extends Controller
         $coop->nome = $req->input('nome');
         $coop->endereco = $req->input('endereco');
         $coop->telefone = $req->input('telefone');
+        /*Terminar a imagem upload, tutorial do devdojo*/
+        if ($req->hasFile('imagem')) {
+            $imagem = $req->file('imagem');
+            $nome_imagem = time() . '.' . $imagem->getClientOriginalExtension();
+            Image::make($imagem)->resize(300,300)->save(public_path('/'));
+        }
         $coop->papel = $req->input('papel');
         $coop->plastico = $req->input('plastico');
         $coop->vidro = $req->input('vidro');
