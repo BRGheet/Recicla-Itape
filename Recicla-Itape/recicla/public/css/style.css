@@ -574,36 +574,37 @@ height: 220px;
   display: inline;
   font-size: 1.9em;
 }
-.menu-user-btn li{
-  clear: both;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
 .menu-user-btn ul{
  list-style-type: none;
  margin: 0;
  padding: 0;
 }
+.menu-user-btn li{
+ display: -webkit-flex;
+ display: flex;
+ -webkit-align-items: center;
+ align-items: center;
+ -webkit-justify-content: center;
+ justify-content: left;
+}
 .menu-user-btn ul li{
  background-color:;
  color: black;
  text-decoration:none;
- height: 55px;
- 
+ height: 45px;
 }
-.menu-user-btn a{
+.menu-user-btn li{
+  border-bottom:1px solid black;
+}
+.menu-user-btn ul li a{
   text-decoration:none;
-  float: left;
+  color: #4F4F4F;
   padding-left: 5px;
+  font-size: 0.9em;
+  font-weight: bold;
 }
-/*Tutoriais*/
-.TutoriaisMain{
 
-}
+/*Tutoriais*/
 .TutoriaisMain h1{
   font-size: 2em;
   text-align: center;

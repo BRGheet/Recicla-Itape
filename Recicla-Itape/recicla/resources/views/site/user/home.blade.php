@@ -14,9 +14,21 @@
 				<!-- Botoes conta -->
 				<nav class="menu-user-btn">
 					<ul>
-						<a href="">
-							<li>Minha Conta</li>
-						</a>
+						<li>
+							<a href="">
+								MINHA CONTA
+							</a>
+						</li>
+						<li>
+							<a href="">
+								MEUS PONTOS
+							</a>
+						</li>
+						<li>
+							<a href="">
+								MEUS VOUCHERS
+							</a>
+						</li>
 					</ul>
 				</nav>
 			</div>
