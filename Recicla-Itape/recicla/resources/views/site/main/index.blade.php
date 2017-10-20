@@ -46,64 +46,38 @@
 
 <div id="box1" class="container box1">
 	<div class="titulo">
-		<h1 id="Tutoriais">Tutoriais sobre a reciclagem</h1>
-		<p>Aprenda a reciclar de forma correta!</p>
+		<h1 id="Tutoriais">
+			Tutoriais sobre a reciclagem
+		</h1>
+		<p>
+			Aprenda a reciclar de forma correta!
+		</p>
 	</div>
-	@forelse($tutoriais as $tuto)
 
-	<div class="col-sm-6 col-md-6">
+	@forelse($tutoriais as $tuto)
+	<div class="col-sm-12 col-md-6">
 		<div class="thumbnail">
 			<div class="imagemThubnail" style="background-image:url('img/tutoriais/{{$tuto->img}}');">
 			</div>
 			<div class="caption">
 				<h3>{{$tuto->titulo}}.</h3>
 				<p>{{$tuto->resumo}}</p>
-				<p><a href="/tutoriais/{{$tuto->id}}" class="btn btn-primary" role="button">Ler Mais</a></p>
+				<p class="ReadMore">
+					<a href="/tutoriais/{{$tuto->id}}" class="btn btn-primary" role="button">Ler Mais</a></p>
+				</div>
 			</div>
 		</div>
-	</div>
-	@empty
-	<p style="text-align: center; font-size: 1.5em;">Nenhum Tutorial Encontrado</p>
-	@endforelse
-	<div class="col-md-12 paginacao">
-		{!!$tutoriais->links()!!}
-	</div>
-</div>
-<footer class="container-fluid">
-	<div class="container container-menus-footer">
-		<div class="box-footer-list">
-			<nav>
-				<h2>Recicla Itapê</h2>
-				<ul>
-					<li><a href=""> Home</a></li>
-					<li><a href=""> Quero Reciclar</a></li>
-					<li><a href=""> Cooperativas</a></li>
-					<li><a href=""> Entrar</a></li>
-				</ul>
-			</nav>
+		@empty
+		<p style="text-align: center; font-size: 1.5em;">Nenhum Tutorial Encontrado</p>
+		@endforelse
+		<div class="col-md-12 paginacao">
+			{!!$tutoriais->links()!!}
 		</div>
-		<div class="box-footer-list">
-			<nav>
-				<h2>Redes Sociais</h2>
-				<ul>
-					<li><a href=""> Facebook</a></li>
-					<li><a href=""> Instagram</a></li>
-					<li><a href=""> Twitter</a></li>
-					<li><a href=""> Youtube</a></li>
-				</ul>
-			</nav>
-		</div>
-		<div class="box-footer-list">
-			<nav>
-				<h2>Contato</h2>
-				<ul>
-					<li><a href=""> Ajuda</a></li>
-					<li><a href=""> Reclamação</a></li>
-					<li><a href=""> Telefones</a></li>
-					<li><a href=""> Email</a></li>
-				</ul>
-			</nav>
-		</div>
+
 	</div>
-</footer>
-@endsection
+	<!-- Inicio Rodape -->
+	<footer id="footer" class="container-fluid ">
+
+	</footer>
+
+	@endsection
