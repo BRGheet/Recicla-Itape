@@ -306,7 +306,7 @@ body{
 }
 .slide-1,.slide-2,.slide-3{
   /*Escurecer Imagem*/
-  filter: brightness(90%);
+  filter: brightness(40%);
 }
 .fade-carousel .slides .slide-1 {
   height: 100%;
