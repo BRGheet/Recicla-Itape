@@ -1,5 +1,6 @@
 @extends('.site.template.cabecalho')
 @section('cabecalho')
+<!-- insert into markers(name,address,lat,lng,type) values('teste','werqwer',-23.593986,-48.018683,'Ifsp'); -->
 <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
