@@ -17,7 +17,8 @@ class siteController extends Controller
 	} 
 	public function queroReciclar(){
 		$title = 'Quero Reciclar';
-		return view('site.main.queroReciclar',compact('title'));
+		$markers = DB::table('markers')->get();
+		return view('site\main\queroReciclar',compact('title'), ['markers' => $markers]);
 	}
 
 	public function cooperativas(){
