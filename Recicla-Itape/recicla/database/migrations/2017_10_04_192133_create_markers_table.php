@@ -13,14 +13,17 @@ class CreateMarkersTable extends Migration
      */
     public function up()
     {
-        Schema::create('makers', function (Blueprint $table) {
-        $table->increments('id');
-        $table->string('name',60);
-        $table->string('address',80);
-        $table->float('lat',10,6);
-        $table->float('lng',10,6);
-        $table->string('type')->nullable();
-    });
+        Schema::create('markers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name',60);
+            $table->string('content', 200);
+            $table->string('address',80);
+            $table->float('lat',10,6);
+            $table->float('lng',10,6);
+            $table->boolean('papel');
+            $table->boolean('plastico');
+            $table->boolean('vidro');
+        });
     }
 
     /**
