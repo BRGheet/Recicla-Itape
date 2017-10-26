@@ -603,6 +603,9 @@ height: 220px;
   font-size: 0.9em;
   font-weight: bold;
 }
+.menu-user-btn ul li a:hover{
+  color:#363636;
+}
 .IformTitle h2{
   float: left;
   font-size: 1.1em;
