@@ -17,8 +17,8 @@
 							</a>
 						</li>
 						<li>
-							<a href="">
-								MEUS PONTOS
+							<a href="/minha_conta">
+								MINHA CONTA
 							</a>
 						</li>
 						<li>

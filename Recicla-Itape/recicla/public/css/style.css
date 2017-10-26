@@ -693,6 +693,15 @@ height: 220px;
   font-weight: bold;
   background-color: #B5B5B5;
 }
+.formUserUpda input{
+ height: 30px;
+ background-color: #f8f8f8;
+ border:1px solid #CDC9C9;
+ border-radius: 5px;
+}
+.formUserUpda label{
+  margin: 10px;
+}
 /*Tutoriais*/
 .TutoriaisMain h1{
   font-size: 2em;
