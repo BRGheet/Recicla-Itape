@@ -75,9 +75,9 @@
 		</div>
 
 	</div>
-	<!-- Inicio Rodape -->
+	<!--Inicio Rodape
 	<footer id="footer" class="container-fluid ">
 
-	</footer>
+	</footer> -->
 
 	@endsection
