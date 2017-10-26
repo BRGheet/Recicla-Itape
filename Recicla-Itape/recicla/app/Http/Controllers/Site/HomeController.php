@@ -27,6 +27,6 @@ class HomeController extends Controller
     	return view('site.user.home');
     }
     public function alterarDados(){
-    	return('ola');
+    	return view('site.user.alterardados');
     }
 }

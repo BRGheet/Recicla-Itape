@@ -14,14 +14,19 @@ Route::group(['namespace'=>'Site'],function(){
 	Route::get('cooperativas', 'siteController@Cooperativas');
 	Route::get('tutoriais/{id}','siteController@Tutoriais');
 	/*Login User*/
-	Route::get('/minha_conta', 'HomeController@index')->name('home');
-	Route::get('/alterar_dados', 'HomeController@alterarDados')->name('home');
 	$this->get('cadastro/login', 'Auth\LoginController@showLoginForm')->name('login');
 	$this->post('cadastro/login', 'Auth\LoginController@login');
 	$this->post('logout', 'Auth\LoginController@logout')->name('logout');
-	/*Registro*/
+	/*****************************************/
+	/**********Rotas Personalizadas***********/
+	/*****************************************/
+	Route::get('/minha_conta', 'HomeController@index')->name('home');
+	Route::get('/alterar_dados', 'HomeController@alterarDados')->name('home');
+	/*****************************************/
+	/*************Registro********************/
+	/*****************************************/
 	$this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-$this->post('register', 'Auth\RegisterController@register');
+	$this->post('register', 'Auth\RegisterController@register');
 });
 
 /*Login admin*/

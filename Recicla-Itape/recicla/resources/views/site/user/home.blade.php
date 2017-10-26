@@ -15,7 +15,7 @@
 				<nav class="menu-user-btn">
 					<ul>
 						<li>
-							<a href="">
+							<a href="/alterar_dados">
 								ALTERAR DADOS
 							</a>
 						</li>
