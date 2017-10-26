@@ -16,7 +16,7 @@
 					<ul>
 						<li>
 							<a href="">
-								MINHA CONTA
+								ALTERAR DADOS
 							</a>
 						</li>
 						<li>
