@@ -1,92 +1,44 @@
 @extends('.site.template.cabecalho')
 @section('cabecalho')
-<div class="container CooperativasMain"> 
-	<div class="row">
-
-		<div class="col-md-12 titleCoope">
-			<h1>Cooperativas</h1>
-			<p>
-				As cooperativas de reciclagem desenvolvem o processo de tratamento dos materiais recicláveis e os enviam às empresas recicladoras, mas até esta fase existe uma série de etapas que a antecedem.As cooperativas de reciclagem ajudam a gerar empregos e colaboram para a valorização do trabalho de catadores.
-
-				Uma cooperativa do Distrito Federal, chamada “100 Dimensões”, realiza cursos de capacitação profissional, promove oficinas de artesanato com parte do material recolhido e é constantemente chamada para trabalhar em eventos.
-
-				A reciclagem auxilia no processo de preservação ambiental, ao passo que diminui o uso de recursos naturais para a fabricação de embalagens.
-			</p>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				@foreach($coops as $coop)
+					<h1>{{ $coop->nome }}</h1>
+					<p class="lead">Endereço: {{ $coop->endereco }}</p>
+					<button class="btn btn-green" type="button" data-toggle="collapse" data-target="#collapse{{ $coop->id }}">Mais Detalhes</button>
+					<br>
+					<br>
+					<div class="collapse" id="collapse{{ $coop->id }}">
+					  <div class="panel panel-default">
+					  	<div class="panel-body">
+					  		<div class="row">
+					  			<div class="col-md-4">
+					  				<h3>Endereço</h3>
+					  				<p>{{ $coop->endereco }}</p>
+					  			</div>
+					  			<div class="col-md-4">
+					  				<h3>Telefone</h3>
+					  				<p>(15){{ $coop->telefone }}</p>
+					  			</div>
+					  			<div class="col-md-4">
+					  				<h3>Tipo de lixo que recolhe</h3>
+					  				@if($coop->papel)
+          								<span class="glyphicon glyphicon-file green"></span><strong>Papel</strong><br>
+          							@endif
+          							@if($coop->plastico)
+          								<span class="glyphicon glyphicon-cd green"></span><strong>Plastico</strong><br>
+          							@endif
+          							@if($coop->vidro)
+          								<span class="glyphicon glyphicon-glass green"></span><strong>Vidro</strong>
+          							@endif
+					  			</div>
+					  		</div>
+					  	</div>
+					  </div>
+					</div>
+				@endforeach
+			</div>
 		</div>
-		<div class="titleList">
-			<p>Lista de Cooperativas</p>
-		</div>
-		<div class="listagemCoop col-md-4">
-			<p>Coop. de Reciclagem de Itapetininga</p>
-			<p><strong>Endereço:</strong> Rua Orlando Scotto, 68</p>
-			<p><strong>Bairro:</strong> Vila Arlindo Luz</p>
-			<p><strong>Cep:</strong> 18214-385</p>
-			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
-		</div>
-		<div class="listagemCoop col-md-4">
-			<p>Carrefour Sorocaba Norte</p>
-			<p><strong>Endereço:</strong>Avenida Brasil, 376</p>
-			<p><strong>Bairro:</strong> Terra Vermelha</p>
-			<p><strong>Cep:</strong> 18065-100</p>
-			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
-		</div>
-		<div class="listagemCoop col-md-4">
-			<p>COOP - UnidadeTatuí</p>
-			<p><strong>Endereço:</strong>Rua Onze de Agosto, 3045</p>
-			<p><strong>Bairro:</strong> Valinho</p>
-			<p><strong>Cep:</strong> 18275-000</p>
-			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
-		</div>
-		<div class="listagemCoop col-md-4">
-			<p>Cooperação-Cooperativa Regional de Coleta Seletiva e Reciclage</p>
-			<p><strong>Endereço:</strong>Rua Onze de Agosto, 3045</p>
-			<p><strong>Bairro:</strong> Valinho</p>
-			<p><strong>Cep:</strong> 18275-000</p>
-			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
-		</div>
-		<div class="listagemCoop col-md-4">
-			<p>Cooperativa de Reciclagem de Sorocaba</p>
-			<p><strong>Endereço:</strong>R. Tomaz Sanches Artero, 70</p>
-			<p><strong>Bairro:</strong> Valinho</p>
-			<p><strong>Cep:</strong> 18275-000</p>
-			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
-		</div>
-		<div class="listagemCoop col-md-4">
-			<p>CDM - Central Distrib., Serviços e Reciclagem de Madeiras</p>
-			<p><strong>Endereço:</strong>Rua Onze de Agosto, 3045</p>
-			<p><strong>Bairro:</strong> Valinho</p>
-			<p><strong>Cep:</strong> 18275-000</p>
-			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
-		</div>
-		<div class="listagemCoop col-md-4">
-			<p>Cooperativa Central de Catadores e Catadoras de Materiais Re</p>
-			<p><strong>Endereço:</strong>Rua Onze de Agosto, 3045</p>
-			<p><strong>Bairro:</strong> Valinho</p>
-			<p><strong>Cep:</strong> 18275-000</p>
-			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
-		</div><div class="listagemCoop col-md-4">
-			<p>Cooperativa de Recicláveis Santa Genebra</p>
-			<p><strong>Endereço:</strong>Rua Onze de Agosto, 3045</p>
-			<p><strong>Bairro:</strong> Valinho</p>
-			<p><strong>Cep:</strong> 18275-000</p>
-			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
-		</div><div class="listagemCoop col-md-4">
-			<p>Coopernatuz Cooperativa de Catadores Cooperando Com A Natureza</p>
-			<p><strong>Endereço:</strong>Rua Onze de Agosto, 3045</p>
-			<p><strong>Bairro:</strong> Valinho</p>
-			<p><strong>Cep:</strong> 18275-000</p>
-			<a href="#" class="btn btn-primary" role="button">Mais Informaçães</a>
-
-		
-
 	</div>
-</div>
-<style type="text/css">
-*{
-	list-style: none;
-}
-body{
-	background-color: #ededed;
-}
-</style>
 @endsection
