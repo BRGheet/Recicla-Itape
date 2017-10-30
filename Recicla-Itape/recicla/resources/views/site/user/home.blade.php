@@ -17,187 +17,129 @@
 						<div class="row">
 							<div class="col-md-12">
 								<p>Aproveite os Lanches no <strong>McDonald's</strong>
-								na compra de 1 ganha outro para realizar a troca é necessario pelo menos 10 pontos.</p>	
+									na compra de 1 ganha outro para realizar a troca é necessario pelo menos <span>10 pontos.</span></p>	
+								</div>
 							</div>
-						</div>
-						<div class="ReadMorePromo col-md-12">
-							<button>SAIBA MAIS</button>
+							<div class="ReadMorePromo col-md-12">
+								<button>SAIBA MAIS</button>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
 
-			<div class="col-sm-6 col-md-3 PromoItensMain">
-				<div class="row">
-					<div class="thumbnail PromoUserThub" style="z-index: -2">
-						<img src="https://pbs.twimg.com/media/DLPQSQxXkAAQcu6.jpg:small" alt="Imagem não encontrada" >
-					</div>
-					<div class="caption">
-						<div class="row">
-							<div class="col-md-12">
-								<p>Aproveite os Lanches no <strong>McDonald's</strong>
-								na compra de 1 ganha outro para realizar a troca é necessario pelo menos 10 pontos.</p>	
-							</div>
+				<div class="col-sm-6 col-md-3 PromoItensMain">
+					<div class="row">
+						<div class="thumbnail PromoUserThub" style="z-index: -2">
+							<img src="https://pbs.twimg.com/media/DLPQSQxXkAAQcu6.jpg:small" alt="Imagem não encontrada" >
 						</div>
-						<div class="ReadMorePromo col-md-12">
-							<button>SAIBA MAIS</button>
+						<div class="caption">
+							<div class="row">
+								<div class="col-md-12">
+									<p>Aproveite os Lanches no <strong>McDonald's</strong>
+									na compra de 1 ganha outro para realizar a troca é necessario pelo menos 10 pontos.</p>	
+								</div>
+							</div>
+							<div class="ReadMorePromo col-md-12">
+								<button>SAIBA MAIS</button>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-sm-6 col-md-3 PromoItensMain">
-				<div class="row">
-					<div class="thumbnail PromoUserThub" style="z-index: -2">
-						<img src="https://www.mcdonalds.com/content/dam/usa/nutrition/items/evm/h-mcdonalds-Double-Quarter-Pounder-with-Cheese-Extra-Value-Meals.png" alt="Imagem não encontrada" >
-					</div>
-					<div class="caption">
-						<div class="row">
-							<div class="col-md-12">
-								<p>Aproveite os Lanches no <strong>McDonald's</strong>
-								na compra de 1 ganha outro para realizar a troca é necessario pelo menos 10 pontos.</p>	
-							</div>
+				<div class="col-sm-6 col-md-3 PromoItensMain">
+					<div class="row">
+						<div class="thumbnail PromoUserThub" style="z-index: -2">
+							<img src="https://www.mcdonalds.com/content/dam/usa/nutrition/items/evm/h-mcdonalds-Double-Quarter-Pounder-with-Cheese-Extra-Value-Meals.png" alt="Imagem não encontrada" >
 						</div>
-						<div class="ReadMorePromo col-md-12">
-							<button>SAIBA MAIS</button>
+						<div class="caption">
+							<div class="row">
+								<div class="col-md-12">
+									<p>Aproveite os Lanches no <strong>McDonald's</strong>
+									na compra de 1 ganha outro para realizar a troca é necessario pelo menos 10 pontos.</p>	
+								</div>
+							</div>
+							<div class="ReadMorePromo col-md-12">
+								<button>SAIBA MAIS</button>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			
 
-			<div class="col-sm-6 col-md-3 PromoItensMain">
-				<div class="row">
-					<div class="thumbnail PromoUserThub" style="z-index: -2">
-						<img src="http://www.subway.com/~/media/new_zealand/promotions/marquees/mobile/subw0006_web_banner_nz_585x305px_v02.jpg" alt="Imagem não encontrada" >
-					</div>
-					<div class="caption">
-						<div class="row">
-							<div class="col-md-12">
-								<p>Aproveite os Lanches no <strong>McDonald's</strong>
-								na compra de 1 ganha outro para realizar a troca é necessario pelo menos 10 pontos.</p>	
-							</div>
+
+				<div class="col-sm-6 col-md-3 PromoItensMain">
+					<div class="row">
+						<div class="thumbnail PromoUserThub" style="z-index: -2">
+							<img src="http://www.subway.com/~/media/new_zealand/promotions/marquees/mobile/subw0006_web_banner_nz_585x305px_v02.jpg" alt="Imagem não encontrada" >
 						</div>
-						<div class="ReadMorePromo col-md-12">
-							<button>SAIBA MAIS</button>
+						<div class="caption">
+							<div class="row">
+								<div class="col-md-12">
+									<p>Aproveite os Lanches no <strong>McDonald's</strong>
+									na compra de 1 ganha outro para realizar a troca é necessario pelo menos 10 pontos.</p>	
+								</div>
+							</div>
+							<div class="ReadMorePromo col-md-12">
+								<button>SAIBA MAIS</button>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
 
-			<div class="col-sm-6 col-md-3 PromoItensMain">
-				<div class="row">
-					<div class="thumbnail PromoUserThub" style="z-index: -2">
-						<img src="https://www.mcdonalds.com/content/dam/usa/nutrition/items/evm/h-mcdonalds-Double-Quarter-Pounder-with-Cheese-Extra-Value-Meals.png" alt="Imagem não encontrada" >
-					</div>
-					<div class="caption">
-						<div class="row">
-							<div class="col-md-12">
-								<p>Aproveite os Lanches no <strong>McDonald's</strong>
-								na compra de 1 ganha outro para realizar a troca é necessario pelo menos 10 pontos.</p>	
-							</div>
+				<div class="col-sm-6 col-md-3 PromoItensMain">
+					<div class="row">
+						<div class="thumbnail PromoUserThub" style="z-index: -2">
+							<img src="https://www.mcdonalds.com/content/dam/usa/nutrition/items/evm/h-mcdonalds-Double-Quarter-Pounder-with-Cheese-Extra-Value-Meals.png" alt="Imagem não encontrada" >
 						</div>
-						<div class="ReadMorePromo col-md-12">
-							<button>SAIBA MAIS</button>
+						<div class="caption">
+							<div class="row">
+								<div class="col-md-12">
+									<p>Aproveite os Lanches no <strong>McDonald's</strong>
+									na compra de 1 ganha outro para realizar a troca é necessario pelo menos 10 pontos.</p>	
+								</div>
+							</div>
+							<div class="ReadMorePromo col-md-12">
+								<button>SAIBA MAIS</button>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-sm-6 col-md-3 PromoItensMain">
-				<div class="row">
-					<div class="thumbnail PromoUserThub" style="z-index: -2">
-						<img src="https://www.mcdonalds.com/content/dam/usa/nutrition/items/evm/h-mcdonalds-Double-Quarter-Pounder-with-Cheese-Extra-Value-Meals.png" alt="Imagem não encontrada" >
-					</div>
-					<div class="caption">
-						<div class="row">
-							<div class="col-md-12">
-								<p>Aproveite os Lanches no <strong>McDonald's</strong>
-								na compra de 1 ganha outro para realizar a troca é necessario pelo menos 10 pontos.</p>	
-							</div>
+				<div class="col-sm-6 col-md-3 PromoItensMain">
+					<div class="row">
+						<div class="thumbnail PromoUserThub" style="z-index: -2">
+							<img src="https://www.mcdonalds.com/content/dam/usa/nutrition/items/evm/h-mcdonalds-Double-Quarter-Pounder-with-Cheese-Extra-Value-Meals.png" alt="Imagem não encontrada" >
 						</div>
-						<div class="ReadMorePromo col-md-12">
-							<button>SAIBA MAIS</button>
+						<div class="caption">
+							<div class="row">
+								<div class="col-md-12">
+									<p>Aproveite os Lanches no <strong>McDonald's</strong>
+									na compra de 1 ganha outro para realizar a troca é necessario pelo menos 10 pontos.</p>	
+								</div>
+							</div>
+							<div class="ReadMorePromo col-md-12">
+								<button>SAIBA MAIS</button>
+							</div>
 						</div>
 					</div>
 				</div>
+				
+
+
+
+
+
+
+
+
+
+
 			</div>
-			<div class="col-sm-6 col-md-3 PromoItensMain">
-				<div class="row">
-					<div class="thumbnail PromoUserThub" style="z-index: -2">
-						<img src="https://www.mcdonalds.com/content/dam/usa/nutrition/items/evm/h-mcdonalds-Double-Quarter-Pounder-with-Cheese-Extra-Value-Meals.png" alt="Imagem não encontrada" >
-					</div>
-					<div class="caption">
-						<div class="row">
-							<div class="col-md-12">
-								<p>Aproveite os Lanches no <strong>McDonald's</strong>
-								na compra de 1 ganha outro para realizar a troca é necessario pelo menos 10 pontos.</p>	
-							</div>
-						</div>
-						<div class="ReadMorePromo col-md-12">
-							<button>SAIBA MAIS</button>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="col-sm-6 col-md-3 PromoItensMain">
-				<div class="row">
-					<div class="thumbnail PromoUserThub" style="z-index: -2">
-						<img src="https://www.mcdonalds.com/content/dam/usa/nutrition/items/evm/h-mcdonalds-Double-Quarter-Pounder-with-Cheese-Extra-Value-Meals.png" alt="Imagem não encontrada" >
-					</div>
-					<div class="caption">
-						<div class="row">
-							<div class="col-md-12">
-								<p>Aproveite os Lanches no <strong>McDonald's</strong>
-								na compra de 1 ganha outro para realizar a troca é necessario pelo menos 10 pontos.</p>	
-							</div>
-						</div>
-						<div class="ReadMorePromo col-md-12">
-							<button>SAIBA MAIS</button>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-3 PromoItensMain">
-				<div class="row">
-					<div class="thumbnail PromoUserThub" style="z-index: -2">
-						<img src="https://www.mcdonalds.com/content/dam/usa/nutrition/items/evm/h-mcdonalds-Double-Quarter-Pounder-with-Cheese-Extra-Value-Meals.png" alt="Imagem não encontrada" >
-					</div>
-					<div class="caption">
-						<div class="row">
-							<div class="col-md-12">
-								<p>Aproveite os Lanches no <strong>McDonald's</strong>
-								na compra de 1 ganha outro para realizar a troca é necessario pelo menos 10 pontos.</p>	
-							</div>
-						</div>
-						<div class="ReadMorePromo col-md-12">
-							<button>SAIBA MAIS</button>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-
-
-
-
-
-
-
-
 		</div>
+
+
+
+
 	</div>
-
-
-
-
-</div>
-</div>
-</div>
-</div>
 </div>
 <style type="text/css">
 .caption{
@@ -209,6 +151,9 @@
 .caption p{
 	max-height: 160px;
 	padding: 10px;
+}
+.caption span{
+	font-weight: bold;
 }
 </style>
 @endsection
