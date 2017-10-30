@@ -43,7 +43,7 @@
             </button>
             <ul class="dropdown-menu">
               <li><a href="#">Resgatar Vouchers</a></li>
-              <li><a href="#">Alterar Dados</a></li>
+              <li><a href="/vouchers">Vouchers</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="/minha_conta">Minha Conta</a></li>
               <li><a href="{{ route('logout') }}"  onclick="event.preventDefault();

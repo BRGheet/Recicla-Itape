@@ -12,18 +12,13 @@
 				<nav class="menu-user-btn">
 					<ul>
 						<li>
-							<a href="/alterar_dados">
-								ALTERAR DADOS
-							</a>
-						</li>
-						<li>
 							<a href="/minha_conta">
 								MINHA CONTA
 							</a>
 						</li>
 						<li>
-							<a href="">
-								MEUS VOUCHERS
+							<a href="/vouchers">
+								VOUCHERS ATIVOS
 							</a>
 						</li>
 					</ul>

@@ -33,6 +33,6 @@ class CreateMarkersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('makers');
+        Schema::dropIfExists('markers');
     }
 }
