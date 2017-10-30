@@ -5,7 +5,7 @@
 			<div class="col-md-12 userButtons">
 				<dl class="pontosUser">
 					<dt>Atualmente você tem:</dt>
-					<dd><span>0</span><br>
+					<dd><span>{{ Auth::user()->pontos }}</span><br>
 					Pontos Disponíveis.</dd>
 				</dl>
 				<!-- Botoes conta -->

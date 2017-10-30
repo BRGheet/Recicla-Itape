@@ -41,4 +41,6 @@
 			</div>
 		</div>
 	</div>
+		@include('site.includes.rodape')
+
 @endsection

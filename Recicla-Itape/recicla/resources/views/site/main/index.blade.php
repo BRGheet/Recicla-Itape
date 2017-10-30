@@ -75,9 +75,6 @@
 		</div>
 
 	</div>
-	<!--Inicio Rodape
-	<footer id="footer" class="container-fluid ">
-
-	</footer> -->
-
+	<!-- Chamando Rodape -->
+	@include('site.includes.rodape')
 	@endsection

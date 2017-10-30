@@ -4,7 +4,7 @@
 <div class="col-md-9 InformMain">
 	<div class="row">
 		<div class="IformTitle">
-			<h2>CONFIRA AS PROMOÇÕES ATIVAS</h2>
+			<h2>CONFIRA OS VOUCHERS ATIVOS</h2>
 		</div>
 		<div class="promoActive col-md-12">
 
