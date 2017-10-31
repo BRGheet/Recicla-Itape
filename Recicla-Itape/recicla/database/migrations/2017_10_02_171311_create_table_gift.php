@@ -16,6 +16,7 @@ class CreateTableGift extends Migration
         Schema::create('gift', function(Blueprint $table){
             $table->increments('id');
             $table->string('nome');
+            $table->string('imagem');
             $table->string('descricao');
             $table->integer('pontos');
         });

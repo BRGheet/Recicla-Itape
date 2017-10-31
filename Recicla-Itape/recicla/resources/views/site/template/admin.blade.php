@@ -90,31 +90,24 @@
       });
     </script>
     <script type="text/javascript">
+      var file = null;
       $(document).on('click', '.btn-green', function(){
         var pagina = $(this).attr('data-type');
         pagina = '/admin/'+pagina+'/send';
 
-        //tranforma o form em array
-        var dado = {};
-        $('.form-control').each(function(){
-          dado[$(this).attr('name')] = $(this).val();
-        });
-        // verifica se existe input do tipo checkbox
-        if($('.check').length > 0){
-          $('.check').each(function(){
-            dado[$(this).attr('name')] = $(this).is(':checked') ? 1 : 0;
-          });
+        if ($('#upload').length > 0){
+          var form = $('#upload')[0];
+          file = new FormData(form);
+          if ($('#texto').length > 0){
+            file.append('texto', tinymce.get('texto').getContent());
+          }
         }
-        if ($('#texto').length > 0){
-          dado['texto'] = tinymce.get('texto').getContent();
-        }
-        // tranforma array em json
-        JSON.stringify(dado);
-        console.log(dado);
         $.ajax({
           type: 'POST',
-          data: dado,
+          data: file,
           dataType: 'text',
+          processData: false,
+          contentType: false,
           url: pagina,
           success: function(data){
             $.sweetModal({
@@ -125,6 +118,7 @@
         });
       });
     </script>
+
     @yield('script')
   </body>
 </html>

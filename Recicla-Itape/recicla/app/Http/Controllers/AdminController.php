@@ -107,15 +107,15 @@ class AdminController extends Controller
         $coop->nome = $req->input('nome');
         $coop->endereco = $req->input('endereco');
         $coop->telefone = $req->input('telefone');
-        /*Terminar a imagem upload, tutorial do devdojo*/
         if ($req->hasFile('imagem')) {
             $imagem = $req->file('imagem');
-            $nome_imagem = time() . '.' . $imagem->getClientOriginalExtension();
-            Image::make($imagem)->resize(300,300)->save(public_path('/'));
+            $nomeImagem = time() . '.' . $imagem->getClientOriginalName();
+            Image::make($imagem)->resize(400,400)->save(public_path('/uploads/cooperativas/'.$nomeImagem));
+            $coop->imagem = $nomeImagem;
         }
-        $coop->papel = $req->input('papel');
-        $coop->plastico = $req->input('plastico');
-        $coop->vidro = $req->input('vidro');
+        $coop->papel = $req->input('papel') == "on" ? 1 : 0;
+        $coop->plastico = $req->input('plastico') == "on" ? 1 : 0;
+        $coop->vidro = $req->input('vidro') == "on" ? 1 : 0;
 
         $coop->save();
 
@@ -125,6 +125,12 @@ class AdminController extends Controller
     public function giftStore(Request $req){
         $gift = new Gift();
         $gift->nome = $req->input('nome');
+         if ($req->hasFile('imagem')) {
+            $imagem = $req->file('imagem');
+            $nomeImagem = time() . '.' . $imagem->getClientOriginalName();
+            Image::make($imagem)->resize(400,400)->save(public_path('/uploads/gift/'.$nomeImagem));
+            $gift->imagem = $nomeImagem;
+        }
         $gift->descricao = $req->input('desc');
         $gift->pontos = $req->input('pontos');
 
