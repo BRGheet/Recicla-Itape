@@ -33,18 +33,16 @@
     </div>
   </div>
 </div>
+<!-- Div Mapa Google -->
 <div class="container-fluid mapgoogle">
   <button class="btn btn-blue filter">
     <strong>Filtro</strong>
   </button>
   <div class="col-md-12" id="map"></div>
 </div>
-
 <!-- Chamando Rodape -->
 @include('site.includes.rodape')
 @endsection
-
-
 @push('scripts')
 <script type="text/javascript">
   $('.filter').click(function(){
