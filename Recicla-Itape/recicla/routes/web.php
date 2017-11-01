@@ -21,8 +21,8 @@ Route::group(['namespace'=>'Site'],function(){
 	/*****************************************/
 	/**********Rotas Personalizadas***********/
 	/*****************************************/
-	Route::get('/minha_conta', 'HomeController@AlterarDados')->name('home');
-	Route::get('/vouchers', 'HomeController@Index')->name('home');
+	Route::get('/minha_conta', 'User\HomeController@AlterarDados')->name('home');
+	Route::get('/vouchers', 'User\HomeController@Index')->name('home');
 	/*****************************************/
 	/*************Registro********************/
 	/*****************************************/
