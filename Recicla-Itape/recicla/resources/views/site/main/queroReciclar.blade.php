@@ -35,62 +35,62 @@
 </div>
 <div class="container-fluid">
 	<div class="row">
-			<button class="btn btn-blue filter"><strong>Filtro</strong></button>
-			<div class="col-md-12" id="map"></div>
-	</div>
+   <button class="btn btn-blue filter"><strong>Filtro</strong></button>
+   <div class="col-md-12" id="map"></div>
+ </div>
 </div>
 @endsection
 @push('scripts')
 <script type="text/javascript">
-    $('.filter').click(function(){
-      $('#modal').modal('show');
+  $('.filter').click(function(){
+    $('#modal').modal('show');
+  });
+  $('.btn-filter').click(function(){
+    var url = $(this).val();
+    $(location).attr('href',url);
+  });
+  function initMap() {
+    var meio = {lat: -23.588225, lng: -48.040106};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: meio,
+      zoom: 13,
+      /*Minimo zoom limite*/
+      minZoom:13,
+      zoomControl: true,
+      scaleControl: true,
+      streetViewControl: false,
+      /*Desabilita ctrl para zoon*/
+      gestureHandling: 'greedy'
     });
-    $('.btn-filter').click(function(){
-      var url = $(this).val();
-      $(location).attr('href',url);
+
+    @foreach($markers as $marker)
+    var info{{ $marker->id }} = new google.maps.InfoWindow({
+      content: "<h2>{{ $marker->name }}</h2>"
+      +"<p>{{ $marker->content }}</p>"
+      +"<h5>Endereço</h5> {{ $marker->address }}<br>"
+      +"<h5>A cooperativa coleta os seguintes tipos de lixo</h5> <br>"
+      @if($marker->papel)
+      +"<span class=\"glyphicon glyphicon-file\"></span><strong> Papel</strong> "
+      @endif
+      @if($marker->plastico)
+      +"<span class=\"glyphicon glyphicon-cd\"></span><strong> Plastico</strong> "
+      @endif
+      @if($marker->vidro)
+      +"<span class=\"glyphicon glyphicon-glass\"></span><strong> Vidro</strong>"
+      @endif
     });
-	  function initMap() {
-        var meio = {lat: -23.588225, lng: -48.040106};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: meio,
-          zoom: 13,
-          /*Minimo zoom limite*/
-          minZoom:13,
-          zoomControl: true,
-          scaleControl: true,
-          streetViewControl: false,
-          /*Desabilita ctrl para zoon*/
-          gestureHandling: 'greedy'
-        });
+    var marker{{ $marker->id }} = new google.maps.Marker({
+     position: {lat: {{ $marker->lat }}, lng: {{ $marker->lng }} },
+     map: map,
+     title: "{{ $marker->name }}"
+   });
+    marker{{ $marker->id }}.addListener('click', function(){
+      info{{ $marker->id }}.open(map,marker{{ $marker->id }})
+    });
 
-        @foreach($markers as $marker)
-        	var info{{ $marker->id }} = new google.maps.InfoWindow({
-          		content: "<h2>{{ $marker->name }}</h2>"
-          		+"<p>{{ $marker->content }}</p>"
-          		+"<h5>Endereço</h5> {{ $marker->address }}<br>"
-              +"<h5>A cooperativa coleta os seguintes tipos de lixo</h5> <br>"
-          		@if($marker->papel)
-          			+"<span class=\"glyphicon glyphicon-file\"></span><strong> Papel</strong> "
-          		@endif
-          		@if($marker->plastico)
-          			+"<span class=\"glyphicon glyphicon-cd\"></span><strong> Plastico</strong> "
-          		@endif
-          		@if($marker->vidro)
-          			+"<span class=\"glyphicon glyphicon-glass\"></span><strong> Vidro</strong>"
-          		@endif
-        	});
-       	 	var marker{{ $marker->id }} = new google.maps.Marker({
-         		position: {lat: {{ $marker->lat }}, lng: {{ $marker->lng }} },
-          		map: map,
-          		title: "{{ $marker->name }}"
-        	});
-        	marker{{ $marker->id }}.addListener('click', function(){
-          		info{{ $marker->id }}.open(map,marker{{ $marker->id }})
-        	});
-
-        	marker{{ $marker->id }}.setMap(map);
-        @endforeach
-    }
+    marker{{ $marker->id }}.setMap(map);
+    @endforeach
+  }
 
 </script>     
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKTFiIq0LFTvHk92BdJ1qnyUf_U3AGDOE&callback=initMap"></script>
