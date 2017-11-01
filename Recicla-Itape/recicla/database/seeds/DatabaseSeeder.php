@@ -18,6 +18,11 @@ class DatabaseSeeder extends Seeder
         	'email'=> 'miqueiasfernando@gmail.com',
         	'password'=> hash::make('123456'),
         ]);*/
+        DB::table('admins')->insert([
+            'name'=>'Miqueias Fernando',
+            'email' => 'miqueiasfernando@gmail.com',
+            'password'=>bcrypt('123456'),
+        ]);
         DB::table('tutoriais')->insert([
             'autor'=> 'Miqueias Fernando',
             'titulo'=> 'Reciclagem: Como Separar seu Lixo',

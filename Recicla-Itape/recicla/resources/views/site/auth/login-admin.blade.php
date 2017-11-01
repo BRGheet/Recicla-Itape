@@ -1,23 +1,36 @@
-@extends('.site.template.html')
-@section('html')
+@extends('.site.template.cabecalho')
+@section('cabecalho')
 <div class="container">
-	<div class="row" id="pwd-container">
-		<div class="col-md-4"></div>
-		<div class="col-md-4">
-			<section class="login-form">
-				<h1>Login Admin</h1>
-				<form method="POST" action="{{url('/admin/login')}}">
-					{!!csrf_field()!!}
-					<input type="email" name="email" placeholder="Email" required class="form-control input-lg"/>
-					 <input type="password" class="form-control input-lg" id="password" placeholder="Senha" required=""
-					 name="password" />
-					<button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Entrar</button>
-				</form>
+	<img id="cad-bg" src="{{ URL::asset('img/registro.jpg') }}" alt="Background">
+	<h1 class="title_LoginCadas">Login do Administrador</h1>
+	<hr>
+	<div class="row ContentAdmin">
+		<div class="cadastro col-md-6">
+			<p class="lead">Atenção área restrita</p>
+			<h1 class="green">Administrador</h1>
+			<form method="POST" action="{{url('/admin/login')}}">
+				{!!csrf_field()!!}
+				<label for="nome">Email</label>
+
+				<input id="nome" type="email" name="email" class="form-control"  value="{{old('email')}}" placeholder="Digite seu email" required="required"><br>
+
+				<label for="senha">Senha</label>
+				<input id="senha" type="password" name="password" class="form-control" placeholder="Ao menos 8 digitos" value="{{old('Senha')}}" required="required">
+				<br>
+				<button class="btn btn-green">Login</button>
 			</div>
-			</section>
-		</div>
-		</div>
-	</div>
-</div>
+			<style type="text/css">
+			.ContentAdmin{
+				display: -webkit-flex;
+				display: flex;
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+			}
+			p{
+				color: red;
+			}
+		</style>
 @endsection
 
