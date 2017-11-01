@@ -40,45 +40,11 @@
   <div class="col-md-12" id="map"></div>
 </div>
 
-<footer class="container-fluid">
-  <div class="container footerContent">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="footerBox col-md-4">
-        <h2>Recicla Itapê</h2>
-        <ul>
-          <li>Home</li>
-          <li>Quero Reciclar</li>
-          <li>Cooperativas</li>
-          <li>Entrar</li>
-        </ul>
-      </div>
-      <div class="footerBox col-md-4">
-        <h2>Redes Sociais</h2>
-        <ul>
-          <li>Facebook</li>
-          <li>Instagram</li>
-          <li>Twitter</li>
-        </ul>
-      </div>
-      <div class="footerBox col-md-4">
-        <h2>Contato</h2>
-        <ul>
-          <li>Reclame Aqui</li>
-          <li>Sugestões</li>
-          <li>Duvidas</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<style type="text/css">
-html, body {
-  height: 100%;
-}
-</style>
-
+<!-- Chamando Rodape -->
+@include('site.includes.rodape')
 @endsection
+
+
 @push('scripts')
 <script type="text/javascript">
   $('.filter').click(function(){
@@ -130,7 +96,6 @@ html, body {
     marker{{ $marker->id }}.setMap(map);
     @endforeach
   }
-
 </script>     
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKTFiIq0LFTvHk92BdJ1qnyUf_U3AGDOE&callback=initMap"></script>
 @endpush

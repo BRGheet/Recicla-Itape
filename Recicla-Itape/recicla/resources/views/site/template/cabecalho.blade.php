@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{$title or 'Recicla Itapê'}}</title>
+  <title>{{$title or 'Recicla Itapê - Reciclagem'}}</title>
   <!--************ Arquivos Css ****************-->
   <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
@@ -71,49 +71,7 @@
   <a href="#"><i class="fa fa-comment" aria-hidden="true"></i>Dicas</a>
   <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Sobre</a>
 </nav>
-
 @yield('cabecalho')
-
-<!-- <div class="container-fluid rodapeMain">
-  <div class="rodape-menus col-md-10">
-    <section class="col-md-2 listasRodape">
-      <h2>Recicla Itapê</h2>
-      <ul>
-        <li><span class="glyphicon glyphicon-chevron-right"></span><a href=""> Home</a></li>
-
-        <li><span class="glyphicon glyphicon-chevron-right"></span><a href=""> Quero Reciclar</a></li>
-
-        <li><span class="glyphicon glyphicon-chevron-right"></span><a href=""> Cooperativas</a></li>
-
-        <li><span class="glyphicon glyphicon-chevron-right"></span><a href=""> Entrar</a></li>
-      </ul>
-    </section>
-    <section class="col-md-2 listasRodape">
-      <h2>Redes Sociais</h2>
-      <ul>
-        <li><span class="glyphicon glyphicon-chevron-right"></span><a href=""> Facebook</a></li>
-
-        <li><span class="glyphicon glyphicon-chevron-right"></span><a href=""> Instagram</a></li>
-
-        <li><span class="glyphicon glyphicon-chevron-right"></span><a href=""> Twitter</a></li>
-
-        <li><span class="glyphicon glyphicon-chevron-right"></span><a href=""> Youtube</a></li>
-      </ul>
-    </section>
-    <section class="col-md-2 listasRodape">
-      <h2>Contato</h2>
-      <ul>
-        <li><span class="glyphicon glyphicon-chevron-right"></span><a href=""> Ajuda</a></li>
-
-        <li><span class="glyphicon glyphicon-chevron-right"></span><a href=""> Reclamação</a></li>
-
-        <li><span class="glyphicon glyphicon-chevron-right"></span><a href=""> Telefones</a></li>
-
-        <li><span class="glyphicon glyphicon-chevron-right"></span><a href=""> Email</a></li>
-      </ul>
-    </section>
-  </div>
-</div> -->
 <!-- Script NavBar -->
 <script type="text/javascript" src="{{ URL::asset('js/Navbar.js') }}"></script>
 <script src="https://use.fontawesome.com/6a84f90556.js"></script>
