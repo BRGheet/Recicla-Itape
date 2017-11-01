@@ -1,0 +1,37 @@
+html, body{
+  overflow-y: auto;
+}
+
+.sidebar-lg {
+  height: 100%;
+  background-color: #141414;
+  overflow-x: hidden;
+  position: fixed;
+}
+
+.sidebar-lg a{
+  border-left: 6px solid #00B16A;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+  padding: 10px 0px 10px 20px;
+  margin: 10px 0px;
+}
+
+.sidebar-lg a:hover{
+	transition: 0.3s;
+	background-color: rgba(255,255,255,0.1);
+}
+
+.panel{
+  border: 1px solid rgb(238,238,238);
+}
+.panel .panel-heading{
+  background-color: green;
+  border:none;
+}
+
+.font-red{
+  color: red;
+}
