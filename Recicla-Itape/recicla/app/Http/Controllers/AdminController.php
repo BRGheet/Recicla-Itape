@@ -44,9 +44,14 @@ class AdminController extends Controller
     		return redirect('/admin/login');
     }
 
-     public function admin(){
+    public function admin(){
         return view('site.admin.admin-index');
     }
+
+    public function pdf(){
+        return view('site.admin.pdf');
+    }
+
     public function info(){
         return view('site.admin.admin-info');
     }

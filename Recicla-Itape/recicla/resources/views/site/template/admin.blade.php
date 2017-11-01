@@ -70,6 +70,7 @@
         	<a class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
         	<a class="pagina" id="coop">Nova Cooperativa</a>
         	<a class="pagina" id="gift">Nova Recompensa</a>
+          <a href="/testpdf">Teste PDF</a>
       </nav>
       <div class="col-md-2"></div>
       <div id="conteudo" class="container col-md-10">
@@ -82,6 +83,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="{{ URL::asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ URL::asset('assets/js/jquery.sweet-modal.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/jspdf/jspdf.js') }}"></script>
     <script type="text/javascript">
       $.ajaxSetup({
         headers: {

@@ -30,6 +30,7 @@ Route::post('admin/info/send', 'AdminController@infoStore');
 Route::post('admin/ponto/send', 'AdminController@pontoStore');
 Route::post('admin/coop/send', 'AdminController@coopStore');
 Route::post('admin/gift/send', 'AdminController@giftStore');
+Route::get('/testepdf','AdminController@pdf');
 
 /*Rotas de Login e Cadastro*/
 $this->get('cadastro/login', 'Auth\LoginController@showLoginForm')->name('login');
