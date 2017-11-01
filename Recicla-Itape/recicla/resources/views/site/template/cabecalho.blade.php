@@ -13,6 +13,7 @@
   @stack('estilos')
 </head>
 <body>
+  <!-- Sidebar Principal -->
   <nav class="navbar navbar-default navbar-green">
     <div class="container">
       <div class="navbar-header cor-branco">
@@ -58,6 +59,7 @@
     </div>
   </div>
 </nav>
+<!-- Fim Sidebar Principal -->
 <nav id="mySidenav" class="sidebar">
   <div class="sidenav-image">
     <button class="btn btn-green">Cadastre-se</button>

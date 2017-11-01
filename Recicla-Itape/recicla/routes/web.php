@@ -29,6 +29,7 @@ Route::group(['namespace'=>'Site'],function(){
 });
 
 /* Rotas da tela de administrador */
+Route::get('admin/login', 'AdminController@login');
 Route::get('admin', 'AdminController@admin');
 Route::get('admin/index', 'AdminController@index');
 Route::get('info', 'AdminController@info');
