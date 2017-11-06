@@ -847,6 +847,7 @@ footer{
   transition: 0.3s;
   padding: 10px 0px 10px 20px;
   margin: 10px 0px;
+  cursor: pointer;
 }
 
 .sidebar-lg a:hover{

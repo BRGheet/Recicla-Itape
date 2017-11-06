@@ -10,12 +10,21 @@
 			<h1 class="green">Administrador</h1>
 			<form method="POST" action="{{url('/admin/login')}}">
 				{!!csrf_field()!!}
+				@if ($errors->adminErrors->first('email'))
+				<span class="help-block">
+					<strong>{{ $errors->adminErrors->first('email')}}</strong>
+				</span>
+				@endif
+				@if ($errors->adminErrors->first('password'))
+				<span class="help-block">
+					<strong>{{ $errors->adminErrors->first('password')}}</strong>
+				</span>
+				@endif
 				<label for="nome">Email</label>
-
-				<input id="nome" type="email" name="email" class="form-control"  value="{{old('email')}}" placeholder="Digite seu email" required="required"><br>
+				<input id="nome" type="email" name="email" class="form-control"  value="{{old('email')}}" placeholder="Digite seu email" ><br>
 
 				<label for="senha">Senha</label>
-				<input id="senha" type="password" name="password" class="form-control" placeholder="Ao menos 8 digitos" value="{{old('Senha')}}" required="required">
+				<input id="senha" type="password" name="password" class="form-control" placeholder="Ao menos 8 digitos" value="{{old('Senha')}}">
 				<br>
 				<button class="btn btn-green">Login</button>
 			</div>
@@ -32,5 +41,5 @@
 				color: red;
 			}
 		</style>
-@endsection
+		@endsection
 

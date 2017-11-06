@@ -13,7 +13,10 @@ use DateTime;
 
 class adminController extends Controller
 {
-
+    public function __construct()
+    {
+        /*$this->middleware('authAdmin');*/
+    }
     public function index(){
         $infos = DB::table('info')->get();
         return view('site.admin.admin', ['infos' => $infos]);
@@ -42,10 +45,17 @@ class adminController extends Controller
     }
     public function infoStore(Request $req){
         $info = new Info();
+        $video = $req->input('video');
+        $step1=explode('v=', $video);
+        $step2 =explode('&',$step1[1]);
+        $vedio_id = $step2[0];
+        $Videolink = 'http://www.youtube.com/embed/'.$vedio_id;
+
+
         $info->titulo = $req->input('titulo');
         $info->autor = $req->input('autor');
         $info->resumo = $req->input('resumo');
-        $info->video = $req->input('video');
+        $info->video = $Videolink;
         $info->texto = $req->input('texto');
         $info->save();
 

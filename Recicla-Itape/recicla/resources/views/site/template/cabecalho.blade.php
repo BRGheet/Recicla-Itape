@@ -26,7 +26,7 @@
         <a href="/" class="navbar-brand hidden-xs">Recicla Itapê</a>
         <a href="/" class="navbar-brand hidden-sm hidden-md hidden-lg">Recicla Itapê</a>                
       </div>
-      <div class="col-md-6 col-md-offset-3 hidden-xs">
+      <div class="col-md-5 col-md-offset-3 hidden-xs">
         <ul class="nav navbar-nav">
           <li><a href="/">Home</a></li>
           <li><a href="/reciclar">Quero Reciclar</a></li>
@@ -35,6 +35,7 @@
       </div>
       <div class="nav navbar-nav navbar-right">
         <div class="dropdown hidden-xs">
+          <a href="{{url('/admin/login')}}" style="float: left;"><button class="btn btn-blue-outline navbar-btn">Administrador</button></a>
           @if (Auth::guest())
           <a href="{{url('cadastro/login')}}"><button class="btn btn-blue-outline navbar-btn">Entrar</button></a>
           @else

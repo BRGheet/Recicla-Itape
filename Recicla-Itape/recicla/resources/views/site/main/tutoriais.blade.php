@@ -21,7 +21,7 @@
 		</div>
 		<div class="col-md-8 tutoCenter">
 			<div class="VideoPlay col-md-12">
-				<iframe src="{{$news->linkVideo}}" frameborder="0" allowfullscreen></iframe>
+				<iframe src="{{$news->video}}" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<div class="col-md-12 textTutorial">
 				<p>{{$news->texto}}</p>
