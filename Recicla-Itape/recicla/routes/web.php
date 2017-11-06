@@ -29,16 +29,19 @@ Route::group(['namespace'=>'Site'],function(){
 });
 
 /* Rotas da tela de administrador */
-Route::get('admin/login', 'AdminController@login');
-Route::get('admin', 'AdminController@admin');
-Route::get('admin/index', 'AdminController@index');
 Route::get('info', 'AdminController@info');
-Route::get('ponto', 'AdminController@ponto');
-Route::get('coop', 'AdminController@coop');
-Route::get('gift', 'AdminController@gift');
-Route::post('admin/info/send', 'AdminController@infoStore');
-Route::post('admin/ponto/send', 'AdminController@pontoStore');
-Route::post('admin/coop/send', 'AdminController@coopStore');
-Route::post('admin/gift/send', 'AdminController@giftStore');
+Route::get('admin', 'adminController@admin');
+Route::get('admin/index', 'adminController@index');
+Route::get('info', 'adminController@info');
+Route::get('ponto', 'adminController@ponto');
+Route::get('coop', 'adminController@coop');
+Route::get('gift', 'adminController@gift');
+Route::post('admin/info/send', 'adminController@infoStore');
+Route::post('admin/ponto/send', 'adminController@pontoStore');
+Route::post('admin/coop/send', 'adminController@coopStore');
+Route::post('admin/gift/send', 'adminController@giftStore');
+/*Routes de Login e Cadastro*/
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 
 
