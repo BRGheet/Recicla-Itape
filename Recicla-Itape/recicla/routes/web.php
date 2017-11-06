@@ -29,16 +29,24 @@ Route::group(['namespace'=>'Site'],function(){
 });
 
 /* Rotas da tela de administrador */
-Route::get('admin/login', 'Admin\Auth\adminController@login');
-Route::post('admin/login', 'Admin\Auth\adminController@loginValidation');
-Route::get('admin', 'adminController@admin');
-Route::get('admin/index', 'adminController@index');
-Route::get('info', 'adminController@info');
-Route::get('ponto', 'adminController@ponto');
-Route::get('coop', 'adminController@coop');
-Route::get('gift', 'adminController@gift');
-Route::post('admin/info/send', 'adminController@infoStore');
-Route::post('admin/ponto/send', 'adminController@pontoStore');
-Route::post('admin/coop/send', 'adminController@coopStore');
-Route::post('admin/gift/send', 'adminController@giftStore');
+Route::group(['middleware' => 'admin'], function (){
+
+	Route::get('admin/login', 'Admin\Auth\adminController@login');
+	Route::post('admin/login', 'Admin\Auth\adminController@loginValidation');
+	Route::get('admin/logout', 'Admin\Auth\adminController@logout');
+
+	Route::group(['middleware'=> 'auth:admin'], function(){
+		Route::get('admin', 'adminController@admin');
+		Route::get('admin/index', 'adminController@index');
+		Route::get('info', 'adminController@info');
+		Route::get('ponto', 'adminController@ponto');
+		Route::get('coop', 'adminController@coop');
+		Route::get('gift', 'adminController@gift');
+		Route::post('admin/info/send', 'adminController@infoStore');
+		Route::post('admin/ponto/send', 'adminController@pontoStore');
+		Route::post('admin/coop/send', 'adminController@coopStore');
+		Route::post('admin/gift/send', 'adminController@giftStore');
+	});
+});
+
 

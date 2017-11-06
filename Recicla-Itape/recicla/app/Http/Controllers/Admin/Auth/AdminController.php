@@ -24,6 +24,16 @@ class AdminController extends Controller
 			return redirect('/admin/login')
 			->withErrors($validator, 'adminErrors')->withInput();
 		}
+		$credentials = ['email'=> $request->get('email'),'password'=>$request->get('password')];
 
+    	if(auth()->guard('admin')->attempt($credentials)){
+    		return redirect('/admin');
+    	} else{
+    		return redirect('/admin/login')->withErrors(['errors' => 'Login Invalido'])->withInput();
+    	}
 	}
+	public function logout(){
+    		auth()->guard('admin')->logout();
+    		return redirect('/admin/login');
+    	}
 }
