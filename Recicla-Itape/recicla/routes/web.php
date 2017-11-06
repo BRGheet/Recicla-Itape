@@ -39,8 +39,4 @@ Route::post('admin/info/send', 'adminController@infoStore');
 Route::post('admin/ponto/send', 'adminController@pontoStore');
 Route::post('admin/coop/send', 'adminController@coopStore');
 Route::post('admin/gift/send', 'adminController@giftStore');
-/*Routes de Login e Cadastro*/
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
-
 

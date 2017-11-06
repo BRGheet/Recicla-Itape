@@ -14,16 +14,15 @@ class CreateTutoriaisTable extends Migration
     public function up()
     {
         Schema::create('tutoriais', function (Blueprint $table) {
-        $table->increments('id');
-        $table->string('autor',30);
-        $table->string('titulo',200);
-        $table->string('resumo',476);
-        $table->text('texto');
-        $table->string('linkVideo')->nullable();
-        $table->string('img');
-        $table->dateTime('dataHora');
-    });
-  }
+          $table->increments('id');
+          $table->string('autor',30);
+          $table->string('titulo',200);
+          $table->string('resumo',476);
+          $table->text('texto');
+          $table->string('video')->nullable();
+          $table->timestamp('dataHora')->useCurrent();
+      });
+    }
 
     /**
      * Reverse the migrations.
