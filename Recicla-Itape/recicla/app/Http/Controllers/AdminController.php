@@ -44,12 +44,12 @@ class adminController extends Controller
         return view('site.admin.admin-dicas');
     }
     public function infoStore(Request $req){
-        $info = new Info();
+  /*      $info = new Info();
         $video = $req->input('video');
-        $step1=explode('v=', $video);
-        $step2 =explode('&',$step1[1]);
-        $vedio_id = $step2[0];
-        $Videolink = 'http://www.youtube.com/embed/'.$vedio_id;
+        $step1= explode('v=', $video);
+        $step2 = explode('&',$step1[1]);
+        $vedio_id = $step2[0];*/
+        $Videolink = 'http://www.youtube.com/embed/';
 
 
         $info->titulo = $req->input('titulo');
