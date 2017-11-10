@@ -26,10 +26,14 @@ Route::get('info', 'AdminController@info');
 Route::get('ponto', 'AdminController@ponto');
 Route::get('coop', 'AdminController@coop');
 Route::get('gift', 'AdminController@gift');
+Route::get('check', 'AdminController@check');
+Route::get('add','AdminController@add');
 Route::post('admin/info/send', 'AdminController@infoStore');
 Route::post('admin/ponto/send', 'AdminController@pontoStore');
 Route::post('admin/coop/send', 'AdminController@coopStore');
+Route::post('admin/add/send','AdminController@addStore');
 Route::post('admin/gift/send', 'AdminController@giftStore');
+Route::post('admin/check/send', 'AdminController@checkVoucher');
 Route::get('/testepdf','AdminController@pdf');
 
 /*Rotas de Login e Cadastro*/

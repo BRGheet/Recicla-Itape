@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use Image;
+use DB;
 use App\Info;
 use App\Ponto;
 use App\Gift;
@@ -60,6 +61,12 @@ class AdminController extends Controller
     }
     public function ponto(){
         return view('site.admin.admin-ponto');
+    }
+    public function add(){
+        return view('site.admin.admin-add-ponto');
+    }
+    public function check(){
+        return view('site.admin.admin-check');
     }
     public function coop(){
         return view('site.admin.admin-coop');
@@ -142,5 +149,22 @@ class AdminController extends Controller
         $gift->save();
 
         return "Recompensa adicionada com sucesso";
+    }
+
+    public function addStore(Request $req){
+        $_id = $req->input('user');
+        $_pontos = $req->input('pontos');
+        DB::select('call add_pontos_usuario('.$_id.','.$_pontos.');');
+
+        return "Pontos adicionados na conta do usuário com sucesso";
+    }
+
+    public function checkVoucher(Request $req){
+        $_cod = $req->input('codigo');
+        $result = DB::select('call check_voucher('.$_cod.');');
+        if ($result != null) {
+            return "Código confirmado com sucesso";
+        }
+        throw new Exception("Unable to find customer", 410);
     }
 }

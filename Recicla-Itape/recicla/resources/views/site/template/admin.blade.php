@@ -66,6 +66,8 @@
     </nav>
       <nav class="col-md-2 sidebar-lg hidden-xs hidden-sm">
       	<h1>ADMIN</h1>
+          <a class="pagina" id="add">Adicionar Ponto</a>
+          <a class="pagina" id="check">Verificar Voucher</a>
       	  <a href="/admin">Nova Informação</a>
         	<a class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
         	<a class="pagina" id="coop">Nova Cooperativa</a>
@@ -115,6 +117,22 @@
             $.sweetModal({
               content: data,
               icon: $.sweetModal.ICON_SUCCESS
+            });
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+            var msg = "";
+            switch(jqXHR.status){
+              case 500:
+                msg = "Digite apenas números inteiros.";
+                break;
+              case 410:
+                msg = "Código não encontrado";
+                break;
+            }
+            $.sweetModal({
+              content: msg,
+              title: "Erro: "+jqXHR.status,
+              icon: $.sweetModal.ICON_ERROR
             });
           }
         });
