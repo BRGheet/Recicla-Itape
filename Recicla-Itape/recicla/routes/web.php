@@ -23,6 +23,7 @@ Route::group(['middleware' => 'CheckAdmin'], function (){
 	Route::group(['namespace'=>'Admin\Auth'],function(){
 		Route::get('admin/login', 'LoginAdminController@login');
 		Route::post('admin/login', 'LoginAdminController@loginValidation');
+			Route::get('admin/logout', 'LoginAdminController@logout');
 	});
 });
 Route::group(['middleware'=> 'auth:admin'], function(){
@@ -37,7 +38,6 @@ Route::group(['middleware'=> 'auth:admin'], function(){
 		Route::post('admin/ponto/send', 'adminController@pontoStore');
 		Route::post('admin/coop/send', 'adminController@coopStore');
 		Route::post('admin/gift/send', 'adminController@giftStore');
-		Route::get('admin/logout', 'Admin\Auth\adminController@logout');
 	});
 });
 // Resetar Senhas
