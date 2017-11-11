@@ -757,6 +757,9 @@ height: 220px;
 .CooperativasMain{
   text-align: justify;
 }
+.ContentCoop{
+  min-height: 1000px;
+}
 .titleCoope h1{
   font-size: 2.2em;
 }

@@ -23,7 +23,7 @@ class siteController extends Controller
 
 	public function cooperativas(){
 		$title = 'Cooperativas';
-		$coops = DB::table('cooperativas')->get();
+		$coops = DB::table('coop')->get();
 		return view('site\main\cooperativas',compact('title'), ['coops' => $coops]);
 	}
 	
