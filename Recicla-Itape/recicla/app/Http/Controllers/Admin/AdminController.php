@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use DB;
 use App\Info;
 use App\Video;
@@ -11,9 +12,9 @@ use App\Coop;
 use App\Gift;
 use DateTime;
 
-class adminController extends Controller
+class AdminController extends Controller
 {
-    public function __construct()
+	 public function __construct()
     {
         /*$this->middleware('authAdmin');*/
     }

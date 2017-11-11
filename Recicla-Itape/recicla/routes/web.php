@@ -20,21 +20,25 @@ Route::group(['namespace'=>'site'],function(){
 
 /*Rotas Da Interface Adminitrativa*/
 Route::group(['middleware' => 'CheckAdmin'], function (){
-	Route::get('admin/login', 'Admin\Auth\adminController@login');
-	Route::post('admin/login', 'Admin\Auth\adminController@loginValidation');
+	Route::group(['namespace'=>'Admin\Auth'],function(){
+		Route::get('admin/login', 'LoginAdminController@login');
+		Route::post('admin/login', 'LoginAdminController@loginValidation');
+	});
 });
 Route::group(['middleware'=> 'auth:admin'], function(){
-	Route::get('admin', 'adminController@admin');
-	Route::get('admin/index', 'adminController@index');
-	Route::get('info', 'adminController@info');
-	Route::get('ponto', 'adminController@ponto');
-	Route::get('coop', 'adminController@coop');
-	Route::get('gift', 'adminController@gift');
-	Route::post('admin/info/send', 'adminController@infoStore');
-	Route::post('admin/ponto/send', 'adminController@pontoStore');
-	Route::post('admin/coop/send', 'adminController@coopStore');
-	Route::post('admin/gift/send', 'adminController@giftStore');
-	Route::get('admin/logout', 'Admin\Auth\adminController@logout');
+	Route::group(['namespace'=>'Admin'],function(){
+		Route::get('admin', 'adminController@admin');
+		Route::get('admin/index', 'adminController@index');
+		Route::get('info', 'adminController@info');
+		Route::get('ponto', 'adminController@ponto');
+		Route::get('coop', 'adminController@coop');
+		Route::get('gift', 'adminController@gift');
+		Route::post('admin/info/send', 'adminController@infoStore');
+		Route::post('admin/ponto/send', 'adminController@pontoStore');
+		Route::post('admin/coop/send', 'adminController@coopStore');
+		Route::post('admin/gift/send', 'adminController@giftStore');
+		Route::get('admin/logout', 'Admin\Auth\adminController@logout');
+	});
 });
 // Resetar Senhas
 $this->get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
