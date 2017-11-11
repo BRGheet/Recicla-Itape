@@ -80,7 +80,8 @@
           <input id="senha" type="password" name="password" class="form-control" placeholder="Digite sua senha" value="{{old('password')}}" required="required">
           <br>
 
-          <a href="{{ route('password.request') }}">Esqueci a minha senha</a>
+          <a href="{{ route('password.request') }}">Esqueci a minha senha</a><br>
+           <a href="{{ url('/admin/login') }}">Administrador</a>
           <br>
           <br>
           <button class="btn btn-green pull-right">Entrar</button>
