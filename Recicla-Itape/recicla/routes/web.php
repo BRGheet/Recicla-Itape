@@ -6,21 +6,20 @@ $this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 
 /*Principais rotas site*/
-Route::group(['namespace'=>'Site'],function(){
+Route::group(['namespace'=>'site'],function(){
 	Route::get('/', 'siteController@index');
 	Route::get('reciclar', 'siteController@queroReciclar');
 	Route::get('cooperativas', 'siteController@Cooperativas');
 	Route::get('tutoriais/{id}','siteController@Tutoriais');
 	Route::get('reciclar/f={dado}','siteController@mapFilter');
+	
 	/*Login User*/
 	$this->get('cadastro/login', 'Auth\LoginController@showLoginForm')->name('login');
 	$this->post('cadastro/login', 'Auth\LoginController@login');
 	$this->post('logout', 'Auth\LoginController@logout')->name('logout');
-	/*****************************************/
-	/**********Rotas Usuario Logado***********/
-	/*****************************************/
 	Route::get('/minha_conta', 'User\HomeController@AlterarDados')->name('home');
 	Route::get('/vouchers', 'User\HomeController@Index')->name('home');
+	
 	/*****************************************/
 	/*************Registro********************/
 	/*****************************************/
