@@ -13,7 +13,7 @@ class CreateTableCooperativas extends Migration
      */
     public function up()
     {
-      Schema::create('cooperativas', function(Blueprint $table){
+      Schema::create('coop', function(Blueprint $table){
         $table->increments('id');
         $table->string('nome');
         $table->string('endereco');

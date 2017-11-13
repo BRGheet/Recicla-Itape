@@ -1,6 +1,6 @@
 @extends('.site.template.cabecalho')
 @section('cabecalho')
-	<div class="container">
+	<div class="container ContentCoop">
 		<div class="row">
 			<div class="col-md-12">
 				@foreach($coops as $coop)
@@ -41,6 +41,5 @@
 			</div>
 		</div>
 	</div>
-		@include('site.includes.rodape')
-
+	@include('site.includes.rodape')
 @endsection

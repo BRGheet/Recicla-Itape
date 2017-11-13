@@ -6,11 +6,14 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Validator;
-use Session;
 
-class AdminController extends Controller
+class LoginAdminController extends Controller
 {
 
+	public function __construct()
+	{
+		/*$this->middleware('admin');*/
+	}
 	public function login(){
 		return view("site.auth.login-admin");
 	}
@@ -27,7 +30,6 @@ class AdminController extends Controller
 		$credentials = ['email'=> $request->get('email'),'password'=>$request->get('password')];
 
 		if(auth()->guard('admin')->attempt($credentials)){
-			Session::put('usuario', ['nome' => 'Wallacwrerwere']);
 			return redirect('/admin');
 		} else{
 			return redirect('/admin/login')->withErrors(['errors' => 'Login Invalido'])->withInput();

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Site;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
-use Session;
 
 class siteController extends Controller
 {
@@ -24,7 +23,7 @@ class siteController extends Controller
 
 	public function cooperativas(){
 		$title = 'Cooperativas';
-		$coops = DB::table('cooperativas')->get();
+		$coops = DB::table('coop')->get();
 		return view('site\main\cooperativas',compact('title'), ['coops' => $coops]);
 	}
 	

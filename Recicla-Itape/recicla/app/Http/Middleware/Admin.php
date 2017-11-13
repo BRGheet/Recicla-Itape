@@ -3,9 +3,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Auth;
 
-class checkLogin
+class Admin
 {
     /**
      * Handle an incoming request.
@@ -16,11 +15,13 @@ class checkLogin
      */
     public function handle($request, Closure $next)
     {
-     if (Auth::guard('admins')->check()) {
-        return $next($request);
+        if (Auth::guard('admins')->check()) {
+            return redirect('/admin');
         }
         else{
             return redirect('/');
         }
+
+        return redirect('home');
     }
 }

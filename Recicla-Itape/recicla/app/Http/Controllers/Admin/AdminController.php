@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use DB;
 use App\Info;
 use App\Video;
@@ -11,11 +12,11 @@ use App\Coop;
 use App\Gift;
 use DateTime;
 
-class adminController extends Controller
+class AdminController extends Controller
 {
-    public function __construct()
+	 public function __construct()
     {
-       /* $this->middleware('auth:admin');*/
+        /*$this->middleware('authAdmin');*/
     }
     public function index(){
         $infos = DB::table('info')->get();
@@ -44,12 +45,12 @@ class adminController extends Controller
         return view('site.admin.admin-dicas');
     }
     public function infoStore(Request $req){
-        $info = new Info();
+  /*      $info = new Info();
         $video = $req->input('video');
-        $step1=explode('v=', $video);
-        $step2 =explode('&',$step1[1]);
-        $vedio_id = $step2[0];
-        $Videolink = 'http://www.youtube.com/embed/'.$vedio_id;
+        $step1= explode('v=', $video);
+        $step2 = explode('&',$step1[1]);
+        $vedio_id = $step2[0];*/
+        $Videolink = 'http://www.youtube.com/embed/';
 
 
         $info->titulo = $req->input('titulo');

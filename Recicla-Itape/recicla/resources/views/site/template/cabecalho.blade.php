@@ -35,6 +35,17 @@
       </div>
       <div class="nav navbar-nav navbar-right">
         <div class="dropdown hidden-xs">
+          @if (Auth::guard('admin')->check())
+          <div class="btn-group">
+            <button type="button" class="btn btn-blue-outline navbar-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{Auth::guard('admin->name')}} <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="/admin">Inicio</a></li>
+              <li><a href="/admin/logout">Sair</a></li>
+            </ul>
+          </div>
+          @endif
           @if (Auth::guest())
           <a href="{{url('cadastro/login')}}"><button class="btn btn-blue-outline navbar-btn">Entrar</button></a>
           @else

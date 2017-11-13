@@ -17,6 +17,7 @@ return [
         'guard' => 'web',
         'passwords' => 'users',
     ],
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -43,9 +44,13 @@ return [
             'driver' => 'session',
             'provider' => 'admins',
         ],
+        'admin-api' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
         'api' => [
             'driver' => 'token',
-            'provider' => 'users',
+            'provider' => 'admins',
         ],
     ],
 
@@ -103,10 +108,10 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
-        'admins'=> [
-            'provaider' => 'admins',
-            'table' => 'password_resets',
-            'expire' => 60,  
+        'admins' => [
+            'admins'=> 'admins',
+            'table'=> 'password_resets',
+            'expire' => 15,
         ],
     ],
 

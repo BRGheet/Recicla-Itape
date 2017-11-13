@@ -126,12 +126,10 @@
 				</div>
 			</div>
 		</div>
-
-
-
-
 	</div>
 </div>
+</div>
+@include('.site.includes.rodape')
 <style type="text/css">
 .caption{
 	border-right: 1px solid #B5B5B5;
