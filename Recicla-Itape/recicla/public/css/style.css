@@ -519,7 +519,15 @@ height: 220px;
 .login-form h1{
   text-align: center;
 }
-
+.sidebar-lg a {
+      /* border-left: 6px solid #00B16A; */
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    padding: 10px 0px 10px 20px;
+    margin: 10px 0px;
+}
 /*Interface Usuario*/
 .UserInterface{
   height: 170px;

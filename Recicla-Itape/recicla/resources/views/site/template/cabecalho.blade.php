@@ -35,7 +35,6 @@
       </div>
       <div class="nav navbar-nav navbar-right">
         <div class="dropdown hidden-xs">
-          <a href="{{url('/admin/login')}}" style="float: left;"><button class="btn btn-blue-outline navbar-btn">Administrador</button></a>
           @if (Auth::guest())
           <a href="{{url('cadastro/login')}}"><button class="btn btn-blue-outline navbar-btn">Entrar</button></a>
           @else

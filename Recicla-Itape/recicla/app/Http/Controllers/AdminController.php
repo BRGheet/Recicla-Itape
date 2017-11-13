@@ -15,7 +15,7 @@ class adminController extends Controller
 {
     public function __construct()
     {
-        /*$this->middleware('authAdmin');*/
+       /* $this->middleware('auth:admin');*/
     }
     public function index(){
         $infos = DB::table('info')->get();
