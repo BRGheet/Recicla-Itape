@@ -83,14 +83,22 @@ class LoginController extends Controller
                 }
             }
         }
-     public function logout(){
-        auth()->guard('admin')->logout();
-        return redirect('/admin/login');
-    }
-    public function index(){
-       if (Auth::attempt(array('email' => 'miqueiasfernando@gmail.com', 'password' => '12345')))
+        public function index(){
+            if (Auth::attempt(array('email' => 'miqueiasfernando@gmail.com', 'password' => '12345')))
           {
              return('logado');
          }
-     }
+        }
+        public function logout(){
+            if(Auth::guard('admin')->check()){
+                /*Auth::guard('admin')->admin()->name;*/
+                auth()->guard('admin')->logout();
+                return redirect('/cadastro/login');
+            }
+            else if(Auth::guard('web')->check()){
+                auth()->guard('web')->logout();
+                return redirect('/cadastro/login');
+               /* Auth::guard('user')->user()->name;*/
+            }
+        }
  }
