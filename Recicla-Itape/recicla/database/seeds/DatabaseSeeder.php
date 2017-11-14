@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         /*$this->call(UserTableSeeder::class);*/
-       DB::table('admins')->insert([
+     DB::table('admins')->insert([
         	'name' => 'Miqueias Fernando',
         	'email'=> 'miqueiasfernando@gmail.com',
         	'password'=> hash::make('123456'),
@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'name'=>'Miqueias Fernando',
             'email' => 'miqueiasfernando@gmail.com',
             'password'=>bcrypt('123456'),
-        ]);
+        ]);*/
         DB::table('tutoriais')->insert([
             'autor'=> 'Miqueias Fernando',
             'titulo'=> 'Reciclagem: Como Separar seu Lixo',
@@ -101,7 +101,7 @@ A composteira doméstica decompõe os alimentos por meio da ação de micro-orga
             'img'=> 'corridor-1045441_640.jpg',
             'LinkVideo'=> 'http://www.youtube.com/embed/V4qgUdwze6E',
             'dataHora' => '2017-08-12 13:30:12',
-        ]);*/
+        ]);
         /*db:seed*/
     }
 }

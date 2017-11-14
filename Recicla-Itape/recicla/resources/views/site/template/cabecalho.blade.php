@@ -38,7 +38,7 @@
           @if (Auth::guard('admin')->check())
           <div class="btn-group">
             <button type="button" class="btn btn-blue-outline navbar-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {{Auth::guard('admin->name')}} <span class="caret"></span>
+            Administrador <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
               <li><a href="/admin">Inicio</a></li>
