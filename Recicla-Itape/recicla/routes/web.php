@@ -7,12 +7,19 @@ Route::group(['namespace'=>'site'],function(){
 	Route::get('cooperativas', 'siteController@Cooperativas');
 	Route::get('tutoriais/{id}','siteController@Tutoriais');
 	Route::get('reciclar/f={dado}','siteController@mapFilter');
+
+
+
+
 	/*Login User*/
 	$this->get('cadastro/login', 'Auth\LoginController@showLoginForm')->name('login');
-	$this->post('cadastro/login', 'Auth\LoginController@login');
+	$this->post('cadastro/login', 'Auth\LoginController@login')->name('login');
+
 	$this->post('logout', 'Auth\LoginController@logout')->name('logout');
+
 	Route::get('/minha_conta', 'User\HomeController@AlterarDados')->name('home');
 	Route::get('/vouchers', 'User\HomeController@Index')->name('home');
+
 	/*Rotas Registro De Usuarios*/
 	$this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 	$this->post('register', 'Auth\RegisterController@register');
@@ -26,8 +33,8 @@ Route::group(['middleware' => 'CheckAdmin'], function (){
 			Route::get('admin/logout', 'LoginAdminController@logout');
 	});
 });
-Route::group(['middleware'=> 'auth:admin'], function(){
-	Route::group(['namespace'=>'Admin'],function(){
+Route::group(['middleware' => ['CheckAdmin']], function () {
+Route::group(['namespace'=>'Admin'],function(){
 		Route::get('admin', 'adminController@admin');
 		Route::get('admin/index', 'adminController@index');
 		Route::get('info', 'adminController@info');

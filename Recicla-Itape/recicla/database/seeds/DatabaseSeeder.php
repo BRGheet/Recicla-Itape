@@ -13,16 +13,17 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         /*$this->call(UserTableSeeder::class);*/
-     DB::table('admins')->insert([
+     DB::table('users')->insert([
         	'name' => 'Miqueias Fernando',
         	'email'=> 'miqueiasfernando@gmail.com',
         	'password'=> hash::make('123456'),
+            'role' => '2',
         ]);
        /* DB::table('admins')->insert([
             'name'=>'Miqueias Fernando',
             'email' => 'miqueiasfernando@gmail.com',
             'password'=>bcrypt('123456'),
-        ]);*/
+        ]);
         DB::table('tutoriais')->insert([
             'autor'=> 'Miqueias Fernando',
             'titulo'=> 'Reciclagem: Como Separar seu Lixo',

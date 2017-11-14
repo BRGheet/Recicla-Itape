@@ -16,9 +16,11 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
-         if (Auth::guard('admin')->check()) {
-            return redirect('/admin');
+        if (Auth::guard('admin')->check()) {
+           return $next($request); 
         }
-        return $next($request);
+        else{
+            return redirect('/vouchers');
+        }
     }
 }

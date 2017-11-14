@@ -42,7 +42,8 @@ return [
         ],
         'admin' => [
             'driver' => 'session',
-            'provider' => 'admins',
+            'provider' => 'users',
+            /*Provider é a tabela que vai ser usada*/
         ],
         'admin-api' => [
             'driver' => 'session',

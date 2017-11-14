@@ -13,15 +13,20 @@ class Admin
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next,$user)
     {
-        if (Auth::guard('admins')->check()) {
+        return redirect('/')
+        /*echo "Role: " .$role;*/
+     /*   if(Auth::user()->role == '3'){
+            return redirect('/');
+        }*/
+        /*if (Auth::guard('admin')->check()) {
             return redirect('/admin');
         }
         else{
-            return redirect('/');
+            return redirect('/cadastro/login');
         }
-
-        return redirect('home');
+*/
+        return $next($request);
     }
 }
