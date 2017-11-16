@@ -12,21 +12,12 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
- /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
- /*   public function __construct()
-    {
-     $this->middleware('guest')->except('logout');
- }*/
-/*   use AuthenticatesUsers;*/
+
+  public function __construct()
+  {
+   $this->middleware('guest')->except('logout');
+  }
+/* use AuthenticatesUsers;*/
 
     /**
      * Where to redirect users after login.
@@ -44,6 +35,7 @@ class LoginController extends Controller
     {
         return view('site.auth.loginRegistro');
     }
+
     public function login(Request $request){
         $formData = $request->all();
         $email = $formData['email'];
@@ -56,45 +48,50 @@ class LoginController extends Controller
         */
 
 
-        /*Autenticando Administrador*/
-        if(Auth::attempt(['email' => $email, 'password' => $password,'role' => 2])){
-            $credentials = ['email'=> $email,'password'=>$password, 'role' => 2];
+            /*Autenticando Administrador*/
+            if(Auth::attempt(['email' => $email, 'password' => $password,'role' => 2])){
+                $credentials = ['email'=> $email,'password'=>$password, 'role' => 2];
 
-            if(auth()->guard('admin')->attempt($credentials)){
-                return redirect('/admin');
-            } else{
-                return redirect('/cadastro/login')->withErrors(['errors' => 'Login Invalido'])->withInput();
+                if(auth()->guard('admin')->attempt($credentials)){
+                    return redirect('/admin');
+                } else{
+                    return redirect('/cadastro/login')->withErrors(['errors' => 'Login Invalido'])->withInput();
+                }
             }
-        }
 
-        /*Autenticando Cooperativas*/
-        if(Auth::attempt(['email' => $email, 'password' => $password,'role' => 1])){
+            /*Autenticando Cooperativas*/
+            if(Auth::attempt(['email' => $email, 'password' => $password,'role' => 1])){
                 return('cooperativas');
-        }
+            }
 
-        /*Autenticando Usuarios*/
-        if(Auth::attempt(['email' => $email, 'password' => $password,'role' => 0])){
+            /*Autenticando Usuarios*/
+            if(Auth::attempt(['email' => $email, 'password' => $password,'role' => 0])){
                 if(auth()->guard('web')){
                     return redirect()->intended('/vouchers');
                 }
             }
+            else{
+                return('usuario nao encontrado');
+            }
         }
-        public function index(){
-            if (Auth::attempt(array('email' => 'miqueiasfernando@gmail.com', 'password' => '12345')))
-          {
-             return('logado');
-         }
-        }
+
         public function logout(){
             if(Auth::guard('admin')->check()){
                 /*Auth::guard('admin')->admin()->name;*/
                 auth()->guard('admin')->logout();
+                auth()->guard('web')->logout();
                 return redirect('/cadastro/login');
             }
             else if(Auth::guard('web')->check()){
                 auth()->guard('web')->logout();
                 return redirect('/cadastro/login');
-               /* Auth::guard('user')->user()->name;*/
+                /* Auth::guard('user')->user()->name;*/
             }
         }
- }
+        public function index(){
+            if (Auth::attempt(array('email' => 'miqueiasfernando@gmail.com', 'password' => '12345')))
+              {
+               return('logado');
+           }
+       }
+   }
