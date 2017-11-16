@@ -520,8 +520,17 @@ height: 220px;
   text-align: center;
 }
 /*Admin*/
+#row-same-height {
+ 
+}
 #conteudo{
-  min-height: 1000px;
+  overflow:auto;
+  height: 100%;
+  position: fixed;
+  max-height: 95%;
+}
+#adminSidenav{
+  height: 100%;
 }
 /*Interface Usuario*/
 .UserInterface{
