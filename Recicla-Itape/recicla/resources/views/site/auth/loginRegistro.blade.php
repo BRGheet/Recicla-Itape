@@ -62,14 +62,20 @@
       <form  method="POST" action="{{ route('login') }}">
 
         {!!csrf_field()!!}
-        @if ($errors->has('email'))
-        <span class="help-block">
-          <strong>{{ $errors->first('email') }}</strong>
-        </span>
+        @if ($errors->LoginErrors->first('email'))
+          <span class="help-block">
+            <strong>{{ $errors->LoginErrors->first('email')}}</strong>
+          </span>
         @endif
-        @if ($errors->has('password'))
+       
+        @if ($errors->LoginErrors->first('password'))
+          <span class="help-block">
+            <strong>{{ $errors->LoginErrors->first('password')}}</strong>
+          </span>
+        @endif
+        @if($errors->any())
         <span class="help-block">
-          <strong>{{ $errors->first('password') }}</strong>
+          <strong>{{$errors->first()}}</strong>
         </span>
         @endif
         <label for="nome">E-mail</label>
