@@ -28,13 +28,40 @@ Route::get('coop', 'AdminController@coop');
 Route::get('gift', 'AdminController@gift');
 Route::get('check', 'AdminController@check');
 Route::get('add','AdminController@add');
-Route::post('admin/info/send', 'AdminController@infoStore');
-Route::post('admin/ponto/send', 'AdminController@pontoStore');
-Route::post('admin/coop/send', 'AdminController@coopStore');
-Route::post('admin/add/send','AdminController@addStore');
-Route::post('admin/gift/send', 'AdminController@giftStore');
-Route::post('admin/check/send', 'AdminController@checkVoucher');
-Route::get('/testepdf','AdminController@pdf');
+
+/*Criar dados para a tabela*/
+Route::post('admin/info/store', 'AdminController@infoStore');
+Route::post('admin/ponto/store', 'AdminController@pontoStore');
+Route::post('admin/coop/store', 'AdminController@coopStore');
+Route::post('admin/add/store','AdminController@addStore');
+Route::post('admin/gift/store', 'AdminController@giftStore');
+Route::post('admin/check/store', 'AdminController@checkVoucher');
+
+/*Editar os dados da tabela*/
+Route::get('admin/info/edit={id}', 'AdminController@infoEdit');
+Route::post('admin/info/update', 'AdminController@infoUpdate');
+Route::post('admin/ponto/edit', 'AdminController@pontoedit');
+Route::post('admin/coop/edit', 'AdminController@coopedit');
+Route::post('admin/add/edit','AdminController@addedit');
+Route::post('admin/gift/edit', 'AdminController@giftedit');
+Route::post('admin/check/edit', 'AdminController@checkVoucher');
+
+/*Deletar os dados da tabela*/
+Route::get('admin/info/delete={id}', 'AdminController@infoDelete');
+Route::post('admin/ponto/delete', 'AdminController@pontodelete');
+Route::post('admin/coop/delete', 'AdminController@coopdelete');
+Route::post('admin/add/delete','AdminController@adddelete');
+Route::post('admin/gift/delete', 'AdminController@giftdelete');
+Route::post('admin/check/delete', 'AdminController@checkVoucher');
+
+/*Mostrar os dados das tabelas*/
+Route::get('admin/info/show', 'AdminController@infoshow');
+Route::get('admin/ponto/show', 'AdminController@pontoshow');
+Route::get('admin/coop/show', 'AdminController@coopshow');
+Route::get('admin/add/show','AdminController@addshow');
+Route::get('admin/gift/show', 'AdminController@giftshow');
+Route::get('admin/check/show', 'AdminController@checkVoucher');
+
 
 /*Rotas de Login e Cadastro*/
 $this->get('cadastro/login', 'Auth\LoginController@showLoginForm')->name('login');

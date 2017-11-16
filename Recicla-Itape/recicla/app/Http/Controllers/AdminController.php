@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Auth;
 use Image;
 use DB;
+use Redirect;
 use App\Info;
 use App\Ponto;
 use App\Gift;
@@ -48,11 +49,6 @@ class AdminController extends Controller
     public function admin(){
         return view('site.admin.admin-index');
     }
-
-    public function pdf(){
-        return view('site.admin.pdf');
-    }
-
     public function info(){
         return view('site.admin.admin-info');
     }
@@ -166,5 +162,26 @@ class AdminController extends Controller
             return "Código confirmado com sucesso";
         }
         throw new Exception("Unable to find customer", 410);
+    }
+    /*Mostrar dados das tabelas*/
+    public function infoShow(){
+        $infos = DB::table('tutoriais')->get();
+
+        return view('site.admin.admin-info-show', ["infos" => $infos]);
+    }
+
+    public function infoDelete($id){
+        DB::delete('delete from tutoriais where id='.$id.';');
+        return Redirect::back()->with('success','Informação deletada com sucesso');
+    }
+    public function infoEdit($id){
+        $infos = DB::table('tutoriais')->where('id',$id)->get();
+        return view('site.admin.admin-info-edit',['infos' => $infos]);
+    }
+    public function infoUpdate(Request $req){
+        $update = 'update tutoriais set titulo="'.$req->input('titulo').'", autor="'.$req->input('autor').'", video="'.$req->input('video').'", resumo="'.$req->input('resumo').'", texto="'.$req->input('texto').'"" where id='.$req->input('id').';';
+        dd($update);
+        DB::update();
+        return "Update completo";
     }
 }
