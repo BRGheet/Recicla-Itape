@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{$title or 'Recicla Itapê - Reciclagem'}}</title>
+   <meta name="csrf-token" content="{{ csrf_token() }}">
   <!--************ Arquivos Css ****************-->
   <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
