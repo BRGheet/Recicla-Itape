@@ -57,7 +57,8 @@
 	@forelse($tutoriais as $tuto)
 	<div class="col-sm-12 col-md-6">
 		<div class="thumbnail">
-			<div class="imagemThubnail" style="background-image:url('img/tutoriais/{{$tuto->img}}');">
+			
+				<div class="imagemThubnail" style="background-image:url('https://cdn4.ecycle.com.br/cache/images/guia_da_reciclagem/50-650-o-que-e-reciclagem.jpg');">
 			</div>
 			<div class="caption">
 				<h3>{{$tuto->titulo}}.</h3>

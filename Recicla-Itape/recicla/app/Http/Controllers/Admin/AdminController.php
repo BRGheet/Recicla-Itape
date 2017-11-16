@@ -45,9 +45,7 @@ class AdminController extends Controller
         return view('site.admin.admin-dicas');
     }
     public function infoStore(Request $req){
-
-
-
+        $info = new Info();
         $info->titulo = $req->input('titulo');
         $info->autor = $req->input('autor');
         $info->resumo = $req->input('resumo');
