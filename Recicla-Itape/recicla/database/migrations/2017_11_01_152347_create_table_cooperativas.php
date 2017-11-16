@@ -31,6 +31,6 @@ class CreateTableCooperativas extends Migration
      */
     public function down()
     {
-        Schema::drop('cooperativas');
+        Schema::drop('coop');
     }
 }
