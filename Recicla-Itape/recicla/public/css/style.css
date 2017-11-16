@@ -50,15 +50,14 @@ html, body {
   border-radius: 0px; 
 }
 
-
+/*Cores Botao*/
 .btn-blue-outline{
   color: white;
   background-color: #1FDCA6;
   border-radius: 0px;
   border: 1px solid #1FDCA6;
   transition: 0.3s;
-} 
-.btn-blue-outline:hover{
+} .btn-blue-outline:hover{
   background-color: #1FDCA6;
   color: white;
   transition: 0.3s;
@@ -96,6 +95,9 @@ html, body {
 {
   color: white;
   background-color: #1FDCA6;
+}
+.dropdown ul{
+  display: none;
 }
 
 /* The navigation menu links */

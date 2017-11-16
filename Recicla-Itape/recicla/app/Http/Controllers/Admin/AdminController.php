@@ -15,7 +15,7 @@ use DateTime;
 
 class AdminController extends Controller
 {
-	 protected $title='Dashboard';
+	 protected $title='Dashboard - Administrador';
      public function __construct()
     {
         /*$this->middleware('authAdmin');*/

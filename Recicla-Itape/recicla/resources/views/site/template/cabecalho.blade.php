@@ -46,12 +46,11 @@
               <ul class="dropdown-menu">
                 <li><a href="/vouchers">Vouchers</a></li>
                 <li><a href="/minha_conta">Minha Conta</a></li>
+                <li><a href="/admin">DashBoard</a></li>
                 <li><a href="{{ route('logout') }}"  onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">Sair</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 {{ csrf_field() }}</form></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="/admin">DashBoard Administrador</a></li>
               </ul>
             </div>
           @endif
@@ -99,3 +98,18 @@
   @stack('scripts')
 </body>
 </html>
+<style type="text/css">
+  .dropdown-menu>li>a, .open>.dropdown-menu, .open>.dropdown-menu, .dropdown-menu>li>a:hover {
+    color: white;
+    background-color: #1FDCA6;
+    border-radius: 0px;
+    text-align: justify;
+}
+.dropdown-menu>li>a, .open>.dropdown-menu, .open>.dropdown-menu, .dropdown-menu>li>a {
+    color: white;
+    background-color: #008000;
+    border-radius: 0px;
+    text-align: justify;
+    font-size: 1em;
+}
+</style>
