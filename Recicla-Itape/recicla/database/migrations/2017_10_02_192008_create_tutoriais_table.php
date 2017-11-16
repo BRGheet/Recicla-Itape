@@ -19,8 +19,8 @@ class CreateTutoriaisTable extends Migration
           $table->string('titulo',200);
           $table->string('resumo',476);
           $table->text('texto');
-          $table->string('img')->nullable();
-          $table->string('LinkVideo')->nullable();
+/*          $table->string('img')->nullable();*/
+          $table->string('video')->nullable();
           $table->timestamp('dataHora')->useCurrent();
       });
     }
