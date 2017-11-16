@@ -15,35 +15,43 @@ use DateTime;
 
 class AdminController extends Controller
 {
-	 public function __construct()
+	 protected $title='Dashboard';
+     public function __construct()
     {
         /*$this->middleware('authAdmin');*/
     }
     public function index(){
         $infos = DB::table('info')->get();
-        return view('site.admin.admin', ['infos' => $infos]);
+        return view('site.admin.admin', ['infos' => $infos],compact('title'));
     }
 
     public function admin(){
-        return view('site.admin.admin-index');
+        $title = $this->title;
+        return view('site.admin.admin-index',compact('title'));
     }
     public function info(){
-        return view('site.admin.admin-info');
+        $title = $this->title;
+        return view('site.admin.admin-info',compact('title'));
     }
     public function video(){
-        return view('site.admin.admin-video');
+        $title = $this->title;
+        return view('site.admin.admin-video',compact('title'));
     }
     public function ponto(){
-        return view('site.admin.admin-ponto');
+        $title = $this->title;
+        return view('site.admin.admin-ponto',compact('title'));
     }
     public function coop(){
-        return view('site.admin.admin-coop');
+        $title = $this->title;
+        return view('site.admin.admin-coop',compact('title'));
     }
     public function gift(){
-        return view('site.admin.admin-gift');
+        $title = $this->title;
+        return view('site.admin.admin-gift',compact('title'));
     }
     public function dicas(){
-        return view('site.admin.admin-dicas');
+        $title = $this->title;
+        return view('site.admin.admin-dicas',compact('title'));
     }
     public function infoStore(Request $req){
         $info = new Info();
