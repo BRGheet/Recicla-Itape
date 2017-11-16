@@ -1,7 +1,6 @@
 @extends('.site.template.cabecalho')
 @section('cabecalho')
 @push('estilos')
- <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/admin.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('css/jquery.sweet-modal.min.css') }}" />
   <script src="{{ URL::asset('js/tinymce/tinymce.min.js') }}"></script>
   <script type="text/javascript">
@@ -102,5 +101,10 @@
       });
     </script>
 @endpush
+<style type="text/css">
+  body{
+    overflow: visible; 
+  }
+</style>
 @endsection
  

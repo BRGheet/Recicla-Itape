@@ -519,7 +519,10 @@ height: 220px;
 .login-form h1{
   text-align: center;
 }
-
+/*Admin*/
+#conteudo{
+  min-height: 1000px;
+}
 /*Interface Usuario*/
 .UserInterface{
   height: 170px;
