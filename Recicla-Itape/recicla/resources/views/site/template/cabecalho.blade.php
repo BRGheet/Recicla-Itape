@@ -35,7 +35,10 @@
       </div>
       <div class="nav navbar-nav navbar-right">
         <div class="dropdown hidden-xs">
-          @if (Auth::guest())
+<!--           @if(Auth::guard('admin')->check() && Auth::guard('web')->check())
+ewtrewr 
+          @endif -->
+          @if (!Auth::guard('web')->check())
           <a href="{{url('cadastro/login')}}"><button class="btn btn-blue-outline navbar-btn">Entrar</button></a>
           @else
           <div class="btn-group">
