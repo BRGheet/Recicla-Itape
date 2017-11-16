@@ -3,7 +3,7 @@
 	<div class="container ContentCoop">
 		<div class="row">
 			<div class="col-md-12">
-				@foreach($coops as $coop)
+				@forelse($coops as $coop)
 					<h1>{{ $coop->nome }}</h1>
 					<p class="lead">Endereço: {{ $coop->endereco }}</p>
 					<button class="btn btn-green" type="button" data-toggle="collapse" data-target="#collapse{{ $coop->id }}">Mais Detalhes</button>
@@ -37,7 +37,11 @@
 					  	</div>
 					  </div>
 					</div>
-				@endforeach
+					@empty
+					<div id="CoopError">
+						<h1>Desculpa Nenhuma Cooperativa Encontrada!</h1>
+					</div>
+				@endforelse
 			</div>
 		</div>
 	</div>

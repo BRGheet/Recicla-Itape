@@ -532,6 +532,10 @@ height: 220px;
 #adminSidenav{
   height: 100%;
 }
+#adminSidenav h1{
+  color: white;
+  text-align: left;
+}
 /*Interface Usuario*/
 .UserInterface{
   height: 170px;
@@ -768,6 +772,9 @@ height: 220px;
 }
 .CooperativasMain{
   text-align: justify;
+}
+#CoopError{
+  text-align: center;
 }
 .ContentCoop{
   min-height: 1000px;

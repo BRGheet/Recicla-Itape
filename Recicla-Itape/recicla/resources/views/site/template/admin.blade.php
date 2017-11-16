@@ -32,29 +32,29 @@
 @endpush
 <div class="container-fluid">
 
-<div class='row row-same-height'>
-  <nav id="mySidenav" class="sidebar">
-    <div class="sidenav-image">
-      <h1>ADMIN</h1>
-    </div>
-    <button class="closebtn" onclick="closeNav()">&times;</button>
-    <a href="#" class="pagina" id="info">Nova Informação/Tutorial</a>
-    <a href="#" class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
-    <a href="#" class="pagina" id="coop">Nova Cooperativa</a>
-    <a href="#" class="pagina" id="gift">Nova Recompensa</a>
-  </nav>
+  <div class='row row-same-height'>
+    <nav id="mySidenav" class="sidebar">
+      <div class="sidenav-image">
+        <h1>ADMIN</h1>
+      </div>
+      <button class="closebtn" onclick="closeNav()">&times;</button>
+      <a href="#" class="pagina" id="info">Nova Informação/Tutorial</a>
+      <a href="#" class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
+      <a href="#" class="pagina" id="coop">Nova Cooperativa</a>
+      <a href="#" class="pagina" id="gift">Nova Recompensa</a>
+    </nav>
 
-  <nav class="col-md-2 sidebar-lg hidden-xs hidden-sm" id="adminSidenav">
-   <h1>ADMIN</h1>
-   <a href="/admin">Nova Informação</a>
-   <a class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
-   <a class="pagina" id="coop">Nova Cooperativa</a>
-   <a class="pagina" id="gift">Nova Recompensa</a>
- </nav>
- <div class="col-md-2"></div>
- <div id="conteudo" class="container col-md-10 col-md-offset-2">
-  @yield('content')
-</div>
+    <nav class="col-md-2 sidebar-lg hidden-xs hidden-sm" id="adminSidenav">
+     <h1>ADMIN</h1>
+     <a href="/admin">Nova Informação</a>
+     <a class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
+     <a class="pagina" id="coop">Nova Cooperativa</a>
+     <a class="pagina" id="gift">Nova Recompensa</a>
+   </nav>
+   <div class="col-md-2"></div>
+   <div id="conteudo" class="container col-md-10 col-md-offset-2">
+    @yield('content')
+  </div>
 
 
 </div>
@@ -116,6 +116,5 @@
       @endpush
       <style type="text/css">
       html, body { height: 100%;overflow: hidden;}
-
     </style>
     @endsection
