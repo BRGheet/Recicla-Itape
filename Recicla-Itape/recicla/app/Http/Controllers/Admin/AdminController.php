@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
+use Auth;
 use App\Info;
 use App\Video;
 use App\Ponto;
@@ -47,7 +48,7 @@ class AdminController extends Controller
     public function infoStore(Request $req){
         $info = new Info();
         $info->titulo = $req->input('titulo');
-        $info->autor = $req->input('autor');
+        $info->autor = Auth::user()->name;
         $info->resumo = $req->input('resumo');
         $info->video = $req->input('video');
         $info->texto = $req->input('texto');

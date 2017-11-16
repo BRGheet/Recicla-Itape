@@ -521,7 +521,10 @@ height: 220px;
 }
 /*Admin*/
 #row-same-height {
- 
+
+}
+.DesativaInput{
+  pointer-events:none;
 }
 #conteudo{
   overflow:auto;

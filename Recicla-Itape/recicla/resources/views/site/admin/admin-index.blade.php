@@ -15,7 +15,7 @@
     <input id="titulo" type="text" name="titulo" class="form-control">
     <br>
     <label for="autor">Autor</label>
-    <input id="autor" type="text" name="autor"  class="form-control">
+    <input id="autor" type="text" name="autor"  class="form-control DesativaInput" readonly="true" value="{{Auth::user()->name}}">
     <br>
     <label for="video">Vídeo</label>
     <input type="text" name="video" id="video" class="form-control">
