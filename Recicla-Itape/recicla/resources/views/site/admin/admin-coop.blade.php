@@ -26,7 +26,7 @@
 				<input id="imagem" type="file" name="imagem">
 			</form>
 			<br>
-			<button class="btn btn-green" data-type="coop">Submeter</button>
+			<button class="btn btn-green" data-type="coop" data-cod="1">Submeter</button>
     	</div>
   	</div>
 </div>

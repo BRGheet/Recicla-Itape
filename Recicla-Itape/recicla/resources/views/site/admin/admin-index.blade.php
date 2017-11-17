@@ -21,6 +21,9 @@
             <label for="video">Vídeo</label>
             <input type="text" name="video" id="video" class="form-control">
             <br>
+            <label for="imagem">Imagem</label><span class="font-red">*</span>
+            <input type="file" name="imagem">
+            <br>
             <label for="resumo">Resumo do texto<span class="font-red">*</span></label>
             <textarea class="form-control" id="resumo" name="resumo"></textarea>
             <br>

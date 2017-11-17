@@ -75,9 +75,9 @@
         	<a class="pagina" id="gift">Nova Recompensa</a>
           <h2>Modificação</h2>
           <a href="/admin/info/show">Editar Informações</a>
-          <a href="/admin/info/show">Editar Marcadores no mapa</a>
-          <a href="/admin/info/show">Editar Cooperativas</a>
-          <a href="/admin/info/show">Editar Recompensas</a>
+          <a href="/admin/ponto/show">Editar Marcadores no mapa</a>
+          <a href="/admin/coop/show">Editar Cooperativas</a>
+          <a href="/admin/gift/show">Editar Recompensas</a>
       </nav>
       <div class="col-md-2"></div>
       <div id="conteudo" class="container col-md-10">

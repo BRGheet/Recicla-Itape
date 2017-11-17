@@ -7,9 +7,9 @@
 <table class="table table-bordered table-hover">
 	<tr>
 		<th>ID</th>
-		<th>Título</th>
-		<th>Autor</th>
-		<th>Criado em</th>
+		<th>Nome</th>
+		<th>Endereço</th>
+		<th>Telefone</th>
 	</tr>
 @foreach($infos as $info)
 	<tr>

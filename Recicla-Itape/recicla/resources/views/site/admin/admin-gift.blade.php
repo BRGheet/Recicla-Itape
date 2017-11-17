@@ -20,7 +20,7 @@
 				<input id="imagem" type="file" name="imagem">
 				<br>
 			</form>
-			<button class="btn btn-green" data-type="gift">Submeter</button>
+			<button class="btn btn-green" data-type="gift" data-cod="1">Submeter</button>
     	</div>
   	</div>
 </div>

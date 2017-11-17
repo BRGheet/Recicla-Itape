@@ -1,4 +1,4 @@
-@extends('.site.template.admin')
+@extends('site.template.admin')
 
 @section('content')
 
@@ -23,6 +23,9 @@
             <br>
             <label for="video">Vídeo</label>
             <input type="text" name="video" id="video" class="form-control" value="{{ $info->video }}">
+            <br>
+            <label for="imagem">Imagem (Não é obrigatório)</label>
+            <input id="imagem" type="file" name="imagem">
             <br>
             <label for="resumo">Resumo do texto<span class="font-red">*</span></label>
             <textarea class="form-control" id="resumo" name="resumo">{{ $info->resumo }}</textarea>

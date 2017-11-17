@@ -18,6 +18,7 @@ class CreateTableCoop extends Migration
             $table->string('nome');
             $table->string('endereco');
             $table->string('telefone');
+            $table->string('imagem');
             $table->boolean('papel');
             $table->boolean('plastico');
             $table->boolean('vidro');
