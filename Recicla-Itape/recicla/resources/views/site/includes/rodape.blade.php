@@ -28,4 +28,16 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="container-fluid FooterLogo">
+      <div class="container">
+        <div class="logoIfFooter col-md-1">
+          <img src="{{ URL::asset('img/logos/logo-ifsp.png')}}" class="img-responsive">
+        </div>
+        <div class="logoReciclaItape col-md-1">
+          <img src="{{ URL::asset('img/logos/logo-ifsp.png')}}" class="img-responsive">
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>

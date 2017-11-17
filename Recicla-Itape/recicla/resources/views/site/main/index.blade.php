@@ -1,7 +1,7 @@
 @extends('.site.template.cabecalho')
 @section('cabecalho')
 <!-- Carousel -->
-<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+<!-- <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
 	<div class="overlay" id="carousel"></div>
 	<ol class="carousel-indicators">
 		<li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
@@ -75,7 +75,7 @@
 			{!!$tutoriais->links()!!}
 		</div>
 
-	</div>
+	</div> -->
 	<!-- Chamando Rodape -->
 	@include('site.includes.rodape')
 	@endsection
