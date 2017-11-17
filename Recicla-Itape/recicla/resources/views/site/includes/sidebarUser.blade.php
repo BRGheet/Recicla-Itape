@@ -12,13 +12,13 @@
 				<nav class="menu-user-btn">
 					<ul>
 						<li>
-							<a href="/minha_conta">
-								MINHA CONTA
+							<a href="/vouchers">
+								VOUCHERS ATIVOS
 							</a>
 						</li>
 						<li>
-							<a href="/vouchers">
-								VOUCHERS ATIVOS
+							<a href="/minha_conta">
+								MINHA CONTA
 							</a>
 						</li>
 					</ul>
