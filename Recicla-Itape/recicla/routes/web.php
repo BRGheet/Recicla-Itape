@@ -10,7 +10,7 @@ Route::group(['namespace'=>'site'],function(){
 });
 
 
-
+/*Rotas De Validação de Login, Sair,Mostrar Form*/
 Route::group(['namespace'=>'Site\Auth'],function(){
 	$this->get('cadastro/login', 'LoginController@showLoginForm')->name('login');
 	$this->post('cadastro/login', 'LoginController@login')->name('login');
@@ -20,6 +20,8 @@ Route::group(['namespace'=>'Site\Auth'],function(){
 	$this->get('register', 'RegisterController@showRegistrationForm')->name('register');
 	$this->post('register', 'RegisterController@register');
 });
+
+/*Rotas Usuario Logado*/
 Route::group(['namespace'=>'Site\User'],function(){
 	Route::get('/minha_conta', 'HomeController@AlterarDados')->name('home');
 	Route::get('/vouchers', 'HomeController@Index')->name('home');

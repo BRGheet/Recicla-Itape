@@ -77,9 +77,10 @@ class AdminController extends Controller
     }
     public function pontoStore(Request $req){
         $ponto = new Ponto();
-        $ponto->nome = $req->input('nome');
-        $ponto->longitude = $req->input('longitude');
-        $ponto->latitude = $req->input('latitude');
+        $ponto->name = $req->input('nome');
+        $ponto->address = 'reverendo';
+        $ponto->lng = $req->input('longitude');
+        $ponto->lat = $req->input('latitude');
         $ponto->papel = $req->input('papel');
         $ponto->plastico = $req->input('plastico');
         $ponto->vidro = $req->input('vidro');
