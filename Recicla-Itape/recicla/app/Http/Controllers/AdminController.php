@@ -179,9 +179,16 @@ class AdminController extends Controller
         return view('site.admin.admin-info-edit',['infos' => $infos]);
     }
     public function infoUpdate(Request $req){
-        $update = 'update tutoriais set titulo="'.$req->input('titulo').'", autor="'.$req->input('autor').'", video="'.$req->input('video').'", resumo="'.$req->input('resumo').'", texto="'.$req->input('texto').'"" where id='.$req->input('id').';';
-        dd($update);
-        DB::update();
+        $id = $req->input('id');
+        $titulo = $req->input('titulo');
+        $autor = $req->input('autor');
+        $video = $req->input('video');
+        $resumo = $req->input('resumo');
+        $texto = $req->input('texto');
+
+        $update = "update tutoriais set titulo='".$titulo."', autor='".$autor."', video='".$video."', resumo='".$resumo."', texto='".$texto."' where id=".$id.";";
+        DB::update($update);
+
         return "Update completo";
     }
 }

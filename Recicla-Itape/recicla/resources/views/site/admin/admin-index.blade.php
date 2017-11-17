@@ -28,7 +28,7 @@
             <textarea id="texto" name="texto" class="form-control"></textarea>
             <br>
         </form>
-        <button class="btn btn-green" data-type="info">Submeter</button>
+        <button class="btn btn-green" data-type="info" data-cod="1">Submeter</button>
     </div>
   </div>
 </div>

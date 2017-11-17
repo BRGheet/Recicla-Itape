@@ -14,7 +14,7 @@
         @foreach($infos as $info)
         <form id="upload" enctype="multipart/form-data">
             <label for="id">ID</label>
-            <input id="id" type="text" name="id" disabled value="{{ $input->id }}">
+            <input class="form-control" id="id" type="text" name="id" value="{{ $info->id }}" readonly>
             <label for="titulo">Titulo<span class="font-red">*</span></label>
             <input id="titulo" type="text" name="titulo" class="form-control" value="{{ $info->titulo }}">
             <br>
