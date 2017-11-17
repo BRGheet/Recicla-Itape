@@ -205,8 +205,8 @@ html, body {
   .fade-carousel .carousel-indicators > li {
     margin: 0 2px;
     background-color:#008000;
-    border-color: white;
-    opacity: .7;
+    border-color: #008000;
+  
   }
   .fade-carousel .carousel-indicators > li.active {
     width: 10px;
@@ -871,30 +871,6 @@ footer{
 .FooterLogo{
   background-color: #006400;
   height: 100px;
-}
-.logoIfFooter{
-  width: 86px;
-  height: 100px;
-  float: left; 
-  background-size: 90% 90%;
-  cursor: pointer;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center; 
-}
-.logoReciclaItape{
-  width: 86px;
-  height: 100px;
-  float: right; 
-  background-size: 90% 90%;
-  cursor: pointer;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center; 
 }
 /*Admin*/
 .sidebar-lg {
