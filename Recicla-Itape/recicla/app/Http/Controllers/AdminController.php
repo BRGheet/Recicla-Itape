@@ -74,22 +74,7 @@ class AdminController extends Controller
         return view('site.admin.admin-dicas');
     }
 
-    public function giftStore(Request $req){
-        $gift = new Gift();
-        $gift->nome = $req->input('nome');
-         if ($req->hasFile('imagem')) {
-            $imagem = $req->file('imagem');
-            $nomeImagem = time() . '.' . $imagem->getClientOriginalName();
-            Image::make($imagem)->resize(400,400)->save(public_path('/uploads/gift/'.$nomeImagem));
-            $gift->imagem = $nomeImagem;
-        }
-        $gift->descricao = $req->input('desc');
-        $gift->pontos = $req->input('pontos');
-
-        $gift->save();
-
-        return "Recompensa adicionada com sucesso";
-    }
+   
 
     public function addStore(Request $req){
         $_id = $req->input('user');
@@ -278,5 +263,59 @@ class AdminController extends Controller
         DB::update($update);
 
         return "Cooperativa atualizada com sucesso";
+    }
+
+    public function giftStore(Request $req){
+        $gift = new Gift();
+        $gift->nome = $req->input('nome');
+        if ($req->hasFile('imagem')) {
+            $imagem = $req->file('imagem');
+            $nomeImagem = time() . '.' . $imagem->getClientOriginalName();
+            Image::make($imagem)->resize(400,400)->save(public_path('/uploads/gift/'.$nomeImagem));
+            $gift->imagem = $nomeImagem;
+        }
+        $gift->descricao = $req->input('descricao');
+        $gift->pontos = $req->input('pontos');
+
+        $gift->save();
+
+        return "Recompensa adicionada com sucesso";
+    }
+
+    public function giftShow(){
+        $gifts = DB::table('gift')->get();
+
+        return view('site.admin.admin-gift-show', ['gifts' => $gifts]);
+    }
+
+    public function giftDelete($id){
+        DB::delete('delete from gift where id='.$id.';');
+        return Redirect::back()->with('success','Recompensa deletada com sucesso');
+    }
+
+    public function giftEdit($id){
+        $gifts = DB::table('gift')->where('id',$id)->get();
+        return view('site.admin.admin-gift-edit',['gifts' => $gifts]);
+    }
+
+    public function giftUpdate(Request $req){
+        $id = $req->input('id');
+        $nome = $req->input('nome');
+        $descricao = $req->input('descricao');
+        $pontos = $req->input('pontos');
+        $update = null;
+        if ($req->hasFile('imagem')) {
+            $imagem = $req->file('imagem');
+            $nomeImagem = time() . '.' . $imagem->getClientOriginalName();
+            Image::make($imagem)->resize(400,400)->save(public_path('/uploads/gift/'.$nomeImagem));
+            $giftImagem = $nomeImagem;
+            $update = "update gift set nome='".$nome."', descricao='".$descricao."', pontos=".$pontos." , imagem='".$giftImagem."' where id=".$id.";";
+        } else {
+            $update = "update gift set nome='".$nome."', descricao='".$descricao."', pontos=".$pontos." where id=".$id.";";
+        }
+
+        DB::update($update);
+
+        return "Update de Recompensa feito com sucesso";
     }
 }
