@@ -856,10 +856,6 @@ footer{
   color: white;
   text-align: center;
 }
-.footerBox ul li a{
-  color: white;
-  text-decoration: none;
-}
 .footerBox ul{
   list-style-type: none;
   padding: 0;

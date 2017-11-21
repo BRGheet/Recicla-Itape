@@ -4,10 +4,10 @@
       <div class="footerBox col-md-4">
         <h2>Recicla Itapê</h2>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/reciclar">Quero Reciclar</a></li>
-          <li><a href="/cooperativas">Cooperativas</a></li>
-          <li><a href="/cadastro/login">Entrar</a></li>
+          <li>Home</li>
+          <li>Quero Reciclar</li>
+          <li>Cooperativas</li>
+          <li>Entrar</li>
         </ul>
       </div>
       <div class="footerBox col-md-4">
