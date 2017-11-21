@@ -26,12 +26,7 @@ class DatabaseSeeder extends Seeder
             'role' => '2',
         ]);
      
-       /* DB::table('admins')->insert([
-            'name'=>'Miqueias Fernando',
-            'email' => 'miqueiasfernando@gmail.com',
-            'password'=>bcrypt('123456'),
-        ]);
-        DB::table('tutoriais')->insert([
+        /*DB::table('tutoriais')->insert([
             'autor'=> 'Miqueias Fernando',
             'titulo'=> 'Reciclagem: Como Separar seu Lixo',
             'resumo'=> 'Aqui você vai descobrir maneiras fantásticas de fazer decoração com reciclagem.Com objetos feitos à mão você pode melhorar o visual da sua casa inteira, desde o jardim, até o quarto, cozinha, sala e banheiro. Sendo assim, mostraremos aqui vários artesanatos simples, todos feitos com materiais recicláveis, tais como: latas, garrafas de vidro, caixotes e papelão.Aqui você vai descobrir maneiras fantásticas de fazer decoração com reciclagem.',
