@@ -15,6 +15,7 @@ use App\Coop;
 
 class AdminController extends Controller
 {
+    
     public function index(){
         return view('site.admin.index');
     }
@@ -318,5 +319,5 @@ class AdminController extends Controller
         DB::update($update);
 
         return "Update de Recompensa feito com sucesso";
-    } 
+    }
 }
