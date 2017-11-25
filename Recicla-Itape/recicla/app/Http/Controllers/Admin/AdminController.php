@@ -110,9 +110,6 @@ class AdminController extends Controller
             Image::make($imagem)->resize(400,400)->save(public_path('/uploads/info/'.$nomeImagem));
             $info->imagem = $nomeImagem;
         }
-
-        $info->resumo = $req->input('imagem');
-
         $info->video = $req->input('video');
         $info->texto = $req->input('texto');
         $info->save();
