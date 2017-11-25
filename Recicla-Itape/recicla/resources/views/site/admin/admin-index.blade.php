@@ -12,11 +12,11 @@
     </div>
     <div class="panel-body">
         <form id="upload" enctype="multipart/form-data">
-            <label for="titulo">Titulo<span class="font-red">*</span></label>
+            <label for="titulo">Titulo(Min:50 Max:90)<span class="font-red">*</span></label>
             <input id="titulo" type="text" name="titulo" class="form-control">
             <br>
             <label for="autor">Autor</label>
-            <input id="autor" type="text" name="autor"  class="form-control">
+            <input id="autor" type="text" name="autor"  class="form-control" value="{{Auth::user()->name}}" readonly>
             <br>
             <label for="video">Vídeo</label>
             <input type="text" name="video" id="video" class="form-control">

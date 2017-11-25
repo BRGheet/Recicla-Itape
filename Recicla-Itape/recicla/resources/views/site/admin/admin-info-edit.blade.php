@@ -15,7 +15,7 @@
         <form id="upload" enctype="multipart/form-data">
             <label for="id">ID</label>
             <input class="form-control" id="id" type="text" name="id" value="{{ $info->id }}" readonly>
-            <label for="titulo">Titulo<span class="font-red">*</span></label>
+            <label for="titulo">Titulo(Min:50 Max:90)<span class="font-red">*</span></label>
             <input id="titulo" type="text" name="titulo" class="form-control" value="{{ $info->titulo }}">
             <br>
             <label for="autor">Autor</label>

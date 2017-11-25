@@ -978,30 +978,28 @@ footer{
     border-radius: 0px;
   }
   .imagemThubnail{
-    height: 202px;
+    height: 230px;
     background-color: #363636;
     background-repeat: no-repeat;
+    background-size:100%;
     cursor: pointer;
-    background-position: 0px -130px;
+    background-position: 0px;
   }
   .caption {
     height: 350px;
   }
   .caption h3{
     height: auto;
-    min-height: 51px;
-    max-height: 51px;
+    max-height: 40px;
     color: #666;
     font-size: 1.5em;
     text-align: center;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
     font-weight: bold;
   }
   .caption p{
     text-align: justify;
     font-size: 1.1em;
-    height: 130px;
+    height: 70px;
   }
   .ReadMore{
     clear: both;
