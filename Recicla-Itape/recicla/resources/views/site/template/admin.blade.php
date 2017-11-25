@@ -39,18 +39,26 @@
       </div>
       <button class="closebtn" onclick="closeNav()">&times;</button>
       <a href="#" class="pagina" id="info">Nova Informação/Tutorial</a>
-      <a href="#" class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
+      <a href="#" class="pagina" id="ponto">Novo Marcador no mapa</a>
       <a href="#" class="pagina" id="coop">Nova Cooperativa</a>
       <a href="#" class="pagina" id="gift">Nova Recompensa</a>
     </nav>
 
-    <nav class="col-md-2 sidebar-lg hidden-xs hidden-sm" id="adminSidenav">
-     <h1>ADMIN</h1>
-     <a href="/admin">Nova Informação</a>
-     <a class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
-     <a class="pagina" id="coop">Nova Cooperativa</a>
-     <a class="pagina" id="gift">Nova Recompensa</a>
-   </nav>
+   <nav class="col-md-2 sidebar-lg hidden-xs hidden-sm" id="adminSidenav">
+        <h1>ADMIN</h1>
+          <h2>Implementação</h2>
+          <a class="pagina" id="add">Adicionar Ponto</a>
+          <a class="pagina" id="check">Verificar Voucher</a>
+          <a href="/admin">Nova Informação</a>
+          <a class="pagina" id="ponto">Novo Marcador no mapa</a>
+          <a class="pagina" id="coop">Nova Cooperativa</a>
+          <a class="pagina" id="gift">Nova Recompensa</a>
+          <h2>Modificação</h2>
+          <a href="/admin/info/show">Editar Informações</a>
+          <a href="/admin/ponto/show">Editar Marcadores no mapa</a>
+          <a href="/admin/coop/show">Editar Cooperativas</a>
+          <a href="/admin/gift/show">Editar Recompensas</a>
+      </nav>
    <div class="col-md-2"></div>
    <div id="conteudo" class="container col-md-10 col-md-offset-2">
     @yield('content')

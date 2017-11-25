@@ -40,6 +40,37 @@ Route::group(['namespace'=>'Admin'],function(){
 		Route::post('admin/ponto/send', 'adminController@pontoStore');
 		Route::post('admin/coop/send', 'adminController@coopStore');
 		Route::post('admin/gift/send', 'adminController@giftStore');
+
+		/*Criar dados para a tabela*/
+Route::post('admin/info/store', 'AdminController@infoStore');
+Route::post('admin/ponto/store', 'AdminController@pontoStore');
+Route::post('admin/coop/store', 'AdminController@coopStore');
+Route::post('admin/add/store','AdminController@addStore');
+Route::post('admin/gift/store', 'AdminController@giftStore');
+Route::post('admin/check/store', 'AdminController@checkVoucher');
+
+/*Editar os dados da tabela*/
+Route::get('admin/info/edit={id}', 'AdminController@infoEdit');
+Route::post('admin/info/update', 'AdminController@infoUpdate');
+Route::get('admin/ponto/edit={id}', 'AdminController@pontoEdit');
+Route::post('admin/ponto/update','AdminController@pontoUpdate');
+Route::get('admin/coop/edit={id}', 'AdminController@coopEdit');
+Route::post('admin/coop/update','AdminController@coopUpdate');
+Route::get('admin/gift/edit={id}', 'AdminController@giftEdit');
+Route::post('admin/gift/update','AdminController@giftUpdate');
+
+
+/*Deletar os dados da tabela*/
+Route::get('admin/info/delete={id}', 'AdminController@infoDelete');
+Route::get('admin/ponto/delete={id}', 'AdminController@pontoDelete');
+Route::get('admin/coop/delete={id}', 'AdminController@coopdelete');
+Route::get('admin/gift/delete={id}', 'AdminController@giftdelete');
+
+/*Mostrar os dados das tabelas*/
+Route::get('admin/info/show', 'AdminController@infoShow');
+Route::get('admin/ponto/show', 'AdminController@pontoShow');
+Route::get('admin/coop/show', 'AdminController@coopShow');
+Route::get('admin/gift/show', 'AdminController@giftShow');
 	});
 });
 
