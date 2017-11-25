@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>{{$title or 'Recicla Itapê - Reciclagem'}}</title>
-  <!--************ Arquivos Css ****************-->
-  <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
-  <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
-  @stack('estilos')
-</head>
-<body>
-  <!-- Sidebar Principal -->
-  <nav class="navbar navbar-default navbar-green">
+<nav class="navbar navbar-default navbar-green">
     <div class="container">
       <div class="navbar-header cor-branco">
         <!-- <a href="#" class="navbar-brand"><img src="img/logo.png" alt="Logo do Recicla Itapê"></a>-->
@@ -87,27 +72,3 @@
     <a href="#"><i class="fa fa-comment" aria-hidden="true"></i>Dicas</a>
     <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Sobre</a>
   </nav>
-    @yield('cabecalho')
-  <!-- Script NavBar -->
- <script type="text/javascript" src="{{ URL::asset('js/Navbar.js') }}"></script>
-  <script src="https://use.fontawesome.com/6a84f90556.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script> 
-  @stack('scripts')
-</body>
-</html>
-<style type="text/css">
-  .dropdown-menu>li>a, .open>.dropdown-menu, .open>.dropdown-menu, .dropdown-menu>li>a:hover {
-    color: white;
-    background-color: #1FDCA6;
-    border-radius: 0px;
-    text-align: justify;
-}
-.dropdown-menu>li>a, .open>.dropdown-menu, .open>.dropdown-menu, .dropdown-menu>li>a {
-    color: white;
-    background-color: #008000;
-    border-radius: 0px;
-    text-align: justify;
-    font-size: 1em;
-}
-</style>

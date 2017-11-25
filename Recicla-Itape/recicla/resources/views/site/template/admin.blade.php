@@ -39,6 +39,7 @@
     </script>
   </head>
   <body>
+    @include('site.includes.cabecalho')
     <nav class="navbar navbar-default navbar-green hidden-lg hidden-md">
         <div class="container">
             <div class="navbar-header cor-branco">
@@ -65,14 +66,14 @@
       <a href="#" class="pagina" id="gift">Nova Recompensa</a>
     </nav>
       <nav class="col-md-2 sidebar-lg hidden-xs hidden-sm">
-      	<h1>ADMIN</h1>
+        <h1>ADMIN</h1>
           <h2>Implementação</h2>
           <a class="pagina" id="add">Adicionar Ponto</a>
           <a class="pagina" id="check">Verificar Voucher</a>
-      	  <a href="/admin">Nova Informação</a>
-        	<a class="pagina" id="ponto">Novo Marcador no mapa</a>
-        	<a class="pagina" id="coop">Nova Cooperativa</a>
-        	<a class="pagina" id="gift">Nova Recompensa</a>
+          <a href="/admin">Nova Informação</a>
+          <a class="pagina" id="ponto">Novo Marcador no mapa</a>
+          <a class="pagina" id="coop">Nova Cooperativa</a>
+          <a class="pagina" id="gift">Nova Recompensa</a>
           <h2>Modificação</h2>
           <a href="/admin/info/show">Editar Informações</a>
           <a href="/admin/ponto/show">Editar Marcadores no mapa</a>
@@ -136,3 +137,8 @@
     @yield('script')
   </body>
 </html>
+<style type="text/css">
+  body,html{
+    overflow-y: hidden;
+  }
+</style>
