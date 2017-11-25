@@ -73,7 +73,7 @@
       </div>
     </div>
   </nav>
-  <!-- Fim Sidebar Principal -->
+  <!--  Fim Sidebar Principal
   <nav id="mySidenav" class="sidebar">
     <div class="sidenav-image">
       <button class="btn btn-green">Cadastre-se</button>
@@ -86,7 +86,7 @@
     <a href="#"><i class="fa fa-ticket" aria-hidden="true"></i>Recompensas</a>
     <a href="#"><i class="fa fa-comment" aria-hidden="true"></i>Dicas</a>
     <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Sobre</a>
-  </nav>
+  </nav> -->
     @yield('cabecalho')
   <!-- Script NavBar -->
  <script type="text/javascript" src="{{ URL::asset('js/Navbar.js') }}"></script>

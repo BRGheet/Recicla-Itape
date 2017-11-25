@@ -537,7 +537,7 @@ height: 220px;
 #conteudo{
   overflow:auto;
   height: 100%;
- /* position: fixed;*/
+  position: fixed;
   max-height: 95%;
 }
 #adminSidenav{
@@ -895,7 +895,7 @@ footer{
   height: 100%;
   background-color: #141414;
   overflow-x: hidden;
-/*  position: fixed;*/
+  position: fixed;
 }
 
 .sidebar-lg a{

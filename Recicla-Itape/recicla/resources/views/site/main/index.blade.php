@@ -58,7 +58,7 @@
 	<div class="col-sm-12 col-md-6">
 		<div class="thumbnail">
 			
-				<div class="imagemThubnail" style="background-image:url('https://cdn4.ecycle.com.br/cache/images/guia_da_reciclagem/50-650-o-que-e-reciclagem.jpg');">
+				<div class="imagemThubnail" style="background-image:url(public_path('uploads/info/$tuto->imagem'));">
 			</div>
 			<div class="caption">
 				<h3>{{$tuto->titulo}}.</h3>
