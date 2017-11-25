@@ -4,23 +4,18 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use DB;
 use Auth;
+use Image;
+use DB;
+use Redirect;
 use App\Info;
-use App\Video;
 use App\Ponto;
-use App\Coop;
 use App\Gift;
-use DateTime;
+use App\Coop;
 
 class AdminController extends Controller
 {
-	 protected $title='Dashboard - Administrador';
-     public function __construct()
-    {
-        /*$this->middleware('authAdmin');*/
-    }
-   public function index(){
+    public function index(){
         return view('site.admin.index');
     }
 
@@ -323,5 +318,5 @@ class AdminController extends Controller
         DB::update($update);
 
         return "Update de Recompensa feito com sucesso";
-    }
+    } 
 }

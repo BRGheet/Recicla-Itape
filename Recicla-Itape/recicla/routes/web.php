@@ -32,7 +32,6 @@ Route::group(['middleware' => ['CheckAdmin']],function () {
 Route::group(['namespace'=>'Admin'],function(){
 		/* Rotas da tela de administrador */
 		Route::get('admin', 'AdminController@admin');
-		Route::get('admin/index', 'AdminController@index');
 		Route::get('info', 'AdminController@info');
 		Route::get('ponto', 'AdminController@ponto');
 		Route::get('coop', 'AdminController@coop');
@@ -73,8 +72,6 @@ Route::group(['namespace'=>'Admin'],function(){
 	});
 });
 
-// Resetar Senhas
-$this->get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-$this->post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-$this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-$this->post('password/reset', 'Auth\ResetPasswordController@reset');
+
+
+

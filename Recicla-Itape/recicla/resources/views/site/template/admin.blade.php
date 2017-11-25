@@ -70,57 +70,51 @@
 <!-- Script NavBar -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/eb29782670.js"></script>
+<script src="{{ URL::asset('js/jquery.sweet-modal.min.js') }}">
+</script>
 <script src="{{ URL::asset('js/jquery.sweet-modal.min.js') }}"></script>
+<script src="{{ URL::asset('js/jspdf/jspdf.js') }}"></script>
 <script type="text/javascript">
-  $.ajaxSetup({
-    headers: {
-      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-  });
+      $.ajaxSetup({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+      });
 </script>
 <script type="text/javascript">
-  $(document).on('click', '.btn-green', function(){
-    var pagina = $(this).attr('data-type');
-    pagina = '/admin/'+pagina+'/send';
-
-        //tranforma o form em array
-        var dado = {};
-        $('.form-control').each(function(){
-          dado[$(this).attr('name')] = $(this).val();
-        });
-        // verifica se existe input do tipo checkbox
-        if($('.check').length > 0){
-          $('.check').each(function(){
-            dado[$(this).attr('name')] = $(this).is(':checked') ? 1 : 0;
-          });
+      var file = null;
+      $(document).on('click', '.btn-green', function(){
+        var pagina = null;
+        if ($('.btn-green').attr('data-cod') == 1) {
+          pagina = $(this).attr('data-type');
+          pagina = '/admin/'+pagina+'/store';
+        }else{
+          pagina = $(this).attr('data-type');
+          pagina = '/admin/'+pagina+'/update';
         }
-        if ($('#texto').length > 0){
-          dado['texto'] = tinymce.get('texto').getContent();
+        if ($('#upload').length > 0){
+          var form = $('#upload')[0];
+          file = new FormData(form);
+          if ($('#texto').length > 0){
+            file.append('texto', tinymce.get('texto').getContent());
+          }
         }
-        // tranforma array em json
-        JSON.stringify(dado);
-        console.log(dado);
         $.ajax({
           type: 'POST',
-          data: dado,
+          data: file,
           dataType: 'text',
+          processData: false,
+          contentType: false,
           url: pagina,
           success: function(data){
             $.sweetModal({
               content: data,
               icon: $.sweetModal.ICON_SUCCESS
             });
-          }
+          },
         });
       });
     </script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $("#conteudo").bind("divResized", function(){
-          var height = $(this).height();
-          $("#adminSidenav").height(height);
-        });
-      </script>
       @endpush
       <style type="text/css">
       html, body { height: 100%;overflow: hidden;}
