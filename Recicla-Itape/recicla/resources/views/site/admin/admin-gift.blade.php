@@ -6,21 +6,21 @@
       	Painel
     	</div>
     	<div class="panel-body">
+    		<form id="upload" enctype="multipart/form-data">
 		    	<label for="rec">Nome da recompensa</label>
 				<input id="rec" type="text" name="nome"  class="form-control">
 				<br>
 				<label for="desc">Descrição</label>
-				<input id="desc" type="text" name="desc" class="form-control">
+				<input id="desc" type="text" name="descricao" class="form-control">
 				<br>
 				<label for="pontos">Pontos</label>
 				<input id="pontos" type="text" name="pontos" class="form-control">
 				<br>
-				<span class="lead">Faça o upload de uma imagem</span>
+				<label for="imagem">Faça o Upload da imagem<span class="font-red">*</span></label>
+				<input id="imagem" type="file" name="imagem">
 				<br>
-				<button class="btn btn-green"><i class="glyphicon glyphicon-circle-arrow-up"></i> Enviar Imagem</button>
-				<br>
-				<br>
-				<button class="btn btn-green" data-type="gift">Submeter</button>
+			</form>
+			<button class="btn btn-green" data-type="gift" data-cod="1">Submeter</button>
     	</div>
   	</div>
 </div>
