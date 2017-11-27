@@ -56,22 +56,24 @@
 
 	@forelse($tutoriais as $tuto)
 	<div class="col-sm-12 col-md-6">
-		<div class="thumbnail col-md-12">
-			<a href="asd"><div class="imagemThubnail" style="background-image:url('uploads/info/{{$tuto->imagem}}');"></div></a>
+		<div class="thumbnail">
+			
+				<div class="imagemThubnail" style="background-image:url('https://cdn4.ecycle.com.br/cache/images/guia_da_reciclagem/50-650-o-que-e-reciclagem.jpg');">
+			</div>
 			<div class="caption">
 				<h3>{{$tuto->titulo}}.</h3>
 				<p>{{$tuto->resumo}}</p>
 				<p class="ReadMore">
-				<a href="/tutoriais/{{$tuto->id}}" class="btn btn-primary" role="button">Ler Mais</a></p>
+					<a href="/tutoriais/{{$tuto->id}}" class="btn btn-primary" role="button">Ler Mais</a></p>
+				</div>
 			</div>
 		</div>
-	</div>
-	@empty
+		@empty
 		<p style="text-align: center; font-size: 1.5em;">Nenhum Tutorial Encontrado</p>
-	@endforelse
-	<div class="col-md-12 paginacao">
-		{!!$tutoriais->links()!!}
-	</div>
+		@endforelse
+		<div class="col-md-12 paginacao">
+			{!!$tutoriais->links()!!}
+		</div>
 
 	</div>
 	<!-- Chamando Rodape -->

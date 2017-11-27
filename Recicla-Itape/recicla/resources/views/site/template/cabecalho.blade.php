@@ -4,11 +4,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>{{$title or 'Recicla Itapê - Reciclagem'}}</title>
+   <meta name="csrf-token" content="{{ csrf_token() }}">
   <!--************ Arquivos Css ****************-->
   <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('css/font-awesome.min.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
   @stack('estilos')
 </head>
 <body>
@@ -73,7 +75,7 @@
       </div>
     </div>
   </nav>
-  <!--  Fim Sidebar Principal
+  <!-- Fim Sidebar Principal -->
   <nav id="mySidenav" class="sidebar">
     <div class="sidenav-image">
       <button class="btn btn-green">Cadastre-se</button>
@@ -86,13 +88,13 @@
     <a href="#"><i class="fa fa-ticket" aria-hidden="true"></i>Recompensas</a>
     <a href="#"><i class="fa fa-comment" aria-hidden="true"></i>Dicas</a>
     <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Sobre</a>
-  </nav> -->
+  </nav>
     @yield('cabecalho')
   <!-- Script NavBar -->
- <script type="text/javascript" src="{{ URL::asset('js/Navbar.js') }}"></script>
+  <script type="text/javascript" src="{{ URL::asset('js/Navbar.js') }}"></script>
   <script src="https://use.fontawesome.com/6a84f90556.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script> 
+  <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
   @stack('scripts')
 </body>
 </html>

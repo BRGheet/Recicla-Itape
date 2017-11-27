@@ -541,30 +541,12 @@ height: 220px;
   max-height: 95%;
 }
 #adminSidenav{
-  height: 97%;
-
-}
-#adminSidenav{
-  overflow: auto;
-}
-/*Barra de Rolagem*/
-::-webkit-scrollbar-track {
-    background-color: #F4F4F4;
-}
-::-webkit-scrollbar {
-    width: 10px;
-    background: #F4F4F4;
-}
-::-webkit-scrollbar-thumb {
-    background: #696969;
+  height: 100%;
 }
 #adminSidenav h1{
-  text-align: center;
-}
-#adminSidenav h1,h2{
   color: white;
+  text-align: left;
 }
-
 /*Interface Usuario*/
 .UserInterface{
   height: 170px;
@@ -874,10 +856,6 @@ footer{
   color: white;
   text-align: center;
 }
-.footerBox ul li a{
-  color: white;
-  text-decoration: none;
-}
 .footerBox ul{
   list-style-type: none;
   padding: 0;
@@ -982,28 +960,30 @@ footer{
     border-radius: 0px;
   }
   .imagemThubnail{
-    height: 230px;
+    height: 202px;
     background-color: #363636;
     background-repeat: no-repeat;
-    background-size:100%;
     cursor: pointer;
-    background-position: 0px;
+    background-position: 0px -130px;
   }
   .caption {
     height: 350px;
   }
   .caption h3{
     height: auto;
-    max-height: 40px;
+    min-height: 51px;
+    max-height: 51px;
     color: #666;
     font-size: 1.5em;
     text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
     font-weight: bold;
   }
   .caption p{
     text-align: justify;
     font-size: 1.1em;
-    height: 70px;
+    height: 130px;
   }
   .ReadMore{
     clear: both;

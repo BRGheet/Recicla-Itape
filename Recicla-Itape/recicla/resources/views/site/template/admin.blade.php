@@ -1,118 +1,120 @@
 @extends('.site.template.cabecalho')
-  @section('cabecalho')
-    @push('estilos')
-      <link rel="stylesheet" href="{{ URL::asset('css/jquery.sweet-modal.min.css') }}" />
-      <script src="{{ URL::asset('js/tinymce/tinymce.min.js') }}"></script>
-      <script type="text/javascript">
-        tinymce.init({ selector: '#texto' });
-      </script>
-      <link rel="stylesheet" href="{{ URL::asset('css/font-awesome.min.css') }}">
-      <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-      <script>
-        $(document).ready(function(){
-          $('.pagina').click(function(){
+@section('cabecalho')
+@push('estilos')
+<link rel="stylesheet" href="{{ URL::asset('css/jquery.sweet-modal.min.css') }}" />
+<script src="{{ URL::asset('js/tinymce/tinymce.min.js') }}"></script>
+<script type="text/javascript">
+  tinymce.init({ selector: '#texto' });
+</script>
+<!-- Google Fonts -->
+<link rel="stylesheet" href="{{ URL::asset('css/font-awesome.min.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>
+ $(document).ready(function(){
+   $('.pagina').click(function(){
 
-            var pagina = this.id;
-            pagina = "/"+ pagina;
+     var pagina = this.id;
+     pagina = "/"+ pagina;
 
 
-            $.ajax({
-             type: "GET",
-             url: pagina,
-             success: function(data){
-                $('#conteudo').html(data);
-              }
-            });
+     $.ajax({
+       type: "GET",
+       url: pagina,
+       success: function(data){
+        $('#conteudo').html(data);
+      }
+    });
+
+   });
+ });
+</script>
+@endpush
+<div class="container-fluid">
+
+  <div class='row row-same-height'>
+    <nav id="mySidenav" class="sidebar">
+      <div class="sidenav-image">
+        <h1>ADMIN</h1>
+      </div>
+      <button class="closebtn" onclick="closeNav()">&times;</button>
+      <a href="#" class="pagina" id="info">Nova Informação/Tutorial</a>
+      <a href="#" class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
+      <a href="#" class="pagina" id="coop">Nova Cooperativa</a>
+      <a href="#" class="pagina" id="gift">Nova Recompensa</a>
+    </nav>
+
+    <nav class="col-md-2 sidebar-lg hidden-xs hidden-sm" id="adminSidenav">
+     <h1>ADMIN</h1>
+     <a href="/admin">Nova Informação</a>
+     <a class="pagina" id="ponto">Novo Ponto no Quero Reciclar</a>
+     <a class="pagina" id="coop">Nova Cooperativa</a>
+     <a class="pagina" id="gift">Nova Recompensa</a>
+   </nav>
+   <div class="col-md-2"></div>
+   <div id="conteudo" class="container col-md-10 col-md-offset-2">
+    @yield('content')
+  </div>
+
+
+</div>
+@push('scripts')
+<!-- Script NavBar -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/eb29782670.js"></script>
+<script src="{{ URL::asset('js/jquery.sweet-modal.min.js') }}"></script>
+<script type="text/javascript">
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+</script>
+<script type="text/javascript">
+  $(document).on('click', '.btn-green', function(){
+    var pagina = $(this).attr('data-type');
+    pagina = '/admin/'+pagina+'/send';
+
+        //tranforma o form em array
+        var dado = {};
+        $('.form-control').each(function(){
+          dado[$(this).attr('name')] = $(this).val();
+        });
+        // verifica se existe input do tipo checkbox
+        if($('.check').length > 0){
+          $('.check').each(function(){
+            dado[$(this).attr('name')] = $(this).is(':checked') ? 1 : 0;
           });
-       });
-      </script>
-    @endpush
-    <div class="container-fluid">
-      <div class='row row-same-height'>
-        <nav id="mySidenav" class="sidebar">
-          <div class="sidenav-image">
-            <h1>ADMIN</h1>
-          </div>
-          <button class="closebtn" onclick="closeNav()">&times;</button>
-          <a href="#" class="pagina" id="info">Nova Informação/Tutorial</a>
-          <a href="#" class="pagina" id="ponto">Novo Marcador no mapa</a>
-          <a href="#" class="pagina" id="coop">Nova Cooperativa</a>
-          <a href="#" class="pagina" id="gift">Nova Recompensa</a>
-        </nav>
-
-        <nav class="col-md-2 sidebar-lg hidden-xs hidden-sm" id="adminSidenav">
-          <h1>ADMIN</h1>
-          <h2>Implementação</h2>
-          <a class="pagina" id="add">Adicionar Ponto</a>
-          <a class="pagina" id="check">Verificar Voucher</a>
-          <a href="/admin">Nova Informação</a>
-          <a class="pagina" id="ponto">Novo Marcador no mapa</a>
-          <a class="pagina" id="coop">Nova Cooperativa</a>
-          <a class="pagina" id="gift">Nova Recompensa</a>
-          <h2>Modificação</h2>
-          <a href="/admin/info/show">Editar Informações</a>
-          <a href="/admin/ponto/show">Editar Marcadores no mapa</a>
-          <a href="/admin/coop/show">Editar Cooperativas</a>
-          <a href="/admin/gift/show">Editar Recompensas</a>
-        </nav>
-       <div class="col-md-3"></div>
-        <div id="conteudo" class="container col-md-10 col-md-offset-2">
-          @yield('content')
-        </div>
-    </div>
-    <style type="text/css">
-      html, body { height: 100%;overflow: hidden;}
-    </style>
-    @push('scripts')
-    <!-- Script NavBar -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/eb29782670.js"></script>
-    <script src="{{ URL::asset('js/jquery.sweet-modal.min.js') }}">
-    </script>
-    <script src="{{ URL::asset('js/jquery.sweet-modal.min.js') }}"></script>
-    <script src="{{ URL::asset('js/jspdf/jspdf.js') }}"></script>
-    <script type="text/javascript">
-      $.ajaxSetup({
-        headers: {
-          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
-      });
-    </script>
-    <script type="text/javascript">
-      var file = null;
-      $(document).on('click', '.btn-green', function(){
-        var pagina = null;
-        if ($('.btn-green').attr('data-cod') == 1) {
-          pagina = $(this).attr('data-type');
-          pagina = '/admin/'+pagina+'/store';
+        if ($('#texto').length > 0){
+          dado['texto'] = tinymce.get('texto').getContent();
         }
-        else{
-          pagina = $(this).attr('data-type');
-          pagina = '/admin/'+pagina+'/update';
-        }
-        if ($('#upload').length > 0){
-          var form = $('#upload')[0];
-          file = new FormData(form);
-          if ($('#texto').length > 0){
-            file.append('texto', tinymce.get('texto').getContent());
-          }
-        }
+        // tranforma array em json
+        JSON.stringify(dado);
+        console.log(dado);
         $.ajax({
           type: 'POST',
-          data: file,
+          data: dado,
           dataType: 'text',
-          processData: false,
-          contentType: false,
           url: pagina,
           success: function(data){
             $.sweetModal({
               content: data,
               icon: $.sweetModal.ICON_SUCCESS
             });
-          },
+          }
         });
       });
     </script>
-    @endpush
-@endsection
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#conteudo").bind("divResized", function(){
+          var height = $(this).height();
+          $("#adminSidenav").height(height);
+        });
+      </script>
+      @endpush
+      <style type="text/css">
+      html, body { height: 100%;overflow: hidden;}
+    </style>
+    @endsection
